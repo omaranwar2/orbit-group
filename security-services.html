@@ -91,14 +91,14 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased">
 
-    <!-- ==================== HEADER (WHITE NAVBAR) ==================== -->
+  <!-- ==================== HEADER ==================== -->
     <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
         <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
             <a href="index.html" aria-label="Orbit Group Home">
                 <img src="images/orbit_newlogo.png" alt="Orbit Group of Companies" class="h-14 w-auto">
             </a>
 
-            <!-- Desktop Navigation -->
+            <!-- Desktop Navigation with Multi-level Dropdowns -->
             <nav aria-label="Primary Navigation" class="hidden items-center gap-6 lg:flex">
                 <a href="index.html" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">Home</a>
 
@@ -115,15 +115,15 @@
                     </div>
                 </div>
 
-                <!-- Security Services Dropdown (Active Page) -->
+                <!-- Security Services Dropdown -->
                 <div class="dropdown-parent relative py-6">
-                    <a href="security-services.html" class="inline-flex items-center gap-1 text-sm font-semibold text-red-700 transition-colors py-2 px-3 rounded-md bg-slate-100/80">
+                    <a href="security-services.html" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
                         Security Services
-                        <svg class="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div class="dropdown-menu absolute left-0 top-full w-60 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
                         <a href="orbit-force-overview.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Orbit Force Overview</a>
-                        <a href="security-services.html" class="block px-5 py-2.5 bg-slate-200/60 font-semibold text-red-700 transition-colors">Security Services</a>
+                        <a href="security-services.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Security Services</a>
                     </div>
                 </div>
 
@@ -137,7 +137,7 @@
                         <a href="orbit-asia-overview.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Orbit Asia Overview</a>
                         <a href="risk-consulting.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Risk Consulting Services</a>
                         
-                        <!-- Nested Submenu -->
+                        <!-- Nested Submenu for Training -->
                         <div class="nested-dropdown-parent relative">
                             <a href="#" class="flex items-center justify-between px-5 py-2.5 hover:bg-slate-200/60 text-red-700 transition-colors">
                                 Training
@@ -157,7 +157,7 @@
 
             <!-- CTA Button -->
             <div class="hidden lg:block">
-                <a href="contact.html" class="orbit-cta inline-flex items-center gap-2">
+                <a href="contact.html" class="inline-flex items-center gap-2 rounded-md bg-red-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-red-800">
                     Contact Us &nearr;
                 </a>
             </div>
