@@ -120,7 +120,7 @@
 </head>
 <body class="bg-white text-slate-900 font-sans antialiased">
 
-<!-- ==================== HEADER ==================== -->
+<!-- ==================== HEADER WITH MOBILE MENU ==================== -->
     <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
         <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
             <a href="index.html" aria-label="Orbit Group Home">
@@ -184,14 +184,50 @@
                 <a href="index.html#industries" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">Industries We Serve</a>
             </nav>
 
-            <!-- CTA Button -->
+            <!-- Desktop CTA Button -->
             <div class="hidden lg:block">
                 <a href="contact.html" class="inline-flex items-center gap-2 rounded-md bg-red-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-red-800">
                     Contact Us &nearr;
                 </a>
             </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="p-2 text-slate-800 lg:hidden focus:outline-none" aria-label="Toggle Navigation Menu">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-6 py-6 text-slate-800">
+            <div class="flex flex-col space-y-4 font-medium text-base">
+                <a href="index.html" class="hover:text-red-700 py-1">Home</a>
+                <a href="about-orbit.html" class="hover:text-red-700 py-1">About Orbit Group</a>
+                <a href="why-orbit.html" class="hover:text-red-700 py-1">Why Orbit Group?</a>
+                <a href="our-values.html" class="hover:text-red-700 py-1">Our Values</a>
+                <a href="security-services.html" class="hover:text-red-700 py-1">Security Services</a>
+                <a href="risk-consulting.html" class="hover:text-red-700 py-1">Risk Consulting</a>
+                <a href="fsr.html" class="hover:text-red-700 py-1 pl-4 text-sm text-slate-600">&bull; FSR Training</a>
+                <a href="tsr.html" class="hover:text-red-700 py-1 pl-4 text-sm text-slate-600">&bull; TSR Training</a>
+                <a href="https://www.orbitglobaltechnology.com/" target="_blank" class="hover:text-red-700 py-1">Technology &nearr;</a>
+                <a href="index.html#industries" class="hover:text-red-700 py-1">Industries We Serve</a>
+                <a href="contact.html" class="mt-4 inline-flex justify-center items-center rounded-md bg-red-700 px-5 py-3 text-sm font-semibold text-white shadow-sm">
+                    Contact Us &nearr;
+                </a>
+            </div>
         </div>
     </header>
+
+    <script>
+        // Simple JavaScript to toggle mobile menu visibility
+        document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        });
+    </script>
 
     <main class="pt-20">
         <!-- ==================== HERO SECTION ==================== -->
