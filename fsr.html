@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facility Security Requirements (FSR) Training | Orbit Group</title>
+    <meta name="description" content="TAPA APAC Training Modules - Facility Security Requirements (FSR) Training & Supply Chain Security Readiness by Orbit Asia Risk Consultancy.">
+    <meta name="author" content="Orbit Group">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Facility Security Requirements (FSR) Training - Orbit Group">
+    <meta property="og:description" content="Certified TAPA APAC Facility Security Requirements (FSR) training modules empowering supply chain, logistics, and warehouse professionals.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Shared Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Shared Nav Dropdown Styling */
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .dropdown-parent:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .nested-dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(8px);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .nested-dropdown-parent:hover .nested-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        /* Perspective Grid */
+        .perspective-grid {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+            background-size: 36px 36px;
+            transform: perspective(600px) rotateX(60deg);
+            transform-origin: top center;
+        }
+
+        /* Animated Shimmer Text */
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .shimmer-text {
+            background: linear-gradient(90deg, #f59e0b, #ef4444, #f59e0b, #ffffff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 5s linear infinite;
+        }
+
+        /* NEW CUSTOM POINTER ROW DESIGN (Differentiates from other pages) */
+        .fsr-pointer-row {
+            background: #ffffff;
+            border-left: 5px solid #dc2626;
+            border-top: 1px solid #e2e8f0;
+            border-right: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fsr-pointer-row:hover {
+            transform: translateX(6px);
+            border-left-color: #b91c1c;
+            box-shadow: 0 15px 30px -10px rgba(15, 23, 42, 0.08), 0 0 15px rgba(220, 38, 38, 0.05);
+        }
+
+        /* Level Badge Indicator */
+        .tier-badge {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        /* Smooth Scroll Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 font-sans antialiased">
+
+    <!-- ==================== HEADER (WHITE NAVBAR) ==================== -->
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
+        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
+            <a href="index.html" aria-label="Orbit Group Home">
+                <img src="images/orbit_newlogo.png" alt="Orbit Group of Companies" class="h-14 w-auto">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav aria-label="Primary Navigation" class="hidden items-center gap-6 lg:flex">
+                <a href="index.html" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">Home</a>
+
+                <!-- Our Story Dropdown -->
+                <div class="dropdown-parent relative py-6">
+                    <a href="about-orbit.html" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
+                        Our Story
+                        <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <div class="dropdown-menu absolute left-0 top-full w-56 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
+                        <a href="about-orbit.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">About Orbit Group</a>
+                        <a href="why-orbit.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Why Orbit Group?</a>
+                        <a href="our-values.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Our Values</a>
+                    </div>
+                </div>
+
+                <!-- Security Services Dropdown -->
+                <div class="dropdown-parent relative py-6">
+                    <a href="security-services.html" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
+                        Security Services
+                        <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <div class="dropdown-menu absolute left-0 top-full w-60 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
+                        <a href="orbit-force-overview.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Orbit Force Overview</a>
+                        <a href="security-services.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Security Services</a>
+                    </div>
+                </div>
+
+                <!-- Risk Consulting Dropdown (Active Subpage) -->
+                <div class="dropdown-parent relative py-6">
+                    <a href="risk-consulting.html" class="inline-flex items-center gap-1 text-sm font-semibold text-red-700 transition-colors py-2 px-3 rounded-md bg-slate-100/80">
+                        Risk Consulting
+                        <svg class="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <div class="dropdown-menu absolute left-0 top-full w-64 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
+                        <a href="orbit-asia-overview.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Orbit Asia Overview</a>
+                        <a href="risk-consulting.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Risk Consulting Services</a>
+                        
+                        <!-- Nested Submenu -->
+                        <div class="nested-dropdown-parent relative">
+                            <a href="#" class="flex items-center justify-between px-5 py-2.5 bg-slate-200/60 font-semibold text-red-700 transition-colors">
+                                Training
+                                <svg class="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </a>
+                            <div class="nested-dropdown-menu absolute left-full top-0 w-72 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md -ml-1">
+                                <a href="fsr.html" class="block px-5 py-2.5 bg-slate-200/60 font-semibold text-red-700 transition-colors">Facility Security Requirements (FSR)</a>
+                                <a href="tsr.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Trucking Security Requirements (TSR)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://www.orbitglobaltechnology.com/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">Technology &nearr;</a>
+                <a href="index.html#industries" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">Industries We Serve</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden lg:block">
+                <a href="contact.html" class="orbit-cta inline-flex items-center gap-2">
+                    Contact Us &nearr;
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="relative bg-slate-950 py-28 text-white overflow-hidden border-b border-white/10">
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <img src="images/orbitasiaoverview-hero.png" onerror="this.src='images/security-division.jpg'" alt="TAPA FSR Training" class="h-full w-full object-cover opacity-65">
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+                <div class="perspective-grid absolute -top-40 inset-x-0 h-[150%] opacity-20"></div>
+            </div>
+
+            <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-amber-400 text-xs font-semibold uppercase tracking-wider font-display mb-6">
+                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span> TAPA APAC Training Modules
+                </div>
+                
+                <h1 class="font-display text-4xl font-bold leading-tight sm:text-6xl max-w-4xl tracking-tight">
+                    Facility Security <span class="shimmer-text">Requirements (FSR)</span>
+                </h1>
+                
+                <p class="mt-6 max-w-3xl text-lg text-slate-300 font-body leading-relaxed drop-shadow-md">
+                    Certified supply chain security training designed to establish, audit, and maintain TAPA APAC Facility Security Requirements across high-value warehouses, factories, and distribution hubs.
+                </p>
+            </div>
+        </section>
+
+        <!-- ==================== LOGO & BUILDING IMAGE SECTION ==================== -->
+        <section class="bg-slate-50 py-16 border-b border-slate-200">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12 text-center">
+                
+                <!-- TAPA APAC Logo (PNG) -->
+                <div class="flex justify-center mb-10">
+                    <img src="images/tapa-apac-logo.png" onerror="this.src='images/orbit_newlogo.png'" alt="TAPA APAC - Transported Asset Protection Association" class="h-20 md:h-24 w-auto object-contain">
+                </div>
+
+                <!-- Secure Building Photo (JPEG) -->
+                <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 max-w-5xl mx-auto bg-slate-200">
+                    <img src="images/fsr-building.jpg" onerror="this.src='images/security-division.jpg'" alt="Secure Facility Architecture" class="w-full h-auto object-cover">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== FSR CLASSIFICATION TIERS (EXPANDED INFO) ==================== -->
+        <section class="py-20 bg-white border-b border-slate-200">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs uppercase font-bold tracking-widest text-red-700 font-display block mb-2">Certification Spectrum</span>
+                    <h2 class="font-display text-3xl font-bold sm:text-4xl text-slate-900">Understanding TAPA FSR Security Tiers</h2>
+                    <p class="mt-3 text-slate-600 text-sm font-body">Facility Security Requirements are structured into three distinct certification levels depending on asset sensitivity and operational risk.</p>
+                </div>
+
+                <div class="grid gap-6 md:grid-cols-3">
+                    <div class="tier-badge text-white p-8 rounded-2xl border-t-4 border-t-red-600 shadow-lg flex flex-col justify-between">
+                        <div>
+                            <span class="px-3 py-1 rounded bg-red-600/30 text-red-400 font-display font-bold text-xs uppercase tracking-wider block w-max mb-4">Tier Level A</span>
+                            <h3 class="font-display font-bold text-2xl text-white">Class A Certification</h3>
+                            <p class="mt-3 text-xs text-slate-300 font-body leading-relaxed">
+                                Highest security level required for ultra-high-value cargo (e.g., semiconductors, luxury electronics, pharmaceuticals). Requires mandatory 24/7 dual-custody access controls and full perimeter intrusion protection.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tier-badge text-white p-8 rounded-2xl border-t-4 border-t-amber-500 shadow-lg flex flex-col justify-between">
+                        <div>
+                            <span class="px-3 py-1 rounded bg-amber-500/30 text-amber-400 font-display font-bold text-xs uppercase tracking-wider block w-max mb-4">Tier Level B</span>
+                            <h3 class="font-display font-bold text-2xl text-white">Class B Certification</h3>
+                            <p class="mt-3 text-xs text-slate-300 font-body leading-relaxed">
+                                Mid-tier security specification designed for standard commercial electronics and high-value industrial goods. Mandates controlled dock entry points and continuous CCTV monitoring.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tier-badge text-white p-8 rounded-2xl border-t-4 border-t-slate-400 shadow-lg flex flex-col justify-between">
+                        <div>
+                            <span class="px-3 py-1 rounded bg-slate-400/30 text-slate-300 font-display font-bold text-xs uppercase tracking-wider block w-max mb-4">Tier Level C</span>
+                            <h3 class="font-display font-bold text-2xl text-white">Class C Certification</h3>
+                            <p class="mt-3 text-xs text-slate-300 font-body leading-relaxed">
+                                Baseline physical security framework suitable for regional distribution centers handling general freight. Establishes essential perimeter fencing and visitor access logging.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== NEW DESIGN FOR CURRICULUM POINTERS ==================== -->
+        <section class="py-24 bg-slate-50/70 border-b border-slate-200">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <p class="section-kicker text-red-700 font-bold uppercase tracking-wider text-xs">Full Course Syllabus</p>
+                    <h2 class="mt-2 font-display text-3xl font-semibold sm:text-5xl text-slate-900">FSR Training Curriculum &amp; Modules</h2>
+                    <p class="mt-4 text-slate-600 text-sm font-body">Deep-dive training modules designed to prepare internal teams to successfully pass TAPA FSR audits.</p>
+                </div>
+
+                <!-- NEW LIST-STYLE POINTER ROW DESIGN -->
+                <div class="space-y-6 max-w-5xl mx-auto">
+                    
+                    <!-- Pointer 01 -->
+                    <div class="fsr-pointer-row p-8 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+                        <div class="space-y-2 max-w-2xl">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-lg bg-red-100 text-red-700 font-display font-bold text-xs flex items-center justify-center shrink-0">01</span>
+                                <h3 class="font-display font-bold text-xl text-slate-900">Perimeter Physical Security &amp; Access Controls</h3>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 font-body leading-relaxed pl-11">
+                                Comprehensive guidelines covering perimeter fencing specifications (minimum 2.4m height requirements), vehicle barrier gates, automated anti-ram bollards, clear zones, and security lighting levels.
+                            </p>
+                        </div>
+                        <div class="pl-11 md:pl-0 shrink-0">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold font-display">
+                                <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Mandatory Standard
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Pointer 02 -->
+                    <div class="fsr-pointer-row p-8 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+                        <div class="space-y-2 max-w-2xl">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-lg bg-red-100 text-red-700 font-display font-bold text-xs flex items-center justify-center shrink-0">02</span>
+                                <h3 class="font-display font-bold text-xl text-slate-900">High-Value Storage Area (HVSA) Construction</h3>
+                                <div class="w-10"></div>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 font-body leading-relaxed pl-11">
+                                Structural enclosure design for HVSA vaults, steel-reinforced mesh cages, dual-custody electronic access locks, motion sensor placement, and dedicated CCTV camera angles.
+                            </p>
+                        </div>
+                        <div class="pl-11 md:pl-0 shrink-0">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold font-display">
+                                <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Class A Requirement
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Pointer 03 -->
+                    <div class="fsr-pointer-row p-8 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+                        <div class="space-y-2 max-w-2xl">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-lg bg-red-100 text-red-700 font-display font-bold text-xs flex items-center justify-center shrink-0">03</span>
+                                <h3 class="font-display font-bold text-xl text-slate-900">Dock Operations &amp; Cargo Handling Procedures</h3>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 font-body leading-relaxed pl-11">
+                                Standard Operating Procedures (SOPs) for seal inspections, ISO 17712 high-security seal verification, dock door lock-out protocols, driver waiting room segregation, and manifest cross-checking.
+                            </p>
+                        </div>
+                        <div class="pl-11 md:pl-0 shrink-0">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold font-display">
+                                <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Dock SOP Module
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Pointer 04 -->
+                    <div class="fsr-pointer-row p-8 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+                        <div class="space-y-2 max-w-2xl">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-lg bg-red-100 text-red-700 font-display font-bold text-xs flex items-center justify-center shrink-0">04</span>
+                                <h3 class="font-display font-bold text-xl text-slate-900">CCTV &amp; Surveillance Recording Protocols</h3>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 font-body leading-relaxed pl-11">
+                                Camera placement to eliminate blind spots across perimeter, dock, and storage areas, minimum 30-day digital video recording retention rules, uninterrupted power supply (UPS) backups, and operator logkeeping.
+                            </p>
+                        </div>
+                        <div class="pl-11 md:pl-0 shrink-0">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold font-display">
+                                <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Surveillance Audit
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Pointer 05 -->
+                    <div class="fsr-pointer-row p-8 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+                        <div class="space-y-2 max-w-2xl">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-lg bg-red-100 text-red-700 font-display font-bold text-xs flex items-center justify-center shrink-0">05</span>
+                                <h3 class="font-display font-bold text-xl text-slate-900">TAPA Audit Preparedness &amp; Self-Assessment</h3>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 font-body leading-relaxed pl-11">
+                                Step-by-step guidance on filling out official TAPA self-assessment questionnaires, compiling evidence files, identifying non-conformances, and hosting third-party independent auditors.
+                            </p>
+                        </div>
+                        <div class="pl-11 md:pl-0 shrink-0">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold font-display">
+                                <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Final Readiness
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FOOTER ==================== -->
+        <footer id="contact" class="bg-slate-950 py-20 text-white border-t border-white/10">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+                <div class="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_1fr]">
+                    <!-- Column 1: Text Branding & Tagline -->
+                    <div>
+                        <div class="font-display text-2xl font-bold tracking-tight text-white">
+                            Orbit Group <span class="text-xs font-normal uppercase tracking-widest block text-slate-400 mt-1">Of Companies</span>
+                        </div>
+                        <h2 class="mt-8 font-display text-3xl font-semibold sm:text-4xl">Protect what matters. See what's next.</h2>
+                        <p class="mt-4 max-w-sm text-slate-400 font-body text-sm">
+                            Speak with Orbit Group about integrated security, risk intelligence and technology for your organisation.
+                        </p>
+                        <div class="mt-6">
+                            <a href="contact.html" class="orbit-cta inline-flex items-center gap-2">
+                                Contact Us &nearr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Divisions & Explore Links -->
+                    <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8 lg:border-t-0 lg:pt-0">
+                        <div>
+                            <p class="section-kicker text-amber-400">Divisions</p>
+                            <ul class="mt-4 space-y-3 text-sm text-slate-400 font-body">
+                                <li><a href="security-services.html" class="hover:text-white transition-colors">Orbit Force Security</a></li>
+                                <li><a href="risk-consulting.html" class="hover:text-white transition-colors">Orbit Asia Risk Consultancy</a></li>
+                                <li><a href="index.html#technology" class="hover:text-white transition-colors">Orbit Global Technologies</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="section-kicker text-amber-400">Explore</p>
+                            <ul class="mt-4 space-y-3 text-sm text-slate-400 font-body">
+                                <li><a href="about-orbit.html" class="hover:text-white transition-colors">Our Story</a></li>
+                                <li><a href="index.html#industries" class="hover:text-white transition-colors">Industries</a></li>
+                                <li><a href="index.html#clients" class="hover:text-white transition-colors">Clients</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Group Contact Info (Bottom Right) -->
+                    <div class="border-t border-white/10 pt-8 lg:border-t-0 lg:pt-0">
+                        <p class="section-kicker text-amber-400">Group Contact</p>
+                        
+                        <div class="mt-6 space-y-6">
+                            <!-- Headquarters -->
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-amber-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                </div>
+                                <div>
+                                    <span class="block text-xs uppercase tracking-widest text-slate-400 font-display font-semibold">Group Headquarters</span>
+                                    <p class="mt-1 text-sm text-slate-300 font-body leading-relaxed">
+                                        36, Jalan Jubli Perak 22/1,<br>
+                                        Section 22, Putri Ayu,<br>
+                                        40700 Shah Alam, Selangor
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-amber-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                </div>
+                                <div>
+                                    <span class="block text-xs uppercase tracking-widest text-slate-400 font-display font-semibold">Email</span>
+                                    <a href="mailto:ceo@orbitgroup.my" class="mt-1 block text-sm text-slate-300 hover:text-white transition-colors font-body">
+                                        ceo@orbitgroup.my
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 flex flex-wrap justify-between gap-4 border-t border-white/10 pt-6 text-xs uppercase tracking-widest text-slate-500 font-display">
+                    <span>&copy; 2026 Orbit Group of Companies</span>
+                    <span>Security &middot; Risk Intelligence &middot; Technology</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

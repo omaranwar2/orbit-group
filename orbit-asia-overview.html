@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit Asia Overview | Risk Consulting | Orbit Group</title>
+    <meta name="description" content="Explore Orbit Asia Risk Consultancy - Strategic risk management, security threat surveys, forensic investigations, corporate due diligence, and specialized TAPA training.">
+    <meta name="author" content="Orbit Group">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Orbit Asia Overview - Orbit Group">
+    <meta property="og:description" content="Boardroom risk advisory, threat intelligence, security audits, and forensic investigations empowering organisations across Asia-Pacific.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Shared Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Shared Nav Dropdown Styling */
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .dropdown-parent:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .nested-dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(8px);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .nested-dropdown-parent:hover .nested-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        /* Perspective Grid */
+        .perspective-grid {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+            background-size: 36px 36px;
+            transform: perspective(600px) rotateX(60deg);
+            transform-origin: top center;
+        }
+
+        /* Animated Shimmer Text */
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .shimmer-text {
+            background: linear-gradient(90deg, #f59e0b, #ef4444, #f59e0b, #ffffff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 5s linear infinite;
+        }
+
+        /* Strategic Feature Cards */
+        .strategic-card {
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid #0f172a;
+            border-radius: 1.25rem;
+        }
+        .strategic-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.12);
+            border-top-color: #dc2626;
+        }
+
+        /* Distinct Pillar Card Styling */
+        .asia-pillar-card {
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .asia-pillar-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 45px -12px rgba(15, 23, 42, 0.12), 0 0 25px rgba(220, 38, 38, 0.08);
+            border-color: #dc2626;
+        }
+
+        /* Top Bar Accent Glow */
+        .card-top-accent {
+            height: 4px;
+            width: 100%;
+            border-top-left-radius: 1.25rem;
+            border-top-right-radius: 1.25rem;
+            background: linear-gradient(90deg, #dc2626, #f59e0b);
+        }
+
+        /* Executive Banner */
+        .executive-banner {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-left: 6px solid #dc2626;
+        }
+
+        /* Smooth Scroll Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 font-sans antialiased">
+
+    <!-- ==================== HEADER (WHITE NAVBAR) ==================== -->
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
+        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
+            <a href="index.html" aria-label="Orbit Group Home">
+                <img src="images/orbit_newlogo.png" alt="Orbit Group of Companies" class="h-14 w-auto">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav aria-label="Primary Navigation" class="hidden items-center gap-6 lg:flex">
+                <a href="index.html" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">Home</a>
+
+                <!-- Our Story Dropdown -->
+                <div class="dropdown-parent relative py-6">
+                    <a href="about-orbit.html" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
+                        Our Story
+                        <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <div class="dropdown-menu absolute left-0 top-full w-56 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
+                        <a href="about-orbit.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">About Orbit Group</a>
+                        <a href="why-orbit.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Why Orbit Group?</a>
+                        <a href="our-values.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Our Values</a>
+                    </div>
+                </div>
+
+                <!-- Security Services Dropdown -->
+                <div class="dropdown-parent relative py-6">
+                    <a href="security-services.html" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
+                        Security Services
+                        <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <div class="dropdown-menu absolute left-0 top-full w-60 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
+                        <a href="orbit-force-overview.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Orbit Force Overview</a>
+                        <a href="security-services.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Security Services</a>
+                    </div>
+                </div>
+
+                <!-- Risk Consulting Dropdown (Active Page) -->
+                <div class="dropdown-parent relative py-6">
+                    <a href="risk-consulting.html" class="inline-flex items-center gap-1 text-sm font-semibold text-red-700 transition-colors py-2 px-3 rounded-md bg-slate-100/80">
+                        Risk Consulting
+                        <svg class="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <div class="dropdown-menu absolute left-0 top-full w-64 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
+                        <a href="orbit-asia-overview.html" class="block px-5 py-2.5 bg-slate-200/60 font-semibold text-red-700 transition-colors">Orbit Asia Overview</a>
+                        <a href="risk-consulting.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Risk Consulting Services</a>
+                        
+                        <!-- Nested Submenu -->
+                        <div class="nested-dropdown-parent relative">
+                            <a href="#" class="flex items-center justify-between px-5 py-2.5 hover:bg-slate-200/60 text-red-700 transition-colors">
+                                Training
+                                <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </a>
+                            <div class="nested-dropdown-menu absolute left-full top-0 w-72 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md -ml-1">
+                                <a href="fsr.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Facility Security Requirements (FSR)</a>
+                                <a href="tsr.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Trucking Security Requirements (TSR)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://www.orbitglobaltechnology.com/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">Technology &nearr;</a>
+                <a href="index.html#industries" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">Industries We Serve</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden lg:block">
+               <a href="contact.html" class="orbit-cta inline-flex items-center gap-2">
+                    Contact Us &nearr;
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="relative bg-slate-950 py-32 text-white overflow-hidden border-b border-white/10">
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <img src="images/orbitasiaoverview-hero.png" onerror="this.src='images/security-division.jpg'" alt="Orbit Asia Risk Consultancy" class="h-full w-full object-cover opacity-65">
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+                <div class="perspective-grid absolute -top-40 inset-x-0 h-[150%] opacity-20"></div>
+            </div>
+
+            <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-amber-400 text-xs font-semibold uppercase tracking-wider font-display mb-6">
+                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span> Boardroom Risk Advisory &amp; Intelligence
+                </div>
+                
+                <h1 class="font-display text-5xl font-bold leading-tight sm:text-7xl max-w-4xl tracking-tight">
+                    Orbit Asia: <span class="shimmer-text">Risk Consulting Overview</span>
+                </h1>
+                
+                <p class="mt-8 max-w-3xl text-lg text-slate-300 font-body leading-relaxed drop-shadow-md">
+                    Providing high-level corporate risk surveys, forensic investigations, compliance auditing (TAPA &amp; RBA), executive threat intelligence, and certified security training across Malaysia and the broader Asia-Pacific region.
+                </p>
+            </div>
+        </section>
+
+        <!-- ==================== EXECUTIVE BANNER ==================== -->
+        <section class="bg-slate-50 py-16 border-b border-slate-200">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+                <div class="executive-banner rounded-2xl p-8 md:p-12 shadow-2xl text-white relative overflow-hidden">
+                    <div class="grid lg:grid-cols-[1fr_auto] gap-8 items-center relative z-10">
+                        <div>
+                            <span class="text-xs uppercase font-bold tracking-widest text-amber-400 font-display block mb-3">Strategic Advisory Mission</span>
+                            <blockquote class="font-display text-3xl md:text-5xl font-extrabold leading-snug text-white tracking-wide uppercase">
+                                &ldquo;INTELLIGENCE. COMPLIANCE. RESILIENCE.&rdquo;
+                            </blockquote>
+                            <p class="mt-4 text-sm md:text-base text-slate-300 font-body leading-relaxed max-w-3xl">
+                                Orbit Asia bridges boardroom risk management with on-the-ground forensic audits, empowering multinationals, supply chain networks, and corporate boards to operate with complete operational clarity.
+                            </p>
+                            <p class="mt-3 text-xs md:text-sm text-slate-400 font-body leading-relaxed max-w-3xl border-t border-white/10 pt-3">
+                                From supply chain security standard certifications to high-level corporate due diligence and internal theft resolution, our risk consultants deliver actionable insights that eliminate operational liabilities.
+                            </p>
+                        </div>
+                        <div class="hidden lg:flex w-24 h-24 rounded-2xl bg-white/10 border border-white/20 items-center justify-center text-amber-400 shrink-0">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== STRATEGIC INTELLIGENCE SECTION (NEW ADDITION) ==================== -->
+        <section class="bg-slate-50/70 py-24 border-b border-slate-200">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
+                        Strategic Intelligence. Proven Enterprise Experience.
+                    </h2>
+                    <p class="mt-6 text-slate-600 text-sm md:text-base font-body leading-relaxed">
+                        Orbit Asia combines intelligence-led investigation, enterprise risk transformation, governance advisory, and operational security expertise to support organizations operating in high-risk and high-value environments.
+                    </p>
+                </div>
+
+                <div class="grid gap-8 md:grid-cols-3">
+                    
+                    <!-- Card 1: Competitive Advantages -->
+                    <div class="strategic-card p-8 flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-slate-100 text-slate-900 flex items-center justify-center mb-6">
+                                <svg class="w-6 h-6 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            </div>
+                            <h3 class="font-display font-bold text-2xl text-slate-900 mb-6">Competitive Advantages</h3>
+                            <ul class="space-y-4 text-xs md:text-sm text-slate-600 font-body leading-relaxed list-disc pl-4">
+                                <li>Leadership credibility from senior policing, intelligence, and corporate risk professionals</li>
+                                <li>Integrated approach combining investigation, analytics, technology, and behavioural change</li>
+                                <li>Field proven methodologies validated in real enterprise environments</li>
+                                <li>Transition to recurring digital services, improving valuation and results</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Leadership & Expertise -->
+                    <div class="strategic-card p-8 flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-slate-100 text-slate-900 flex items-center justify-center mb-6">
+                                <svg class="w-6 h-6 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            </div>
+                            <h3 class="font-display font-bold text-2xl text-slate-900 mb-4">Leadership &amp; Expertise</h3>
+                            <p class="text-xs font-semibold text-slate-500 mb-4 font-body">Orbit Asia's leadership team combines:</p>
+                            <ul class="space-y-3 text-xs md:text-sm text-slate-600 font-body leading-relaxed list-disc pl-4">
+                                <li>National level law enforcement and intelligence experience</li>
+                                <li>Multinational corporate risk and human capital leadership</li>
+                                <li>Certified forensic audit and fraud examination expertise</li>
+                                <li>Decades of operational security and governance advisory</li>
+                            </ul>
+                            <p class="mt-6 text-xs text-slate-500 font-body leading-relaxed border-t border-slate-100 pt-4">
+                                This multidisciplinary capability enables end to end enterprise risk transformation rather than isolated consulting interventions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Proven Enterprise Track Record -->
+                    <div class="strategic-card p-8 flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-slate-100 text-slate-900 flex items-center justify-center mb-6">
+                                <svg class="w-6 h-6 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                            </div>
+                            <h3 class="font-display font-bold text-2xl text-slate-900 mb-6">Proven Enterprise Track Record</h3>
+                            <ul class="space-y-4 text-xs md:text-sm text-slate-600 font-body leading-relaxed list-disc pl-4">
+                                <li>Successful multi year engagements in utilities, logistics, retail, and multinational environments</li>
+                                <li>Demonstrated reduction of non technical losses, fraud exposure, and internal leakage</li>
+                                <li>Trusted by government linked and international corporations</li>
+                                <li>Diligent investigations and experienced investigators</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CORE DIVISIONS & OFFERINGS (NO LINKS) ==================== -->
+        <section class="bg-slate-100/60 py-24 text-slate-900 border-b border-slate-200">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <p class="section-kicker text-red-700 font-bold uppercase tracking-wider text-xs">Our Core Practice Areas</p>
+                    <h2 class="mt-2 font-display text-3xl font-semibold sm:text-5xl text-slate-900">Risk Consulting Pillars</h2>
+                    <p class="mt-4 text-slate-600 text-sm font-body">Integrated advisory services tailored to safeguard corporate integrity, supply chain continuity, and organizational assets.</p>
+                </div>
+
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2 items-stretch">
+                    
+                    <!-- Pillar 01: Risk Management & Consultancy -->
+                    <div class="asia-pillar-card shadow-sm overflow-hidden">
+                        <div class="card-top-accent"></div>
+                        <div class="h-60 overflow-hidden bg-slate-200">
+                            <img src="images/orbitasiaoverview-risk-consulting.png" onerror="this.src='images/security-division.jpg'" alt="Risk Management & Consultancy" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 md:p-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-bold uppercase tracking-widest text-red-700 font-display">Advisory Domain</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 font-display font-bold text-xs text-slate-600">01</span>
+                            </div>
+                            <h3 class="font-display font-bold text-2xl text-slate-900">Risk Management &amp; Consultancy</h3>
+                            <p class="mt-4 text-xs md:text-sm text-slate-600 leading-relaxed font-body">
+                                Comprehensive threat assessments, physical site surveys, loss prevention audits, and customized defense architecture designed to resolve site-specific operational vulnerabilities.
+                            </p>
+                            <p class="mt-3 text-xs text-slate-500 leading-relaxed font-body">
+                                Assisting organizations in achieving compliance with TAPA (Transport Asset Protection Association) and Responsible Business Alliance (RBA) global standards.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 02: Security Investigations -->
+                    <div class="asia-pillar-card shadow-sm overflow-hidden">
+                        <div class="card-top-accent"></div>
+                        <div class="h-60 overflow-hidden bg-slate-200">
+                            <img src="images/orbitasiaoverview-investigations.png" onerror="this.src='images/security-division.jpg'" alt="Security Investigations" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 md:p-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-bold uppercase tracking-widest text-red-700 font-display">Advisory Domain</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 font-display font-bold text-xs text-slate-600">02</span>
+                            </div>
+                            <h3 class="font-display font-bold text-2xl text-slate-900">Security Investigations &amp; Forensic Audits</h3>
+                            <p class="mt-4 text-xs md:text-sm text-slate-600 leading-relaxed font-body">
+                                Confidential corporate investigations addressing internal theft, supply chain leaks, procurement fraud, organized retail crime, and employee misconduct via forensic intelligence.
+                            </p>
+                            <p class="mt-3 text-xs text-slate-500 leading-relaxed font-body">
+                                Conducted under strict non-disclosure protocols with legally admissible chain-of-custody documentation to protect executive decision-making.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 03: Threat Intelligence -->
+                    <div class="asia-pillar-card shadow-sm overflow-hidden">
+                        <div class="card-top-accent"></div>
+                        <div class="h-60 overflow-hidden bg-slate-200">
+                            <img src="images/orbitasiaoverview-threat-intelligence.png" onerror="this.src='images/security-division.jpg'" alt="Threat Intelligence & Risk Profiling" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 md:p-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-bold uppercase tracking-widest text-amber-700 font-display">Advisory Domain</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 font-display font-bold text-xs text-slate-600">03</span>
+                            </div>
+                            <h3 class="font-display font-bold text-2xl text-slate-900">Threat Intelligence &amp; Risk Profiling</h3>
+                            <p class="mt-4 text-xs md:text-sm text-slate-600 leading-relaxed font-body">
+                                Proactive threat profiling, regional supply route threat tracking, executive background screenings, and early warning systems designed to mitigate geopolitical and operational exposure.
+                            </p>
+                            <p class="mt-3 text-xs text-slate-500 leading-relaxed font-body">
+                                Provides decision-makers with structured intelligence feeds to safeguard key personnel, trade secrets, and corporate reputations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 04: Specialised Training Programs -->
+                    <div class="asia-pillar-card shadow-sm overflow-hidden">
+                        <div class="card-top-accent"></div>
+                        <div class="h-60 overflow-hidden bg-slate-200">
+                            <img src="images/orbitasiaoverview-training-fsr-tsr.png" onerror="this.src='images/security-division.jpg'" alt="Facility & Trucking Security Requirements Training" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 md:p-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-bold uppercase tracking-widest text-amber-700 font-display">Advisory Domain</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-100 font-display font-bold text-xs text-slate-600">04</span>
+                            </div>
+                            <h3 class="font-display font-bold text-2xl text-slate-900">Certified Training Programs (FSR &amp; TSR)</h3>
+                            <p class="mt-4 text-xs md:text-sm text-slate-600 leading-relaxed font-body">
+                                Specialised training courses covering Facility Security Requirements (FSR) and Trucking Security Requirements (TSR) designed for warehouse managers, logistics controllers, and security officers.
+                            </p>
+                            <p class="mt-3 text-xs text-slate-500 leading-relaxed font-body">
+                                Prepares internal teams to build, maintain, and audit international supply chain security benchmarks.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FOOTER ==================== -->
+        <footer id="contact" class="bg-slate-950 py-20 text-white border-t border-white/10">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+                <div class="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_1fr]">
+                    <!-- Column 1: Text Branding & Tagline -->
+                    <div>
+                        <div class="font-display text-2xl font-bold tracking-tight text-white">
+                            Orbit Group <span class="text-xs font-normal uppercase tracking-widest block text-slate-400 mt-1">Of Companies</span>
+                        </div>
+                        <h2 class="mt-8 font-display text-3xl font-semibold sm:text-4xl">Protect what matters. See what's next.</h2>
+                        <p class="mt-4 max-w-sm text-slate-400 font-body text-sm">
+                            Speak with Orbit Group about integrated security, risk intelligence and technology for your organisation.
+                        </p>
+                        <div class="mt-6">
+                            <a href="contact.html" class="orbit-cta inline-flex items-center gap-2">
+                                Contact Us &nearr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Divisions & Explore Links -->
+                    <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8 lg:border-t-0 lg:pt-0">
+                        <div>
+                            <p class="section-kicker text-amber-400">Divisions</p>
+                            <ul class="mt-4 space-y-3 text-sm text-slate-400 font-body">
+                                <li><a href="security-services.html" class="hover:text-white transition-colors">Orbit Force Security</a></li>
+                                <li><a href="risk-consulting.html" class="hover:text-white transition-colors">Orbit Asia Risk Consultancy</a></li>
+                                <li><a href="index.html#technology" class="hover:text-white transition-colors">Orbit Global Technologies</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="section-kicker text-amber-400">Explore</p>
+                            <ul class="mt-4 space-y-3 text-sm text-slate-400 font-body">
+                                <li><a href="about-orbit.html" class="hover:text-white transition-colors">Our Story</a></li>
+                                <li><a href="index.html#industries" class="hover:text-white transition-colors">Industries</a></li>
+                                <li><a href="index.html#clients" class="hover:text-white transition-colors">Clients</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Group Contact Info (Bottom Right) -->
+                    <div class="border-t border-white/10 pt-8 lg:border-t-0 lg:pt-0">
+                        <p class="section-kicker text-amber-400">Group Contact</p>
+                        
+                        <div class="mt-6 space-y-6">
+                            <!-- Headquarters -->
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-amber-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                </div>
+                                <div>
+                                    <span class="block text-xs uppercase tracking-widest text-slate-400 font-display font-semibold">Group Headquarters</span>
+                                    <p class="mt-1 text-sm text-slate-300 font-body leading-relaxed">
+                                        36, Jalan Jubli Perak 22/1,<br>
+                                        Section 22, Putri Ayu,<br>
+                                        40700 Shah Alam, Selangor
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-amber-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                </div>
+                                <div>
+                                    <span class="block text-xs uppercase tracking-widest text-slate-400 font-display font-semibold">Email</span>
+                                    <a href="mailto:ceo@orbitgroup.my" class="mt-1 block text-sm text-slate-300 hover:text-white transition-colors font-body">
+                                        ceo@orbitgroup.my
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 flex flex-wrap justify-between gap-4 border-t border-white/10 pt-6 text-xs uppercase tracking-widest text-slate-500 font-display">
+                    <span>&copy; 2026 Orbit Group of Companies</span>
+                    <span>Security &middot; Risk Intelligence &middot; Technology</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

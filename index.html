@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit Group | Security, Risk Intelligence & Technology</title>
+    <meta name="description" content="Integrated security, risk intelligence and technology for Malaysia's leading organisations.">
+    <meta name="author" content="Orbit Group">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Orbit Group of Companies">
+    <meta property="og:description" content="Integrated security, risk intelligence and technology for Malaysia's leading organisations.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Design System Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Continuous Infinite Logo Marquee Animation */
+        @keyframes logo-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-logo-scroll {
+            display: flex;
+            width: max-content;
+            animation: logo-scroll 40s linear infinite;
+        }
+        .animate-logo-scroll:hover {
+            animation-play-state: paused;
+        }
+
+        /* Nav Dropdown Styling */
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .dropdown-parent:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .nested-dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(8px);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .nested-dropdown-parent:hover .nested-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-white font-sans antialiased">
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
+        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
+            <a href="index.html" aria-label="Orbit Group Home">
+                <img src="images/orbit_newlogo.png" alt="Orbit Group of Companies" class="h-14 w-auto">
+            </a>
+
+            <!-- Desktop Navigation with Multi-level Dropdowns -->
+            <nav aria-label="Primary Navigation" class="hidden items-center gap-6 lg:flex">
+                <a href="index.html" class="text-sm font-semibold text-red-700 transition-colors py-2 px-3">Home</a>
+
+                <!-- Our Story Dropdown -->
+                <div class="dropdown-parent relative py-6">
+                    <a href="about-orbit.html" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
+                        Our Story
+                        <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <div class="dropdown-menu absolute left-0 top-full w-56 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
+                        <a href="about-orbit.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">About Orbit Group</a>
+                        <a href="why-orbit.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Why Orbit Group?</a>
+                        <a href="our-values.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Our Values</a>
+                    </div>
+                </div>
+
+                <!-- Security Services Dropdown -->
+                <div class="dropdown-parent relative py-6">
+                    <a href="security-services.html" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
+                        Security Services
+                        <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <div class="dropdown-menu absolute left-0 top-full w-60 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
+                        <a href="orbit-force-overview.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Orbit Force Overview</a>
+                        <a href="security-services.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Security Services</a>
+                    </div>
+                </div>
+
+                <!-- Risk Consulting Dropdown -->
+                <div class="dropdown-parent relative py-6">
+                    <a href="risk-consulting.html" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
+                        Risk Consulting
+                        <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <div class="dropdown-menu absolute left-0 top-full w-64 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
+                        <a href="orbit-asia-overview.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Orbit Asia Overview</a>
+                        <a href="risk-consulting.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Risk Consulting Services</a>
+                        
+                        <!-- Nested Submenu for Training -->
+                        <div class="nested-dropdown-parent relative">
+                            <a href="#" class="flex items-center justify-between px-5 py-2.5 hover:bg-slate-200/60 text-red-700 transition-colors">
+                                Training
+                                <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </a>
+                            <div class="nested-dropdown-menu absolute left-full top-0 w-72 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md -ml-1">
+                                <a href="fsr.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Facility Security Requirements (FSR)</a>
+                                <a href="tsr.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Trucking Security Requirements (TSR)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://www.orbitglobaltechnology.com/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">Technology &nearr;</a>
+                <a href="#industries" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">Industries We Serve</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden lg:block">
+                <a href="contact.html" class="orbit-cta inline-flex items-center gap-2">
+                    Contact Us &nearr;
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==================== HERO SECTION ==================== -->
+        <section id="top" class="orbit-hero relative min-h-[92vh] overflow-hidden bg-slate-950 text-white pt-20 flex flex-col justify-between">
+            
+            <!-- Background Visuals -->
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <img 
+                    id="hero-photo" 
+                    src="images/security-division.jpg" 
+                    alt="Orbit Force Security Personnel" 
+                    class="hero-photo is-active absolute inset-0 h-full w-full object-cover opacity-60 transition-opacity duration-300"
+                >
+                <div class="hero-photo-wash absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+                <div class="hero-grid absolute inset-0 opacity-40"></div>
+                <div class="hero-scanline"></div>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="hero-content relative z-10 mx-auto max-w-7xl px-6 lg:px-12 pt-16 w-full">
+                <p id="hero-kicker" class="section-kicker flex items-center gap-3 text-amber-400">
+                    <span class="h-px w-8 bg-amber-400"></span> Integrated command &middot; Malaysia
+                </p>
+
+                <h1 id="hero-title" class="mt-6 max-w-2xl font-display text-5xl font-bold leading-tight sm:text-7xl">
+                    Orbit Group of Companies
+                </h1>
+
+                <p id="hero-subtitle" class="mt-6 max-w-lg text-lg text-slate-300 font-body">
+                    Integrated Security, Risk Intelligence &amp; Technology for Malaysia's Leading Organisations
+                </p>
+
+                <div class="mt-8">
+                    <a href="#group" class="orbit-cta inline-flex items-center gap-2">
+                        More About Us &darr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Three Divisions Bar -->
+            <div class="hero-divisions relative z-10 mx-auto max-w-7xl px-6 lg:px-12 w-full mt-12 mb-4">
+                <div class="grid grid-cols-1 sm:grid-cols-3">
+                    <div class="hero-division-control is-active flex items-center cursor-pointer transition-all hover:bg-white/5 p-4 rounded-t sm:rounded-none">
+                        <span class="hero-division-number">01</span>
+                        <img src="images/3-OrbitForce.png" alt="Orbit Force Security" class="h-12 w-auto object-contain">
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-display">Protection Services</div>
+                    </div>
+                    <div class="hero-division-control flex items-center cursor-pointer transition-all hover:bg-white/5 p-4">
+                        <span class="hero-division-number">02</span>
+                        <img src="images/orbit-asia.png" alt="Orbit Asia Risk Consultancy" class="h-12 w-auto object-contain">
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-display">Intelligence &amp; Advisory</div>
+                    </div>
+                    <div class="hero-division-control flex items-center cursor-pointer transition-all hover:bg-white/5 p-4">
+                        <span class="hero-division-number">03</span>
+                        <img src="images/orbit_tech.png" alt="Orbit Global Technologies" class="h-12 w-auto object-contain">
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-display">Intelligent Digital Platforms</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== THE GROUP ==================== -->
+        <section id="group" class="bg-white py-24 text-slate-900">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+                <div class="grid gap-8 border-b border-slate-200 pb-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+                    <div>
+                        <p class="section-kicker text-red-700">The Group</p>
+                        <h2 class="mt-3 font-display text-4xl font-semibold sm:text-5xl">Three complementary business arms.</h2>
+                    </div>
+                    <p class="text-lg text-slate-600 font-body">
+                        One unified commitment to protecting people, assets, operations, information and reputations in an increasingly complex world.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== THREE DIVISIONS ==================== -->
+        <section id="divisions" class="bg-slate-950 text-white">
+            <!-- 01: Orbit Force Security -->
+            <article id="security" class="division-row border-b border-white/10">
+                <div class="mx-auto grid max-w-7xl lg:grid-cols-2">
+                    <div class="flex flex-col justify-center px-6 py-16 lg:px-12">
+                        <div class="flex items-start justify-between">
+                            <span class="section-kicker text-amber-400">01 &middot; Protection Services</span>
+                            <img src="images/3-OrbitForce.png" alt="Orbit Force Security Logo" class="h-14 w-auto object-contain">
+                        </div>
+                        <h3 class="mt-8 font-display text-4xl font-semibold sm:text-5xl">Orbit Force Security</h3>
+                        <p class="mt-5 text-base leading-relaxed text-slate-300 font-body">
+                            Professional security personnel, specialised protection services and technology-enabled solutions designed to safeguard people, premises, assets and operations.
+                        </p>
+                        <div class="mt-8">
+                            <a href="orbit-force-overview.html" class="division-link inline-flex items-center gap-2">
+                                Explore Security Services &nearr;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative min-h-[380px] lg:min-h-[540px] overflow-hidden">
+                        <img src="images/security-division.jpg" alt="Orbit Force security officers protecting a corporate site" class="division-image absolute inset-0 h-full w-full object-cover">
+                    </div>
+                </div>
+            </article>
+
+            <!-- 02: Orbit Asia Risk Consultancy -->
+            <article id="risk" class="division-row border-b border-white/10">
+                <div class="mx-auto grid max-w-7xl lg:grid-cols-2">
+                    <div class="flex flex-col justify-center px-6 py-16 lg:order-2 lg:px-12">
+                        <div class="flex items-start justify-between">
+                            <span class="section-kicker text-amber-400">02 &middot; Intelligence &amp; Advisory</span>
+                            <img src="images/orbit-asia.png" alt="Orbit Asia Logo" class="h-14 w-auto object-contain">
+                        </div>
+                        <h3 class="mt-8 font-display text-4xl font-semibold sm:text-5xl">Orbit Asia Risk Consultancy</h3>
+                        <p class="mt-5 text-base leading-relaxed text-slate-300 font-body">
+                            Investigations, due diligence, intelligence and strategic risk advisory that help organisations understand threats, manage exposure and act with confidence.
+                        </p>
+                        <div class="mt-8">
+                            <a href="orbit-asia-overview.html" class="division-link inline-flex items-center gap-2">
+                                Explore Risk Consulting &nearr;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative min-h-[380px] lg:order-1 lg:min-h-[540px] overflow-hidden">
+                        <img src="images/risk-division.jpg" alt="Orbit Asia analysts reviewing risk intelligence" class="division-image absolute inset-0 h-full w-full object-cover">
+                    </div>
+                </div>
+            </article>
+
+            <!-- 03: Orbit Global Technologies -->
+            <article id="technology" class="division-row border-b border-white/10">
+                <div class="mx-auto grid max-w-7xl lg:grid-cols-2">
+                    <div class="flex flex-col justify-center px-6 py-16 lg:px-12">
+                        <div class="flex items-start justify-between">
+                            <span class="section-kicker text-amber-400">03 &middot; Intelligent Digital Platforms</span>
+                            <img src="images/orbit_tech.png" alt="Orbit Global Technologies Logo" class="h-14 w-auto object-contain">
+                        </div>
+                        <h3 class="mt-8 font-display text-4xl font-semibold sm:text-5xl">Orbit Global Technologies</h3>
+                        <p class="mt-5 text-base leading-relaxed text-slate-300 font-body">
+                            Intelligent digital platforms for security, workforce and premises operations, providing stronger visibility, smarter control and greater operational efficiency.
+                        </p>
+                        <div class="mt-8">
+                            <a href="https://www.orbitglobaltechnology.com/" class="division-link inline-flex items-center gap-2">
+                                Explore Technology &nearr;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative min-h-[380px] lg:min-h-[540px] overflow-hidden">
+                        <img src="images/technology-division.jpg" alt="Orbit Global Technologies command centre" class="division-image absolute inset-0 h-full w-full object-cover">
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ==================== INDUSTRIES WE SERVE ==================== -->
+        <section id="industries" class="bg-white py-24 text-slate-900">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+                <p class="section-kicker text-red-700">Industries We Serve</p>
+                <div class="mt-3 grid gap-8 lg:grid-cols-2 lg:items-end">
+                    <h2 class="font-display text-4xl font-semibold sm:text-5xl">Integrated solutions for high-risk, high-value environments.</h2>
+                    <p class="text-slate-600 font-body">
+                        Orbit Group supports organisations across corporate, industrial, logistics, retail, public sector and critical infrastructure environments through an integrated combination of security operations, risk consultancy, intelligence-led protection and smart technology solutions.
+                    </p>
+                </div>
+
+                <!-- 8 Industries Grid -->
+                <div class="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <!-- 01 -->
+                    <article class="industry-card group relative overflow-hidden rounded-lg bg-slate-900 text-white">
+                        <img src="images/industry-corporate.png" alt="Corporate & Commercial" class="absolute inset-0 h-full w-full object-cover opacity-40 transition-transform duration-500 group-hover:scale-105">
+                        <div class="relative flex h-full flex-col justify-end p-6">
+                            <span class="text-xs font-bold text-amber-400 font-display">01</span>
+                            <h3 class="mt-2 text-xl font-bold font-display">Corporate &amp; Commercial</h3>
+                            <p class="industry-copy mt-2 text-xs leading-relaxed text-slate-300 font-body">Office towers, headquarters, business parks and commercial buildings requiring access control, visitor management and professional on-site protection.</p>
+                        </div>
+                    </article>
+
+                    <!-- 02 -->
+                    <article class="industry-card group relative overflow-hidden rounded-lg bg-slate-900 text-white">
+                        <img src="images/industry-manufacturing.png" alt="Manufacturing & Industrial" class="absolute inset-0 h-full w-full object-cover opacity-40 transition-transform duration-500 group-hover:scale-105">
+                        <div class="relative flex h-full flex-col justify-end p-6">
+                            <span class="text-xs font-bold text-amber-400 font-display">02</span>
+                            <h3 class="mt-2 text-xl font-bold font-display">Manufacturing &amp; Industrial</h3>
+                            <p class="industry-copy mt-2 text-xs leading-relaxed text-slate-300 font-body">Factories, plants and production facilities with workforce movement, asset protection and operational security needs.</p>
+                        </div>
+                    </article>
+
+                    <!-- 03 -->
+                    <article class="industry-card group relative overflow-hidden rounded-lg bg-slate-900 text-white">
+                        <img src="images/industry-logistics.png" alt="Logistics & Supply Chain" class="absolute inset-0 h-full w-full object-cover opacity-40 transition-transform duration-500 group-hover:scale-105">
+                        <div class="relative flex h-full flex-col justify-end p-6">
+                            <span class="text-xs font-bold text-amber-400 font-display">03</span>
+                            <h3 class="mt-2 text-xl font-bold font-display">Logistics &amp; Supply Chain</h3>
+                            <p class="industry-copy mt-2 text-xs leading-relaxed text-slate-300 font-body">Warehouses, distribution centres and transport hubs requiring cargo protection, shrinkage control and site monitoring.</p>
+                        </div>
+                    </article>
+
+                    <!-- 04 -->
+                    <article class="industry-card group relative overflow-hidden rounded-lg bg-slate-900 text-white">
+                        <img src="images/industry-retail.png" alt="Retail & Shopping Complexes" class="absolute inset-0 h-full w-full object-cover opacity-40 transition-transform duration-500 group-hover:scale-105">
+                        <div class="relative flex h-full flex-col justify-end p-6">
+                            <span class="text-xs font-bold text-amber-400 font-display">04</span>
+                            <h3 class="mt-2 text-xl font-bold font-display">Retail &amp; Shopping Complexes</h3>
+                            <p class="industry-copy mt-2 text-xs leading-relaxed text-slate-300 font-body">Retail chains, malls and outlets supported through loss prevention, surveillance, patrol and internal theft control.</p>
+                        </div>
+                    </article>
+
+                    <!-- 05 -->
+                    <article class="industry-card group relative overflow-hidden rounded-lg bg-slate-900 text-white">
+                        <img src="images/industry-government.png" alt="Government & Public Sector" class="absolute inset-0 h-full w-full object-cover opacity-40 transition-transform duration-500 group-hover:scale-105">
+                        <div class="relative flex h-full flex-col justify-end p-6">
+                            <span class="text-xs font-bold text-amber-400 font-display">05</span>
+                            <h3 class="mt-2 text-xl font-bold font-display">Government &amp; Public Sector</h3>
+                            <p class="industry-copy mt-2 text-xs leading-relaxed text-slate-300 font-body">Schools, hospitals, administrative buildings and public facilities requiring disciplined security operations.</p>
+                        </div>
+                    </article>
+
+                    <!-- 06 -->
+                    <article class="industry-card group relative overflow-hidden rounded-lg bg-slate-900 text-white">
+                        <img src="images/industry-healthcare.png" alt="Healthcare & Hospitals" class="absolute inset-0 h-full w-full object-cover opacity-40 transition-transform duration-500 group-hover:scale-105">
+                        <div class="relative flex h-full flex-col justify-end p-6">
+                            <span class="text-xs font-bold text-amber-400 font-display">06</span>
+                            <h3 class="mt-2 text-xl font-bold font-display">Healthcare &amp; Hospitals</h3>
+                            <p class="industry-copy mt-2 text-xs leading-relaxed text-slate-300 font-body">Medical facilities requiring visitor control, emergency support, patient safety and protection of sensitive areas.</p>
+                        </div>
+                    </article>
+
+                    <!-- 07 -->
+                    <article class="industry-card group relative overflow-hidden rounded-lg bg-slate-900 text-white">
+                        <img src="images/industry-energy.png" alt="Oil, Gas & Energy" class="absolute inset-0 h-full w-full object-cover opacity-40 transition-transform duration-500 group-hover:scale-105">
+                        <div class="relative flex h-full flex-col justify-end p-6">
+                            <span class="text-xs font-bold text-amber-400 font-display">07</span>
+                            <h3 class="mt-2 text-xl font-bold font-display">Oil, Gas &amp; Energy</h3>
+                            <p class="industry-copy mt-2 text-xs leading-relaxed text-slate-300 font-body">Energy infrastructure, utilities and remote project sites requiring risk control and critical asset protection.</p>
+                        </div>
+                    </article>
+
+                    <!-- 08 -->
+                    <article class="industry-card group relative overflow-hidden rounded-lg bg-slate-900 text-white">
+                        <img src="images/industry-vip.png" alt="Events & VIP Protection" class="absolute inset-0 h-full w-full object-cover opacity-40 transition-transform duration-500 group-hover:scale-105">
+                        <div class="relative flex h-full flex-col justify-end p-6">
+                            <span class="text-xs font-bold text-amber-400 font-display">08</span>
+                            <h3 class="mt-2 text-xl font-bold font-display">Events &amp; VIP Protection</h3>
+                            <p class="industry-copy mt-2 text-xs leading-relaxed text-slate-300 font-body">Corporate events, VIP functions and public gatherings requiring crowd management and rapid-response coordination.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== OUR CLIENTS (INFINITE LOGO MARQUEE) ==================== -->
+        <section id="clients" class="border-y border-slate-200 bg-slate-100 py-20 text-slate-900 overflow-hidden">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12 mb-12">
+                <p class="section-kicker text-red-700">Our Clients</p>
+                <h2 class="mt-3 font-display text-3xl font-semibold sm:text-4xl">
+                    Trusted Security Partner for Public &amp; Private Sector Organisations
+                </h2>
+            </div>
+
+            <!-- Moving Logo Track -->
+            <div class="relative w-full overflow-hidden py-4">
+                <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-slate-100 to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-slate-100 to-transparent z-10 pointer-events-none"></div>
+
+                <div class="animate-logo-scroll flex items-center gap-6">
+                    <!-- FIRST SET (CLIENTS 1 - 22) -->
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-1.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-2.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-3.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-4.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-5.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-6.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-7.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-8.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-9.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-10.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-11.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-12.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-13.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-14.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-15.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-16.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-17.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-18.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-19.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-20.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-21.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-22.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+
+                    <!-- SECOND SET (DUPLICATED FOR SEAMLESS INFINITE LOOP) -->
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-1.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-2.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-3.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-4.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-5.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-6.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-7.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-8.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-9.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-10.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-11.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-12.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-13.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-14.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-15.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-16.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-17.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-18.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-19.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-20.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-21.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                    <div class="bg-white border border-slate-200 rounded-md shadow-sm min-w-[200px] h-28 flex items-center justify-center p-4"><img src="images/client-22.png" alt="Client Logo" class="max-h-16 max-w-[160px] object-contain" onerror="this.closest('div').style.display='none'"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FOOTER ==================== -->
+        <footer id="contact" class="bg-slate-950 py-20 text-white">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+                <div class="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_1fr]">
+                    <!-- Column 1: Text Branding & Tagline -->
+                    <div>
+                        <div class="font-display text-2xl font-bold tracking-tight text-white">
+                            Orbit Group <span class="text-xs font-normal uppercase tracking-widest block text-slate-400 mt-1">Of Companies</span>
+                        </div>
+                        <h2 class="mt-8 font-display text-3xl font-semibold sm:text-4xl">Protect what matters. See what's next.</h2>
+                        <p class="mt-4 max-w-sm text-slate-400 font-body text-sm">
+                            Speak with Orbit Group about integrated security, risk intelligence and technology for your organisation.
+                        </p>
+                        <div class="mt-6">
+                            <a href="contact.html" class="orbit-cta inline-flex items-center gap-2">
+                                Contact Us &nearr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Divisions & Explore Links -->
+                    <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8 lg:border-t-0 lg:pt-0">
+                        <div>
+                            <p class="section-kicker text-amber-400">Divisions</p>
+                            <ul class="mt-4 space-y-3 text-sm text-slate-400 font-body">
+                                <li><a href="security-services.html" class="hover:text-white transition-colors">Orbit Force Security</a></li>
+                                <li><a href="risk-consulting.html" class="hover:text-white transition-colors">Orbit Asia Risk Consultancy</a></li>
+                                <li><a href="https://www.orbitglobaltechnology.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Orbit Global Technologies &nearr;</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="section-kicker text-amber-400">Explore</p>
+                            <ul class="mt-4 space-y-3 text-sm text-slate-400 font-body">
+                                <li><a href="about-orbit.html" class="hover:text-white transition-colors">Our Story</a></li>
+                                <li><a href="#industries" class="hover:text-white transition-colors">Industries</a></li>
+                                <li><a href="#clients" class="hover:text-white transition-colors">Clients</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Group Contact Info (Bottom Right) -->
+                    <div class="border-t border-white/10 pt-8 lg:border-t-0 lg:pt-0">
+                        <p class="section-kicker text-amber-400">Group Contact</p>
+                        
+                        <div class="mt-6 space-y-6">
+                            <!-- Headquarters -->
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-amber-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                </div>
+                                <div>
+                                    <span class="block text-xs uppercase tracking-widest text-slate-400 font-display font-semibold">Group Headquarters</span>
+                                    <p class="mt-1 text-sm text-slate-300 font-body leading-relaxed">
+                                        36, Jalan Jubli Perak 22/1,<br>
+                                        Section 22, Putri Ayu,<br>
+                                        40700 Shah Alam, Selangor
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-amber-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                </div>
+                                <div>
+                                    <span class="block text-xs uppercase tracking-widest text-slate-400 font-display font-semibold">Email</span>
+                                    <a href="mailto:ceo@orbitgroup.my" class="mt-1 block text-sm text-slate-300 hover:text-white transition-colors font-body">
+                                        ceo@orbitgroup.my
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 flex flex-wrap justify-between gap-4 border-t border-white/10 pt-6 text-xs uppercase tracking-widest text-slate-500 font-display">
+                    <span>&copy; 2026 Orbit Group of Companies</span>
+                    <span>Security &middot; Risk Intelligence &middot; Technology</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Dynamic Hero Interaction Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const divisionData = [
+                {
+                    image: "images/security-division.jpg",
+                    title: "Orbit Group of Companies",
+                    subtitle: "Integrated Security, Risk Intelligence & Technology for Malaysia's Leading Organisations",
+                    kicker: "Integrated command &middot; Malaysia"
+                },
+                {
+                    image: "images/risk-division.jpg",
+                    title: "Orbit Asia Risk Consultancy",
+                    subtitle: "Investigations, due diligence, intelligence and strategic risk advisory across Asia.",
+                    kicker: "Intelligence & Advisory &middot; Malaysia"
+                },
+                {
+                    image: "images/technology-division.jpg",
+                    title: "Orbit Global Technologies",
+                    subtitle: "Intelligent digital platforms for security, workforce and premises operations.",
+                    kicker: "Intelligent Digital Platforms &middot; Malaysia"
+                }
+            ];
+
+            const controls = document.querySelectorAll('.hero-division-control');
+            const heroPhoto = document.getElementById('hero-photo');
+            const heroTitle = document.getElementById('hero-title');
+            const heroSubtitle = document.getElementById('hero-subtitle');
+            const heroKicker = document.getElementById('hero-kicker');
+
+            controls.forEach((control, index) => {
+                control.addEventListener('click', () => {
+                    controls.forEach(c => c.classList.remove('is-active'));
+                    control.classList.add('is-active');
+
+                    const data = divisionData[index];
+
+                    if (heroPhoto) {
+                        heroPhoto.classList.add('opacity-0');
+                        setTimeout(() => {
+                            heroPhoto.src = data.image;
+                            if (heroTitle) heroTitle.textContent = data.title;
+                            if (heroSubtitle) heroSubtitle.textContent = data.subtitle;
+                            if (heroKicker) heroKicker.innerHTML = `<span class="h-px w-8 bg-amber-400"></span> ${data.kicker}`;
+                            heroPhoto.classList.remove('opacity-0');
+                        }, 150);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
