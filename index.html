@@ -30,6 +30,20 @@
             visibility: visible;
             transform: translateY(0);
         }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 35s linear infinite;
+        }
+        .animate-marquee-fast {
+            display: flex;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+        }
         /* Hide scrollbars for smooth sliding containers */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
@@ -200,6 +214,7 @@
             <div class="relative w-full max-w-7xl mx-auto px-6 lg:px-12">
                 <div id="service-track" class="flex gap-8 items-stretch overflow-x-auto no-scrollbar scroll-smooth py-4">
                     
+                    <!-- Original 5 Services -->
                     <div class="service-slide flex-shrink-0 w-80 md:w-96 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
                         <div>
                             <div class="h-48 overflow-hidden">
@@ -289,8 +304,8 @@
 
                 <!-- Navigation Arrows -->
                 <div class="flex justify-center gap-3 mt-8">
-                    <button id="prev-service-btn" class="w-10 h-10 rounded-lg border border-slate-300 bg-white hover:bg-red-700 hover:text-white text-slate-700 flex items-center justify-center transition-colors shadow-sm focus:outline-none cursor-pointer">&lsaquo;</button>
-                    <button id="next-service-btn" class="w-10 h-10 rounded-lg border border-slate-300 bg-white hover:bg-red-700 hover:text-white text-slate-700 flex items-center justify-center transition-colors shadow-sm focus:outline-none cursor-pointer">&rsaquo;</button>
+                    <button id="prev-service-btn" class="w-10 h-10 rounded-lg border border-slate-300 bg-white hover:bg-red-700 hover:text-white text-slate-700 flex items-center justify-center transition-colors shadow-sm focus:outline-none">&lsaquo;</button>
+                    <button id="next-service-btn" class="w-10 h-10 rounded-lg border border-slate-300 bg-white hover:bg-red-700 hover:text-white text-slate-700 flex items-center justify-center transition-colors shadow-sm focus:outline-none">&rsaquo;</button>
                 </div>
             </div>
         </section>
@@ -403,79 +418,6 @@
             </div>
         </section>
 
-        <!-- ==================== SECTOR OF INVOLVEMENT ==================== -->
-        <section id="sectors" class="py-24 bg-slate-950 text-white border-b border-white/10 overflow-hidden relative">
-            <div class="absolute inset-0 z-0 pointer-events-none">
-                <img src="images/security-division.jpg" alt="Background" class="h-full w-full object-cover opacity-25">
-                <div class="absolute inset-0 bg-gradient-to-b from-slate-950/90 via-slate-950/80 to-slate-950/90"></div>
-            </div>
-            <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 mb-16">
-                <div class="text-center max-w-2xl mx-auto">
-                    <span class="text-xs font-bold uppercase tracking-widest text-red-500 font-display">Coverage Scope</span>
-                    <h2 class="mt-2 font-display text-3xl sm:text-5xl font-bold tracking-tight text-white uppercase">SECTOR OF INVOLVEMENT</h2>
-                    <p class="mt-2 text-xs text-slate-300 font-body uppercase tracking-wider">OUR SECTORS OF INVOLVEMENT ARE AS FOLLOWS: &ndash;</p>
-                </div>
-            </div>
-
-            <!-- Sectors Track with Manual Arrows -->
-            <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12">
-                <div id="sector-track" class="flex gap-8 items-stretch overflow-x-auto no-scrollbar scroll-smooth py-4">
-                    
-                    <div class="sector-slide flex-shrink-0 w-80 md:w-96 bg-slate-900/90 rounded-2xl border border-white/10 overflow-hidden shadow-md">
-                        <div class="h-48 overflow-hidden">
-                            <img src="images/sector-commercial.jpg" alt="Commercial Sector" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="font-display font-bold text-lg text-white mb-2">Commercial Sector</h3>
-                            <ul class="space-y-1.5 text-xs text-slate-300 font-body leading-relaxed">
-                                <li>&bull; Manufacturing Company</li>
-                                <li>&bull; Hotels</li>
-                                <li>&bull; Office Building</li>
-                                <li>&bull; Shopping Complex</li>
-                                <li>&bull; Logistics / Warehousing</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="sector-slide flex-shrink-0 w-80 md:w-96 bg-slate-900/90 rounded-2xl border border-white/10 overflow-hidden shadow-md">
-                        <div class="h-48 overflow-hidden">
-                            <img src="images/sector-public.jpg" alt="Public Sector" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="font-display font-bold text-lg text-white mb-2">Public Sector</h3>
-                            <ul class="space-y-1.5 text-xs text-slate-300 font-body leading-relaxed">
-                                <li>&bull; Government Office</li>
-                                <li>&bull; School, Colleges &amp; Universities</li>
-                                <li>&bull; Bank, National Building</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="sector-slide flex-shrink-0 w-80 md:w-96 bg-slate-900/90 rounded-2xl border border-white/10 overflow-hidden shadow-md">
-                        <div class="h-48 overflow-hidden">
-                            <img src="images/sector-residential.jpg" alt="Residential Sector" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="font-display font-bold text-lg text-white mb-2">Residential Sector</h3>
-                            <ul class="space-y-1.5 text-xs text-slate-300 font-body leading-relaxed">
-                                <li>&bull; Private Homes</li>
-                                <li>&bull; VIP Homes</li>
-                                <li>&bull; Housing Estates</li>
-                                <li>&bull; Corporate suites</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Navigation Arrows -->
-                <div class="flex justify-center gap-3 mt-8">
-                    <button id="prev-sector-btn" class="w-10 h-10 rounded-lg border border-slate-700 bg-slate-900 hover:bg-red-700 hover:text-white text-white flex items-center justify-center transition-colors shadow-sm focus:outline-none cursor-pointer">&lsaquo;</button>
-                    <button id="next-sector-btn" class="w-10 h-10 rounded-lg border border-slate-700 bg-slate-900 hover:bg-red-700 hover:text-white text-white flex items-center justify-center transition-colors shadow-sm focus:outline-none cursor-pointer">&rsaquo;</button>
-                </div>
-            </div>
-        </section>
-
         <!-- ==================== OUR CLIENTS (CONTINUOUS MARQUEE) ==================== -->
         <section id="clients" class="py-20 bg-white border-b border-slate-200 text-center overflow-hidden">
             <div class="mx-auto max-w-7xl px-6 lg:px-12 mb-12">
@@ -551,43 +493,12 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Mobile Menu Toggle
             document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
                 var menu = document.getElementById('mobile-menu');
                 if (menu) {
                     menu.classList.toggle('hidden');
                 }
             });
-
-            // Smooth Arrow Navigation for Scope of Services
-            const serviceTrack = document.getElementById('service-track');
-            const prevServiceBtn = document.getElementById('prev-service-btn');
-            const nextServiceBtn = document.getElementById('next-service-btn');
-
-            if (serviceTrack && prevServiceBtn && nextServiceBtn) {
-                const scrollAmount = 350;
-                prevServiceBtn.addEventListener('click', () => {
-                    serviceTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-                });
-                nextServiceBtn.addEventListener('click', () => {
-                    serviceTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-                });
-            }
-
-            // Smooth Arrow Navigation for Sector of Involvement
-            const sectorTrack = document.getElementById('sector-track');
-            const prevSectorBtn = document.getElementById('prev-sector-btn');
-            const nextSectorBtn = document.getElementById('next-sector-btn');
-
-            if (sectorTrack && prevSectorBtn && nextSectorBtn) {
-                const scrollAmount = 350;
-                prevSectorBtn.addEventListener('click', () => {
-                    sectorTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-                });
-                nextSectorBtn.addEventListener('click', () => {
-                    sectorTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-                });
-            }
         });
     </script>
 </body>
