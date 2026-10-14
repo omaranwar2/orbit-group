@@ -39,11 +39,6 @@
             width: max-content;
             animation: marquee 35s linear infinite;
         }
-        .animate-marquee-fast {
-            display: flex;
-            width: max-content;
-            animation: marquee 25s linear infinite;
-        }
         /* Hide scrollbars for smooth sliding containers */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
@@ -198,9 +193,9 @@
             </div>
         </section>
 
-        <!-- ==================== SCOPE OF SERVICES ==================== -->
+        <!-- ==================== SCOPE OF SERVICES (AUTO-GLIDING WITH ARROWS) ==================== -->
         <section id="scope-of-services" class="py-24 bg-white text-slate-900 border-b border-slate-200 overflow-hidden">
-            <div class="mx-auto max-w-7xl px-6 lg:px-12 mb-16">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12 mb-12">
                 <div class="text-center max-w-3xl mx-auto">
                     <span class="text-xs font-bold uppercase tracking-widest text-red-700 font-display">Core Capabilities</span>
                     <h2 class="mt-2 font-display text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 uppercase">SCOPE OF SERVICES</h2>
@@ -210,94 +205,64 @@
                 </div>
             </div>
 
-            <!-- Services Track with Manual Arrows -->
+            <!-- Gliding Track with Arrows -->
             <div class="relative w-full max-w-7xl mx-auto px-6 lg:px-12">
-                <div id="service-track" class="flex gap-8 items-stretch overflow-x-auto no-scrollbar scroll-smooth py-4">
+                <div id="service-track" class="flex gap-8 overflow-x-auto no-scrollbar scroll-smooth py-4">
                     
-                    <!-- Original 5 Services -->
+                    <!-- Original Services -->
                     <div class="service-slide flex-shrink-0 w-80 md:w-96 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
                         <div>
-                            <div class="h-48 overflow-hidden">
-                                <img src="images/service-escort.jpg" alt="Private Escort Services" class="w-full h-full object-cover">
-                            </div>
+                            <div class="h-48 overflow-hidden"><img src="images/service-escort.jpg" alt="Private Escort Services" class="w-full h-full object-cover"></div>
                             <div class="p-6">
                                 <h3 class="font-display font-bold text-base text-slate-900 uppercase mb-2">PRIVATE ESCORT SERVICES</h3>
-                                <p class="text-xs text-slate-600 font-body leading-relaxed">
-                                    ORBIT-FORCE SECURITY SDN. BHD. typically arranges a meeting between one of its escorts and the client at the customer's house or hotel room (outcall), or at the escort's residence (incall).
-                                </p>
+                                <p class="text-xs text-slate-600 font-body leading-relaxed">ORBIT-FORCE SECURITY SDN. BHD. typically arranges a meeting between one of its escorts and the client at the customer's house or hotel room (outcall), or at the escort's residence (incall).</p>
                             </div>
                         </div>
-                        <div class="px-6 pb-6">
-                            <a href="private-escort.html" class="inline-block px-4 py-2 bg-slate-200 text-slate-800 text-xs font-semibold rounded hover:bg-red-700 hover:text-white transition-colors">More Details</a>
-                        </div>
+                        <div class="px-6 pb-6"><a href="private-escort.html" class="inline-block px-4 py-2 bg-slate-200 text-slate-800 text-xs font-semibold rounded hover:bg-red-700 hover:text-white transition-colors">More Details</a></div>
                     </div>
 
                     <div class="service-slide flex-shrink-0 w-80 md:w-96 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
                         <div>
-                            <div class="h-48 overflow-hidden">
-                                <img src="images/service-training.jpg" alt="Training" class="w-full h-full object-cover">
-                            </div>
+                            <div class="h-48 overflow-hidden"><img src="images/service-training.jpg" alt="Training" class="w-full h-full object-cover"></div>
                             <div class="p-6">
                                 <h3 class="font-display font-bold text-base text-slate-900 uppercase mb-2">TRAINING</h3>
-                                <p class="text-xs text-slate-600 font-body leading-relaxed">
-                                    Our security officers receive continuous follow up training on critical security issues and policies to make sure they are fully up to date.
-                                </p>
+                                <p class="text-xs text-slate-600 font-body leading-relaxed">Our security officers receive continuous follow up training on critical security issues and policies to make sure they are fully up to date.</p>
                             </div>
                         </div>
-                        <div class="px-6 pb-6">
-                            <a href="security-training.html" class="inline-block px-4 py-2 bg-slate-200 text-slate-800 text-xs font-semibold rounded hover:bg-red-700 hover:text-white transition-colors">More Details</a>
-                        </div>
+                        <div class="px-6 pb-6"><a href="security-training.html" class="inline-block px-4 py-2 bg-slate-200 text-slate-800 text-xs font-semibold rounded hover:bg-red-700 hover:text-white transition-colors">More Details</a></div>
                     </div>
 
                     <div class="service-slide flex-shrink-0 w-80 md:w-96 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
                         <div>
-                            <div class="h-48 overflow-hidden">
-                                <img src="images/service-canine.jpg" alt="Canine Protection" class="w-full h-full object-cover">
-                            </div>
+                            <div class="h-48 overflow-hidden"><img src="images/service-canine.jpg" alt="Canine Protection" class="w-full h-full object-cover"></div>
                             <div class="p-6">
                                 <h3 class="font-display font-bold text-base text-slate-900 uppercase mb-2">CANINE PROTECTION</h3>
-                                <p class="text-xs text-slate-600 font-body leading-relaxed">
-                                    We provide top quality personal protection dogs to protect your entire family. Obedient guardians that perform with absolute precision.
-                                </p>
+                                <p class="text-xs text-slate-600 font-body leading-relaxed">We provide top quality personal protection dogs to protect your entire family. Obedient guardians that perform with absolute precision.</p>
                             </div>
                         </div>
-                        <div class="px-6 pb-6">
-                            <a href="canine-protection.html" class="inline-block px-4 py-2 bg-slate-200 text-slate-800 text-xs font-semibold rounded hover:bg-red-700 hover:text-white transition-colors">More Details</a>
-                        </div>
+                        <div class="px-6 pb-6"><a href="canine-protection.html" class="inline-block px-4 py-2 bg-slate-200 text-slate-800 text-xs font-semibold rounded hover:bg-red-700 hover:text-white transition-colors">More Details</a></div>
                     </div>
 
                     <div class="service-slide flex-shrink-0 w-80 md:w-96 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
                         <div>
-                            <div class="h-48 overflow-hidden">
-                                <img src="images/service-gurkha.jpg" alt="Gurkha Guards Services" class="w-full h-full object-cover">
-                            </div>
+                            <div class="h-48 overflow-hidden"><img src="images/service-gurkha.jpg" alt="Gurkha Guards Services" class="w-full h-full object-cover"></div>
                             <div class="p-6">
                                 <h3 class="font-display font-bold text-base text-slate-900 uppercase mb-2">GURKHA GUARDS SERVICES</h3>
-                                <p class="text-xs text-slate-600 font-body leading-relaxed">
-                                    We select, train and deploy skilled and experienced personnel, often at short notice for high-end and critical locations.
-                                </p>
+                                <p class="text-xs text-slate-600 font-body leading-relaxed">We select, train and deploy skilled and experienced personnel, often at short notice for high-end and critical locations.</p>
                             </div>
                         </div>
-                        <div class="px-6 pb-6">
-                            <a href="gurkha-guards.html" class="inline-block px-4 py-2 bg-slate-200 text-slate-800 text-xs font-semibold rounded hover:bg-red-700 hover:text-white transition-colors">More Details</a>
-                        </div>
+                        <div class="px-6 pb-6"><a href="gurkha-guards.html" class="inline-block px-4 py-2 bg-slate-200 text-slate-800 text-xs font-semibold rounded hover:bg-red-700 hover:text-white transition-colors">More Details</a></div>
                     </div>
 
                     <div class="service-slide flex-shrink-0 w-80 md:w-96 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
                         <div>
-                            <div class="h-48 overflow-hidden">
-                                <img src="images/service-alarm.jpg" alt="Alarm and Automation Services" class="w-full h-full object-cover">
-                            </div>
+                            <div class="h-48 overflow-hidden"><img src="images/service-alarm.jpg" alt="Alarm and Automation Services" class="w-full h-full object-cover"></div>
                             <div class="p-6">
                                 <h3 class="font-display font-bold text-base text-slate-900 uppercase mb-2">ALARM AND AUTOMATION SERVICES</h3>
-                                <p class="text-xs text-slate-600 font-body leading-relaxed">
-                                    We are setting up an alarm monitoring center for centralized network security management across commercial premises.
-                                </p>
+                                <p class="text-xs text-slate-600 font-body leading-relaxed">We are setting up an alarm monitoring center for centralized network security management across commercial premises.</p>
                             </div>
                         </div>
-                        <div class="px-6 pb-6">
-                            <a href="cctv-installation.html" class="inline-block px-4 py-2 bg-slate-200 text-slate-800 text-xs font-semibold rounded hover:bg-red-700 hover:text-white transition-colors">More Details</a>
-                        </div>
+                        <div class="px-6 pb-6"><a href="cctv-installation.html" class="inline-block px-4 py-2 bg-slate-200 text-slate-800 text-xs font-semibold rounded hover:bg-red-700 hover:text-white transition-colors">More Details</a></div>
                     </div>
 
                 </div>
@@ -320,7 +285,6 @@
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                    <!-- Left Side Branches -->
                     <div class="space-y-6 flex flex-col">
                         <div class="group relative flex items-center justify-end text-right p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:bg-white transition-all duration-300 shadow-sm">
                             <div>
@@ -331,7 +295,6 @@
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
                             </div>
                         </div>
-
                         <div class="group relative flex items-center justify-end text-right p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:bg-white transition-all duration-300 shadow-sm">
                             <div>
                                 <h3 class="font-display font-bold text-base text-slate-900 group-hover:text-red-700 transition-colors">PENANG</h3>
@@ -341,7 +304,6 @@
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
                             </div>
                         </div>
-
                         <div class="group relative flex items-center justify-end text-right p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:bg-white transition-all duration-300 shadow-sm">
                             <div>
                                 <h3 class="font-display font-bold text-base text-slate-900 group-hover:text-red-700 transition-colors">MELAKA</h3>
@@ -351,7 +313,6 @@
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
                             </div>
                         </div>
-
                         <div class="group relative flex items-center justify-end text-right p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:bg-white transition-all duration-300 shadow-sm">
                             <div>
                                 <h3 class="font-display font-bold text-base text-slate-900 group-hover:text-red-700 transition-colors">NEGERI SEMBILAN</h3>
@@ -363,14 +324,12 @@
                         </div>
                     </div>
 
-                    <!-- Center Image -->
                     <div class="flex flex-col items-center justify-center text-center py-4">
                         <div class="relative w-full max-w-lg rounded-3xl p-3 bg-white border border-slate-200 shadow-xl group hover:shadow-2xl transition-all duration-500">
                             <img src="images/operation-centers.png" alt="Operation Centers Central Monitoring Station" class="w-full h-auto object-contain rounded-2xl group-hover:scale-[1.02] transition-transform duration-500">
                         </div>
                     </div>
 
-                    <!-- Right Side Branches -->
                     <div class="space-y-6 flex flex-col">
                         <div class="group relative flex items-center p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:bg-white transition-all duration-300 shadow-sm">
                             <div class="mr-4 flex-shrink-0 w-12 h-12 rounded-full bg-[#0073b7] text-white flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-red-700 transition-all duration-300">
@@ -381,7 +340,6 @@
                                 <p class="mt-1 text-xs text-slate-600 font-body leading-relaxed">NO.9, JALAN SUBANG 6, SUBANG JAYA, SELANGOR.</p>
                             </div>
                         </div>
-
                         <div class="group relative flex items-center p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:bg-white transition-all duration-300 shadow-sm">
                             <div class="mr-4 flex-shrink-0 w-12 h-12 rounded-full bg-[#0073b7] text-white flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-red-700 transition-all duration-300">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
@@ -391,7 +349,6 @@
                                 <p class="mt-1 text-xs text-slate-600 font-body leading-relaxed">15A, JALAN KLEDANG 18, TAMAN ALKAF, 30100 IPOH, PERAK.</p>
                             </div>
                         </div>
-
                         <div class="group relative flex items-center p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:bg-white transition-all duration-300 shadow-sm">
                             <div class="mr-4 flex-shrink-0 w-12 h-12 rounded-full bg-[#0073b7] text-white flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-red-700 transition-all duration-300">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
@@ -401,7 +358,6 @@
                                 <p class="mt-1 text-xs text-slate-600 font-body leading-relaxed">NO. 19A, JALAN KIKAPO 11, TAMAN DESA CEMERLANG, JOHOR.</p>
                             </div>
                         </div>
-
                         <div class="group relative flex items-center p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:bg-white transition-all duration-300 shadow-sm">
                             <div class="mr-4 flex-shrink-0 w-12 h-12 rounded-full bg-[#0073b7] text-white flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-red-700 transition-all duration-300">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
@@ -416,7 +372,7 @@
             </div>
         </section>
 
-        <!-- ==================== SECTOR OF INVOLVEMENT ==================== -->
+        <!-- ==================== SECTOR OF INVOLVEMENT (AUTO-GLIDING WITH ARROWS) ==================== -->
         <section id="sectors" class="py-24 bg-slate-50 text-slate-900 border-b border-slate-200 overflow-hidden">
             <div class="mx-auto max-w-7xl px-6 lg:px-12 mb-12">
                 <div class="text-center max-w-2xl mx-auto">
@@ -426,9 +382,9 @@
                 </div>
             </div>
 
-            <!-- Sectors Track with Manual Arrows -->
+            <!-- Gliding Track with Arrows -->
             <div class="relative w-full max-w-7xl mx-auto px-6 lg:px-12">
-                <div id="sector-track" class="flex gap-8 items-stretch overflow-x-auto no-scrollbar scroll-smooth py-4">
+                <div id="sector-track" class="flex gap-8 overflow-x-auto no-scrollbar scroll-smooth py-4">
                     
                     <div class="sector-slide flex-shrink-0 w-80 md:w-96 bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-md">
                         <div class="h-48 overflow-hidden"><img src="images/sector-commercial.jpg" alt="Commercial Sector" class="w-full h-full object-cover"></div>
@@ -479,18 +435,17 @@
             </div>
         </section>
 
-        <!-- ==================== OUR CLIENTS ==================== -->
+        <!-- ==================== OUR CLIENTS (CONTINUOUS MARQUEE - NO HOVER PAUSE) ==================== -->
         <section id="clients" class="py-20 bg-white border-b border-slate-200 text-center overflow-hidden">
             <div class="mx-auto max-w-7xl px-6 lg:px-12 mb-12">
                 <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 uppercase">OUR CLIENTS</h2>
                 <p class="mt-2 text-sm text-slate-600 font-body">Trusted Security Partner for Public &amp; Private Sector Organizations</p>
             </div>
 
-            <!-- Infinite Marquee Track -->
+            <!-- Infinite Marquee Track (Will not pause on hover) -->
             <div class="relative w-full overflow-hidden pointer-events-none">
                 <div class="animate-marquee flex gap-6 items-center">
                     
-                    <!-- Original Set of Logos -->
                     <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-felcra.jpg" alt="Felcra Berhad" class="max-h-16 max-w-full object-contain"></div>
                     <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-glomac.jpg" alt="Glomac Berhad" class="max-h-16 max-w-full object-contain"></div>
                     <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-kpm.jpg" alt="Kementerian Pendidikan" class="max-h-16 max-w-full object-contain"></div>
@@ -578,7 +533,7 @@
         </footer>
     </main>
 
-    <!-- Scripts for Navigation & Manual/Auto Glider -->
+    <!-- Auto-Gliding & Arrow Controls Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
@@ -592,8 +547,9 @@
                 const nextBtn = document.getElementById(nextBtnId);
                 if (!track) return;
 
-                const scrollAmount = 340;
+                const scrollAmount = 340; // width of card + gap
 
+                // Manual arrow clicks
                 if (nextBtn) {
                     nextBtn.addEventListener('click', () => {
                         track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
@@ -605,6 +561,7 @@
                     });
                 }
 
+                // Smooth continuous auto-gliding ticker
                 let autoScroll = setInterval(() => {
                     if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
                         track.scrollTo({ left: 0, behavior: 'smooth' });
@@ -613,6 +570,7 @@
                     }
                 }, 30);
 
+                // Pause auto-glide when user interacts/hovers
                 track.addEventListener('mouseenter', () => clearInterval(autoScroll));
                 track.addEventListener('mouseleave', () => {
                     autoScroll = setInterval(() => {
