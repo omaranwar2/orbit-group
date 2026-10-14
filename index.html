@@ -3,15 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orbit Group | Commercial & Industrial Security Services Malaysia</title>
-    <meta name="description" content="Orbit Force Security - Licensed by KDN under Private Agency Act 1971 (License 005961 & 005962). Providing manned guarding, Gurkha guards, CCTV systems, K9 units, and security training across Malaysia.">
+    <title>Orbit Group of Companies | Orbit Force Security</title>
+    <meta name="description" content="Orbit Group - Integrated Security, Risk Intelligence & Technology for Malaysia's Leading Organisations. Licensed by KDN under Private Agency Act 1971.">
     <meta name="author" content="Orbit Group">
-
-    <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" content="Orbit Group of Companies | Orbit Force Security">
-    <meta property="og:description" content="Licensed commercial & industrial security agency offering guarded personnel, CCTV systems, K9 units, and accredited security training.">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Tailwind CSS Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,20 +19,6 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Continuous Infinite Logo Marquee Animation */
-        @keyframes logo-scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-logo-scroll {
-            display: flex;
-            width: max-content;
-            animation: logo-scroll 40s linear infinite;
-        }
-        .animate-logo-scroll:hover {
-            animation-play-state: paused;
-        }
-
         /* Nav Dropdown Styling */
         .dropdown-menu {
             opacity: 0;
@@ -72,7 +52,7 @@
             transform-origin: top center;
         }
 
-        /* Shimmer Effect for Highlight Headlines */
+        /* Shimmer Effect */
         @keyframes shimmer {
             0% { background-position: -200% 0; }
             100% { background-position: 200% 0; }
@@ -98,65 +78,74 @@
 </head>
 <body class="bg-white text-slate-900 font-sans antialiased">
 
-    <!-- ==================== HEADER WITH MOBILE MENU ==================== -->
+    <!-- ==================== HEADER (Orbit Group Layout) ==================== -->
     <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
         <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
             <a href="index.html" aria-label="Orbit Group Home">
                 <img src="images/orbit_newlogo.png" alt="Orbit Group of Companies" class="h-14 w-auto">
             </a>
 
-            <!-- Desktop Navigation -->
+            <!-- Desktop Navigation matching Screenshot 1 -->
             <nav aria-label="Primary Navigation" class="hidden items-center gap-6 lg:flex">
                 <a href="index.html" class="text-sm font-semibold text-red-700 transition-colors py-2 px-3">Home</a>
 
-                <!-- Our Story / About Dropdown -->
+                <!-- Our Story Dropdown -->
                 <div class="dropdown-parent relative py-6">
                     <a href="about-orbit.html" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
-                        About Us
+                        Our Story
                         <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </a>
-                    <div class="dropdown-menu absolute left-0 top-full w-60 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
-                        <a href="about-orbit.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">About Orbit Force</a>
-                        <a href="why-orbit.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Why Choose Us</a>
-                        <a href="our-values.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Mission, Vision &amp; License</a>
+                    <div class="dropdown-menu absolute left-0 top-full w-56 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
+                        <a href="about-orbit.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">About Orbit Group</a>
+                        <a href="why-orbit.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Why Orbit Group?</a>
+                        <a href="our-values.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Our Values</a>
                     </div>
                 </div>
 
-                <!-- Our Services Dropdown -->
+                <!-- Security Services Dropdown -->
                 <div class="dropdown-parent relative py-6">
                     <a href="security-services.html" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
                         Security Services
                         <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </a>
-                    <div class="dropdown-menu absolute left-0 top-full w-64 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
-                        <a href="security-services.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Static &amp; Dedicated Guards</a>
-                        <a href="gurkha-guards.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Gurkha Guards Services</a>
-                        <a href="canine-protection.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Canine (K9) Protection</a>
-                        <a href="cctv-installation.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">CCTV &amp; Alarm Installation</a>
-                        <a href="access-control-cms.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Access Control &amp; CMS</a>
+                    <div class="dropdown-menu absolute left-0 top-full w-60 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
+                        <a href="orbit-force-overview.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Orbit Force Overview</a>
+                        <a href="security-services.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Security Services</a>
                     </div>
                 </div>
 
-                <!-- Security Training Dropdown -->
+                <!-- Risk Consulting Dropdown -->
                 <div class="dropdown-parent relative py-6">
-                    <a href="security-training.html" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
-                        Security Training
+                    <a href="risk-consulting.html" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
+                        Risk Consulting
                         <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </a>
-                    <div class="dropdown-menu absolute left-0 top-full w-72 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
-                        <a href="security-training.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Training Modules Overview</a>
-                        <a href="fsr.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Facility Security Requirements (FSR)</a>
-                        <a href="tsr.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Trucking Security Requirements (TSR)</a>
+                    <div class="dropdown-menu absolute left-0 top-full w-64 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md">
+                        <a href="orbit-asia-overview.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Orbit Asia Overview</a>
+                        <a href="risk-consulting.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Risk Consulting Services</a>
+                        
+                        <!-- Nested Submenu for Training -->
+                        <div class="nested-dropdown-parent relative">
+                            <a href="#" class="flex items-center justify-between px-5 py-2.5 hover:bg-slate-200/60 text-red-700 transition-colors">
+                                Training
+                                <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </a>
+                            <div class="nested-dropdown-menu absolute left-full top-0 w-72 bg-slate-50/95 border border-slate-200/80 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium backdrop-blur-md -ml-1">
+                                <a href="fsr.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Facility Security Requirements (FSR)</a>
+                                <a href="tsr.html" class="block px-5 py-2.5 hover:bg-slate-200/60 hover:text-red-700 transition-colors">Trucking Security Requirements (TSR)</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <a href="https://www.orbitglobaltechnology.com/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">Technology &nearr;</a>
+                <a href="#industries" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">Industry We Serve</a>
             </nav>
 
-            <!-- Desktop CTA Button -->
+            <!-- Desktop CTA Button matching Screenshot 1 -->
             <div class="hidden lg:block">
-                <a href="contact.html" class="inline-flex items-center gap-2 rounded-md bg-red-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-red-800">
-                    Contact Us &nearr;
+                <a href="contact.html" class="inline-flex items-center gap-2 rounded-full bg-[#0B1B2B] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800">
+                    Contact Us
                 </a>
             </div>
 
@@ -172,227 +161,203 @@
         <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-6 py-6 text-slate-800">
             <div class="flex flex-col space-y-4 font-medium text-base">
                 <a href="index.html" class="text-red-700 font-semibold py-1">Home</a>
-                <a href="about-orbit.html" class="hover:text-red-700 py-1">About Orbit Force</a>
-                <a href="why-orbit.html" class="hover:text-red-700 py-1">Why Choose Us</a>
+                <a href="about-orbit.html" class="hover:text-red-700 py-1">Our Story</a>
                 <a href="security-services.html" class="hover:text-red-700 py-1">Security Services</a>
-                <a href="gurkha-guards.html" class="hover:text-red-700 py-1 pl-4 text-sm text-slate-600">&bull; Gurkha Guards Services</a>
-                <a href="canine-protection.html" class="hover:text-red-700 py-1 pl-4 text-sm text-slate-600">&bull; Canine (K9) Protection</a>
-                <a href="cctv-installation.html" class="hover:text-red-700 py-1 pl-4 text-sm text-slate-600">&bull; CCTV &amp; Alarm Installation</a>
-                <a href="security-training.html" class="hover:text-red-700 py-1">Security Training</a>
-                <a href="fsr.html" class="hover:text-red-700 py-1 pl-4 text-sm text-slate-600">&bull; FSR Training Module</a>
-                <a href="tsr.html" class="hover:text-red-700 py-1 pl-4 text-sm text-slate-600">&bull; TSR Training Module</a>
+                <a href="risk-consulting.html" class="hover:text-red-700 py-1">Risk Consulting</a>
                 <a href="https://www.orbitglobaltechnology.com/" target="_blank" class="hover:text-red-700 py-1">Technology &nearr;</a>
-                <a href="contact.html" class="mt-4 inline-flex justify-center items-center rounded-md bg-red-700 px-5 py-3 text-sm font-semibold text-white shadow-sm">
-                    Contact Us &nearr;
+                <a href="#industries" class="hover:text-red-700 py-1">Industry We Serve</a>
+                <a href="contact.html" class="mt-4 inline-flex justify-center items-center rounded-full bg-[#0B1B2B] px-5 py-3 text-sm font-semibold text-white shadow-sm">
+                    Contact Us
                 </a>
             </div>
         </div>
     </header>
 
     <main class="pt-20">
-        <!-- ==================== HERO SECTION ==================== -->
-        <section class="relative bg-slate-950 py-28 lg:py-36 text-white overflow-hidden border-b border-white/10">
+        <!-- ==================== HERO SECTION (Matching Screenshot 1) ==================== -->
+        <section class="relative bg-slate-950 py-32 lg:py-40 text-white overflow-hidden border-b border-white/10 text-center">
             <div class="absolute inset-0 z-0 pointer-events-none">
-                <img src="images/security-division.jpg" alt="Orbit Force Security Operations" class="h-full w-full object-cover opacity-35">
-                <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/60"></div>
+                <img src="images/security-division.jpg" alt="Orbit Group Operations" class="h-full w-full object-cover opacity-35">
+                <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950"></div>
                 <div class="perspective-grid absolute -top-40 inset-x-0 h-[150%] opacity-20"></div>
             </div>
 
-            <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-amber-400 text-xs font-semibold uppercase tracking-wider font-display mb-6">
-                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span> KDN Licensed Private Agency (No. 005961 &amp; 005962)
+            <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 flex flex-col items-center">
+                <!-- Three Division Logos / Icons -->
+                <div class="flex flex-wrap items-center justify-center gap-8 mb-8">
+                    <img src="images/orbit_newlogo.png" alt="Orbit Force Security" class="h-10 w-auto opacity-90">
+                    <img src="images/orbit_newlogo.png" alt="Orbit Asia Risk" class="h-10 w-auto opacity-90">
+                    <img src="images/orbit_newlogo.png" alt="Orbit Global Technologies" class="h-10 w-auto opacity-90">
                 </div>
 
-                <h1 class="font-display text-4xl font-bold leading-tight sm:text-6xl lg:text-7xl max-w-4xl tracking-tight">
-                    Commercial &amp; Industrial <span class="shimmer-text">Security Solutions</span>
+                <h1 class="font-display text-3xl font-bold leading-tight sm:text-5xl lg:text-6xl max-w-4xl tracking-tight">
+                    ORBIT GROUP OF COMPANIES
                 </h1>
 
-                <p class="mt-6 max-w-3xl text-lg text-slate-300 font-body leading-relaxed drop-shadow-md">
-                    Incorporated on December 6, 2001, Orbit Force Security is a premier licensed security agency in Malaysia. Delivering elite manned guarding, Gurkha units, K9 canine protection, CCTV installation, and specialized security training.
+                <p class="mt-4 max-w-2xl text-base sm:text-lg text-slate-300 font-body leading-relaxed">
+                    Integrated Security, Risk Intelligence &amp; Technology for Malaysia's Leading Organisations
                 </p>
 
-                <div class="mt-10 flex flex-wrap gap-4">
-                    <a href="contact.html" class="inline-flex items-center gap-2 rounded-md bg-red-700 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-red-800">
-                        Request Security Audit &nearr;
-                    </a>
-                    <a href="about-orbit.html" class="inline-flex items-center gap-2 rounded-md border border-slate-700 bg-slate-900/80 px-6 py-3 text-sm font-semibold text-slate-200 transition-colors hover:bg-slate-800">
-                        Company Credentials
+                <div class="mt-8">
+                    <a href="about-orbit.html" class="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/80 px-8 py-3 text-sm font-semibold text-slate-200 transition-colors hover:bg-slate-800">
+                        More About Us
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- ==================== ACCREDITATION & STATS BAR ==================== -->
-        <section class="bg-slate-900 text-white py-10 border-b border-white/10">
+        <!-- ==================== THREE ARMS SECTION (Matching Screenshot 2) ==================== -->
+        <section class="py-24 bg-slate-950 text-white border-b border-white/10 relative">
             <div class="mx-auto max-w-7xl px-6 lg:px-12">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                    <div>
-                        <span class="block font-display text-3xl lg:text-4xl font-bold text-amber-400">2001</span>
-                        <span class="mt-1 block text-xs uppercase tracking-wider text-slate-400">Established In Malaysia</span>
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <p class="text-xs font-bold uppercase tracking-widest text-red-500 font-display">Security &middot; Risk Intelligence &middot; Technology</p>
+                    <h2 class="mt-3 font-display text-4xl sm:text-5xl font-bold tracking-tight text-white">ORBIT GROUP</h2>
+                    <p class="mt-4 text-slate-400 font-body text-sm leading-relaxed">
+                        Three complementary business arms. One unified commitment to protecting people, assets, operations, information and reputations in an increasingly complex world.
+                    </p>
+                </div>
+
+                <div class="grid gap-8 lg:grid-cols-3">
+                    <!-- Arm 01: Orbit Force Security (Orbit Force content integrated) -->
+                    <div class="rounded-3xl p-8 bg-slate-900/90 border border-slate-800 shadow-xl flex flex-col justify-between orbit-card">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="font-display text-sm font-semibold text-slate-400">01</span>
+                                <span class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                                </span>
+                            </div>
+                            <span class="text-xs uppercase font-bold tracking-widest text-red-500 font-display block mb-1">Protection Services</span>
+                            <h3 class="font-display font-bold text-2xl text-white">Orbit Force Security</h3>
+                            <p class="mt-4 text-sm text-slate-300 font-body leading-relaxed">
+                                Professional security personnel, specialized protection services, K9 units, CCTV installations, and KDN licensed guarding solutions (License 005961 &amp; 005962) designed to safeguard people, premises, assets and operations.
+                            </p>
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
+                            <a href="security-services.html" class="text-sm font-semibold text-white hover:text-red-400 transition-colors">Explore Security Services</a>
+                            <a href="security-services.html" class="w-9 h-9 rounded-full bg-red-700 flex items-center justify-center text-white hover:bg-red-800 transition-colors">&rarr;</a>
+                        </div>
                     </div>
-                    <div>
-                        <span class="block font-display text-3xl lg:text-4xl font-bold text-amber-400">100%</span>
-                        <span class="mt-1 block text-xs uppercase tracking-wider text-slate-400">KDN Statutory Compliant</span>
+
+                    <!-- Arm 02: Orbit Asia Risk Consultancy -->
+                    <div class="rounded-3xl p-8 bg-slate-900/90 border border-slate-800 shadow-xl flex flex-col justify-between orbit-card">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="font-display text-sm font-semibold text-slate-400">02</span>
+                                <span class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                                </span>
+                            </div>
+                            <span class="text-xs uppercase font-bold tracking-widest text-red-500 font-display block mb-1">Intelligence &amp; Advisory</span>
+                            <h3 class="font-display font-bold text-2xl text-white">Orbit Asia Risk Consultancy</h3>
+                            <p class="mt-4 text-sm text-slate-300 font-body leading-relaxed">
+                                Investigations, due diligence, intelligence and strategic risk advisory that help organisations understand threats, manage exposure and act with confidence.
+                            </p>
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
+                            <a href="risk-consulting.html" class="text-sm font-semibold text-white hover:text-red-400 transition-colors">Explore Risk Consulting</a>
+                            <a href="risk-consulting.html" class="w-9 h-9 rounded-full bg-red-700 flex items-center justify-center text-white hover:bg-red-800 transition-colors">&rarr;</a>
+                        </div>
                     </div>
-                    <div>
-                        <span class="block font-display text-3xl lg:text-4xl font-bold text-amber-400">24/7</span>
-                        <span class="mt-1 block text-xs uppercase tracking-wider text-slate-400">Central Monitoring Station</span>
-                    </div>
-                    <div>
-                        <span class="block font-display text-3xl lg:text-4xl font-bold text-amber-400">TAPA</span>
-                        <span class="mt-1 block text-xs uppercase tracking-wider text-slate-400">Security Standard Aligned</span>
+
+                    <!-- Arm 03: Orbit Global Technologies -->
+                    <div class="rounded-3xl p-8 bg-slate-900/90 border border-slate-800 shadow-xl flex flex-col justify-between orbit-card">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="font-display text-sm font-semibold text-slate-400">03</span>
+                                <span class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                </span>
+                            </div>
+                            <span class="text-xs uppercase font-bold tracking-widest text-red-500 font-display block mb-1">Intelligent Digital Platforms</span>
+                            <h3 class="font-display font-bold text-2xl text-white">Orbit Global Technologies</h3>
+                            <p class="mt-4 text-sm text-slate-300 font-body leading-relaxed">
+                                Intelligent digital platforms for security, workforce and premises operations, providing stronger visibility, smarter control and greater operational efficiency.
+                            </p>
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
+                            <a href="https://www.orbitglobaltechnology.com/" target="_blank" class="text-sm font-semibold text-white hover:text-red-400 transition-colors">Explore Technology</a>
+                            <a href="https://www.orbitglobaltechnology.com/" target="_blank" class="w-9 h-9 rounded-full bg-red-700 flex items-center justify-center text-white hover:bg-red-800 transition-colors">&rarr;</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ==================== CORE SERVICES GRID ==================== -->
-        <section class="py-24 bg-slate-50 border-b border-slate-200">
+        <!-- ==================== INDUSTRIES WE SERVE (Matching Screenshots 3 & 4) ==================== -->
+        <section id="industries" class="py-24 bg-slate-50 text-slate-900 border-b border-slate-200">
             <div class="mx-auto max-w-7xl px-6 lg:px-12">
                 <div class="max-w-3xl mb-16">
-                    <p class="section-kicker text-red-700 font-bold uppercase tracking-wider text-xs">Orbit Force Portfolio</p>
-                    <h2 class="mt-2 font-display text-3xl font-semibold sm:text-5xl text-slate-900">Comprehensive Security Operations</h2>
-                    <p class="mt-4 text-slate-600 text-sm font-body">Tailored protection solutions designed for corporate headquarters, manufacturing plants, high-value logistics centers, and public sector organizations.</p>
+                    <p class="text-xs font-bold uppercase tracking-widest text-red-700 font-display">Industries We Serve</p>
+                    <h2 class="mt-2 font-display text-3xl font-semibold sm:text-5xl text-slate-900">Integrated Solutions for High-Risk, High-Value Environments</h2>
+                    <p class="mt-4 text-slate-600 text-sm font-body">Orbit Group supports organisations across corporate, industrial, logistics, retail, public sector and critical infrastructure environments through an integrated combination of security operations, risk consultancy, intelligence-led protection and smart technology solutions.</p>
                 </div>
 
-                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    <!-- 01: Manned & Gurkha Guarding -->
-                    <div class="orbit-card rounded-2xl p-8 bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-6">
-                                <span class="w-10 h-10 rounded-xl bg-red-100 text-red-700 flex items-center justify-center font-display font-bold text-sm">01</span>
-                                <span class="text-xs uppercase font-bold tracking-widest text-slate-400 font-display">Personnel</span>
-                            </div>
-                            <h3 class="font-display font-bold text-2xl text-slate-900">Static &amp; Gurkha Guarding</h3>
-                            <p class="mt-3 text-sm text-slate-600 font-body leading-relaxed">
-                                Highly disciplined local and Gurkha security officers selected, trained, and deployed for critical asset protection, access logging, and perimeter defense.
-                            </p>
-                        </div>
-                        <a href="security-services.html" class="mt-8 inline-flex items-center gap-1 text-sm font-semibold text-red-700 hover:text-red-800">
-                            Explore Guarding Services &rarr;
-                        </a>
-                    </div>
-
-                    <!-- 02: CCTV & Electronic Security -->
-                    <div class="orbit-card rounded-2xl p-8 bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-6">
-                                <span class="w-10 h-10 rounded-xl bg-red-100 text-red-700 flex items-center justify-center font-display font-bold text-sm">02</span>
-                                <span class="text-xs uppercase font-bold tracking-widest text-slate-400 font-display">Systems</span>
-                            </div>
-                            <h3 class="font-display font-bold text-2xl text-slate-900">CCTV &amp; Surveillance Systems</h3>
-                            <p class="mt-3 text-sm text-slate-600 font-body leading-relaxed">
-                                Professional HD surveillance camera installation, alarm integrations, access card readers, and Central Monitoring System (CMS) maintenance.
-                            </p>
-                        </div>
-                        <a href="cctv-installation.html" class="mt-8 inline-flex items-center gap-1 text-sm font-semibold text-red-700 hover:text-red-800">
-                            Explore Surveillance Tech &rarr;
-                        </a>
-                    </div>
-
-                    <!-- 03: Canine K9 Protection -->
-                    <div class="orbit-card rounded-2xl p-8 bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-6">
-                                <span class="w-10 h-10 rounded-xl bg-red-100 text-red-700 flex items-center justify-center font-display font-bold text-sm">03</span>
-                                <span class="text-xs uppercase font-bold tracking-widest text-slate-400 font-display">Specialized</span>
-                            </div>
-                            <h3 class="font-display font-bold text-2xl text-slate-900">Canine (K9) Protection Units</h3>
-                            <p class="mt-3 text-sm text-slate-600 font-body leading-relaxed">
-                                Thoroughbred martial breed guard dogs and handlers for general purpose facility security, explosive detection, and high-risk warehouse patrolling.
-                            </p>
-                        </div>
-                        <a href="canine-protection.html" class="mt-8 inline-flex items-center gap-1 text-sm font-semibold text-red-700 hover:text-red-800">
-                            Explore K9 Protection &rarr;
-                        </a>
-                    </div>
-
-                    <!-- 04: Structured Security Training -->
-                    <div class="orbit-card rounded-2xl p-8 bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-6">
-                                <span class="w-10 h-10 rounded-xl bg-red-100 text-red-700 flex items-center justify-center font-display font-bold text-sm">04</span>
-                                <span class="text-xs uppercase font-bold tracking-widest text-slate-400 font-display">Compliance</span>
-                            </div>
-                            <h3 class="font-display font-bold text-2xl text-slate-900">Security Officers Training</h3>
-                            <p class="mt-3 text-sm text-slate-600 font-body leading-relaxed">
-                                Systematic training modules covering induction, SOP execution, checkpoint &amp; material escorting, clocking protocols, and SOC operations.
-                            </p>
-                        </div>
-                        <a href="security-training.html" class="mt-8 inline-flex items-center gap-1 text-sm font-semibold text-red-700 hover:text-red-800">
-                            Explore Training Modules &rarr;
-                        </a>
-                    </div>
-
-                    <!-- 05: Mobile Patrol & Clocking -->
-                    <div class="orbit-card rounded-2xl p-8 bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-6">
-                                <span class="w-10 h-10 rounded-xl bg-red-100 text-red-700 flex items-center justify-center font-display font-bold text-sm">05</span>
-                                <span class="text-xs uppercase font-bold tracking-widest text-slate-400 font-display">Response</span>
-                            </div>
-                            <h3 class="font-display font-bold text-2xl text-slate-900">Mobile Patrol &amp; Escorts</h3>
-                            <p class="mt-3 text-sm text-slate-600 font-body leading-relaxed">
-                                Scheduled and random mobile vehicle patrols, electronic clocking point verification, and rapid-response incident management.
-                            </p>
-                        </div>
-                        <a href="security-services.html" class="mt-8 inline-flex items-center gap-1 text-sm font-semibold text-red-700 hover:text-red-800">
-                            Explore Mobile Patrols &rarr;
-                        </a>
-                    </div>
-
-                    <!-- 06: TAPA Audit Readiness -->
-                    <div class="orbit-card rounded-2xl p-8 bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-6">
-                                <span class="w-10 h-10 rounded-xl bg-red-100 text-red-700 flex items-center justify-center font-display font-bold text-sm">06</span>
-                                <span class="text-xs uppercase font-bold tracking-widest text-slate-400 font-display">Standards</span>
-                            </div>
-                            <h3 class="font-display font-bold text-2xl text-slate-900">TAPA FSR &amp; TSR Readiness</h3>
-                            <p class="mt-3 text-sm text-slate-600 font-body leading-relaxed">
-                                Certified training and advisory for Facility Security Requirements (FSR) and Trucking Security Requirements (TSR) compliance across APAC.
-                            </p>
-                        </div>
-                        <a href="fsr.html" class="mt-8 inline-flex items-center gap-1 text-sm font-semibold text-red-700 hover:text-red-800">
-                            Explore TAPA Standards &rarr;
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== ABOUT ORBIT FORCE / MISSION ==================== -->
-        <section class="py-24 bg-white border-b border-slate-200">
-            <div class="mx-auto max-w-7xl px-6 lg:px-12">
-                <div class="grid gap-12 lg:grid-cols-2 items-center">
-                    <div>
-                        <span class="section-kicker text-red-700 font-bold uppercase tracking-wider text-xs">Official Corporate Profile</span>
-                        <h2 class="mt-2 font-display text-3xl font-semibold sm:text-5xl text-slate-900 leading-tight">
-                            Licensed Protection Backed by Experience
-                        </h2>
-                        <p class="mt-6 text-slate-600 font-body leading-relaxed">
-                            Incorporated in Malaysia under the Private Agency Act 1971 (KDN License No. 005961 &amp; 005962), Orbit Force Security provides dedicated security services to meet the growing demand for truly professional and accredited security management.
-                        </p>
-
-                        <div class="mt-8 space-y-6">
-                            <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                                <h3 class="font-display font-bold text-lg text-slate-900">Our Mission</h3>
-                                <p class="mt-2 text-sm text-slate-600 leading-relaxed font-body">
-                                    To provide quality, trained and effective security services based on customer requirements and needs, to be the key player in providing reliable and quality services.
-                                </p>
-                            </div>
-
-                            <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                                <h3 class="font-display font-bold text-lg text-slate-900">Our Vision</h3>
-                                <p class="mt-2 text-sm text-slate-600 leading-relaxed font-body">
-                                    To be the leading security service provider in the country, excelling in terms of quality management, human resource and customer service.
-                                </p>
-                            </div>
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Card 1 -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg h-80 flex flex-col justify-end p-8 text-white bg-slate-900">
+                        <img src="images/security-division.jpg" alt="Corporate & Commercial" class="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                        <div class="relative z-10">
+                            <span class="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center mb-4 text-white font-bold">&bull;</span>
+                            <h3 class="font-display font-bold text-2xl">Corporate &amp; Commercial</h3>
+                            <p class="mt-2 text-xs text-slate-300 font-body leading-relaxed">Office towers, headquarters, business parks and commercial buildings requiring access control, visitor management and professional on-site protection.</p>
                         </div>
                     </div>
 
-                    <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-100">
-                        <img src="images/about-orbitforce.jpg" onerror="this.src='images/security-division.jpg'" alt="Orbit Force Security Headquarters Operations" class="w-full h-auto object-cover">
+                    <!-- Card 2 -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg h-80 flex flex-col justify-end p-8 text-white bg-slate-900">
+                        <img src="images/fsr-building.jpg" alt="Manufacturing & Industrial" class="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                        <div class="relative z-10">
+                            <span class="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center mb-4 text-white font-bold">&bull;</span>
+                            <h3 class="font-display font-bold text-2xl">Manufacturing &amp; Industrial</h3>
+                            <p class="mt-2 text-xs text-slate-300 font-body leading-relaxed">Factories, plants and production facilities with workforce movement, asset protection and operational security needs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg h-80 flex flex-col justify-end p-8 text-white bg-slate-900">
+                        <img src="images/orbitasiaoverview-hero.png" alt="Logistics & Supply Chain" class="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                        <div class="relative z-10">
+                            <span class="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center mb-4 text-white font-bold">&bull;</span>
+                            <h3 class="font-display font-bold text-2xl">Logistics &amp; Supply Chain</h3>
+                            <p class="mt-2 text-xs text-slate-300 font-body leading-relaxed">Warehouses, distribution centres and transport hubs requiring cargo protection, shrinkage control and site monitoring.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg h-80 flex flex-col justify-end p-8 text-white bg-slate-900">
+                        <img src="images/security-division.jpg" alt="Retail & Shopping Complexes" class="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                        <div class="relative z-10">
+                            <span class="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center mb-4 text-white font-bold">&bull;</span>
+                            <h3 class="font-display font-bold text-2xl">Retail &amp; Shopping Complexes</h3>
+                            <p class="mt-2 text-xs text-slate-300 font-body leading-relaxed">Retail chains, malls and outlets supported through loss prevention, surveillance, patrol and internal theft control.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg h-80 flex flex-col justify-end p-8 text-white bg-slate-900">
+                        <img src="images/fsr-building.jpg" alt="Government & Public Sector" class="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                        <div class="relative z-10">
+                            <span class="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center mb-4 text-white font-bold">&bull;</span>
+                            <h3 class="font-display font-bold text-2xl">Government &amp; Public Sector</h3>
+                            <p class="mt-2 text-xs text-slate-300 font-body leading-relaxed">Schools, hospitals, administrative buildings and public facilities requiring disciplined security operations.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg h-80 flex flex-col justify-end p-8 text-white bg-slate-900">
+                        <img src="images/security-division.jpg" alt="Events & VIP Protection" class="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                        <div class="relative z-10">
+                            <span class="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center mb-4 text-white font-bold">&bull;</span>
+                            <h3 class="font-display font-bold text-2xl">Events &amp; VIP Protection</h3>
+                            <p class="mt-2 text-xs text-slate-300 font-body leading-relaxed">Corporate events, VIP functions and public gatherings requiring crowd management and rapid-response coordination.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -402,7 +367,7 @@
         <footer id="contact" class="bg-slate-950 py-20 text-white border-t border-white/10">
             <div class="mx-auto max-w-7xl px-6 lg:px-12">
                 <div class="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_1fr]">
-                    <!-- Column 1: Text Branding & Tagline -->
+                    <!-- Column 1 -->
                     <div>
                         <div class="font-display text-2xl font-bold tracking-tight text-white">
                             Orbit Group <span class="text-xs font-normal uppercase tracking-widest block text-slate-400 mt-1">Of Companies</span>
@@ -412,13 +377,13 @@
                             Speak with Orbit Force Security about dedicated guarding, CCTV surveillance, and risk management solutions.
                         </p>
                         <div class="mt-6">
-                            <a href="contact.html" class="inline-flex items-center gap-2 rounded-md bg-red-700 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-red-800">
-                                Contact Us &nearr;
+                            <a href="contact.html" class="inline-flex items-center gap-2 rounded-full bg-red-700 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-red-800">
+                                Contact Us
                             </a>
                         </div>
                     </div>
 
-                    <!-- Column 2: Divisions & Links -->
+                    <!-- Column 2 -->
                     <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8 lg:border-t-0 lg:pt-0">
                         <div>
                             <p class="section-kicker text-amber-400">Services</p>
@@ -432,20 +397,19 @@
                         <div>
                             <p class="section-kicker text-amber-400">Company</p>
                             <ul class="mt-4 space-y-3 text-sm text-slate-400 font-body">
-                                <li><a href="about-orbit.html" class="hover:text-white transition-colors">About Us</a></li>
-                                <li><a href="why-orbit.html" class="hover:text-white transition-colors">Why Choose Us</a></li>
+                                <li><a href="about-orbit.html" class="hover:text-white transition-colors">Our Story</a></li>
+                                <li><a href="why-orbit.html" class="hover:text-white transition-colors">Why Orbit Group?</a></li>
                                 <li><a href="security-training.html" class="hover:text-white transition-colors">Security Training</a></li>
                                 <li><a href="fsr.html" class="hover:text-white transition-colors">TAPA FSR</a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Column 3: Contact Info -->
+                    <!-- Column 3 -->
                     <div class="border-t border-white/10 pt-8 lg:border-t-0 lg:pt-0">
                         <p class="section-kicker text-amber-400">Head Office Contact</p>
                         
                         <div class="mt-6 space-y-6">
-                            <!-- Address -->
                             <div class="flex items-start gap-4">
                                 <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-amber-400">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -460,7 +424,6 @@
                                 </div>
                             </div>
 
-                            <!-- Phone & Email -->
                             <div class="flex items-start gap-4">
                                 <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-amber-400">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -478,15 +441,14 @@
                 </div>
 
                 <div class="mt-16 flex flex-wrap justify-between gap-4 border-t border-white/10 pt-6 text-xs uppercase tracking-widest text-slate-500 font-display">
-                    <span>&copy; 2026 Orbit Force Security (Co. No. 005961 &amp; 005962). All Rights Reserved.</span>
-                    <span>KDN Licensed Private Agency</span>
+                    <span>&copy; 2026 Orbit Group of Companies (Orbit Force Co. No. 005961 &amp; 005962). All Rights Reserved.</span>
+                    <span>Security &middot; Risk Intelligence &middot; Technology</span>
                 </div>
             </div>
         </footer>
     </main>
 
     <script>
-        // Mobile Navigation Menu Toggle Script
         document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
             var menu = document.getElementById('mobile-menu');
             if (menu) {
