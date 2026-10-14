@@ -1,61 +1,195 @@
 /* ==========================================================================
-   Orbit Group Design System Stylesheet
+   Orbit Group Design System - Master Stylesheet
+   Theme: orbitgroup.my
    ========================================================================== */
 
-/* Font Family Defaults */
+/* --------------------------------------------------------------------------
+   1. Typography & Global Defaults
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --color-orbit-red: #b91c1c;
+    --color-orbit-red-hover: #991b1b;
+    --color-orbit-dark: #0f172a;
+    --color-orbit-navy: #0b1b2b;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+    color: #0f172a;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 .font-display {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
 }
 
 .font-body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-body);
 }
 
-/* Base Body and Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-    font-family: 'DM Sans', sans-serif;
+/* --------------------------------------------------------------------------
+   2. Buttons & Interactive Elements
+   -------------------------------------------------------------------------- */
+.orbit-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.375rem;
+    background-color: var(--color-orbit-red);
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Section Kickers / Eyebrows */
+.orbit-cta:hover {
+    background-color: var(--color-orbit-red-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(185, 28, 28, 0.25);
+}
+
+.orbit-cta-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    background-color: var(--color-orbit-navy);
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #ffffff;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.orbit-cta-dark:hover {
+    background-color: #1e293b;
+    transform: translateY(-1px);
+}
+
 .section-kicker {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     letter-spacing: 0.15em;
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: 700;
 }
 
-/* Standard Red CTA Button Styling */
-.orbit-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    border-radius: 0.375rem;
-    background-color: #b91c1c; /* Tailwind red-700 */
-    padding: 0.625rem 1.25rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #ffffff;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    transition: background-color 0.2s ease-in-out;
+/* --------------------------------------------------------------------------
+   3. Navigation & Dropdown Styling
+   -------------------------------------------------------------------------- */
+.dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.orbit-cta:hover {
-    background-color: #991b1b; /* Tailwind red-800 */
+.dropdown-parent:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
-/* Custom Scrollbar for Sleek Aesthetic */
+.nested-dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(8px);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nested-dropdown-parent:hover .nested-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* --------------------------------------------------------------------------
+   4. Hero Background Grids & Animations
+   -------------------------------------------------------------------------- */
+.perspective-grid {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 36px 36px;
+    transform: perspective(600px) rotateX(60deg);
+    transform-origin: top center;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.shimmer-text {
+    background: linear-gradient(90deg, #f59e0b, #ef4444, #f59e0b, #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 5s linear infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.3; }
+    50% { transform: scale(1.15) translate(15px, -15px); opacity: 0.5; }
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 8s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   5. Cards & Interactivity
+   -------------------------------------------------------------------------- */
+.orbit-card {
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.orbit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.2), 0 0 25px rgba(220, 38, 38, 0.12);
+    border-color: rgba(220, 38, 38, 0.5);
+}
+
+.light-sell-card {
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.light-sell-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px -10px rgba(185, 28, 28, 0.18), 0 0 25px rgba(245, 158, 11, 0.15);
+    border-color: rgba(220, 38, 38, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   6. Custom Scrollbar
+   -------------------------------------------------------------------------- */
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: #0f172a;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #334155;
     border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #b91c1c;
 }
