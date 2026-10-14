@@ -49,24 +49,24 @@
 </head>
 <body class="bg-white text-slate-900 font-sans antialiased">
 
-    <!-- Top Tagline Bar -->
-    <div class="bg-slate-950 text-slate-300 border-b border-white/10 text-xs py-2 px-6">
+    <!-- Top Tagline Bar (Changed to Crimson Red) -->
+    <div class="bg-[#991B1B] text-white border-b border-red-900/50 text-xs py-2 px-6">
         <div class="mx-auto max-w-7xl flex flex-wrap items-center justify-between gap-4">
             <div class="flex items-center gap-6">
                 <span><strong>Call Us:</strong> +603-55679771 / +603-55679718</span>
                 <span><strong>Email:</strong> enquiry@orbitforce.net</span>
             </div>
-            <div class="hidden md:block font-semibold text-amber-400">
+            <div class="hidden md:block font-semibold text-amber-300">
                 &ldquo;Security Is Not An Expense But An Investment Against Loss!&rdquo;
             </div>
         </div>
     </div>
 
-    <!-- ==================== HEADER (Nav Items from Screenshots) ==================== -->
+    <!-- ==================== HEADER ==================== -->
     <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
         <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
             <a href="index.html" aria-label="Orbit Force Home">
-                <img src="images/orbit_newlogo.png" alt="Orbit Force Security" class="h-14 w-auto">
+                <img src="images/orbitforce-logo.png" onerror="this.src='images/orbit_newlogo.png'" alt="Orbit Force Security" class="h-14 w-auto">
             </a>
 
             <!-- Desktop Navigation Structure -->
@@ -310,7 +310,7 @@
             </div>
         </section>
 
-        <!-- ==================== SECTOR OF INVOLVEMENT (AUTO-SLIDING CAROUSEL WITH CLONED ITEMS) ==================== -->
+        <!-- ==================== SECTOR OF INVOLVEMENT (CAROUSEL) ==================== -->
         <section id="sectors" class="py-24 bg-slate-50 text-slate-900 border-b border-slate-200 overflow-hidden">
             <div class="mx-auto max-w-7xl px-6 lg:px-12">
                 <div class="text-center max-w-2xl mx-auto mb-16">
@@ -511,7 +511,7 @@
                 }
             });
 
-            // Sector Carousel Logic
+            // Sector Carousel Logic with Infinite Stepping
             const track = document.getElementById('sector-track');
             const prevBtn = document.getElementById('prev-sector-btn');
             const nextBtn = document.getElementById('next-sector-btn');
@@ -536,7 +536,7 @@
                 if (currentIndex < totalSlides - visible) {
                     currentIndex++;
                 } else {
-                    currentIndex = 0; // Loop back seamlessly
+                    currentIndex = 0; // Loop back to start
                 }
                 updateSlidePosition();
             }
