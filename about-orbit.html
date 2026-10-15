@@ -30,6 +30,34 @@
             visibility: visible;
             transform: translateY(0);
         }
+
+        /* Dark Grid Pattern Overlay matching Brand Story */
+        .bg-tech-grid {
+            background-color: #0c1c28;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        /* Pulsing Sonar Ring Animation for O-R-B-I-T Badges */
+        @keyframes sonar-ring {
+            0% {
+                transform: scale(0.95);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.25);
+                opacity: 0.2;
+            }
+            100% {
+                transform: scale(1.45);
+                opacity: 0;
+            }
+        }
+        .animate-sonar {
+            animation: sonar-ring 2.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        }
     </style>
 </head>
 <body class="bg-white text-slate-900 font-sans antialiased">
@@ -126,59 +154,75 @@
     </header>
 
     <main>
-        <!-- ==================== 1. SLIM ANIMATED HERO BANNER ==================== -->
-        <section class="relative bg-[#0b1e36] py-10 sm:py-12 text-white overflow-hidden border-b border-white/10 text-center flex items-center justify-center">
+        <!-- ==================== 1. HERO BANNER (BALANCED HEIGHT & LARGER TEXT) ==================== -->
+        <section class="relative bg-[#0b1e36] py-16 sm:py-20 text-white overflow-hidden border-b border-white/10 text-center flex items-center justify-center">
             <!-- Animated Particle Network Canvas -->
             <canvas id="tech-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-80"></canvas>
             
             <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 flex flex-col items-center">
-                <h1 class="font-display text-2xl sm:text-3xl font-bold tracking-normal text-white">
+                <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wider text-white uppercase">
                     About Us
                 </h1>
+                <div class="mt-3 flex items-center gap-2 text-xs sm:text-sm text-amber-300 font-display">
+                    <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                    <span>&rsaquo;</span>
+                    <span class="text-slate-300">About Us</span>
+                </div>
             </div>
         </section>
 
-        <!-- ==================== 2. GROUP OVERVIEW & BUSINESS ARMS (DARK THEME) ==================== -->
-        <section class="py-24 bg-[#0a1826] text-white border-b border-white/10">
+        <!-- ==================== 2. CORPORATE OVERVIEW (DARK TEAL GRID PATTERN LIKE BRAND STORY) ==================== -->
+        <section class="py-24 bg-tech-grid text-white border-b border-white/10">
             <div class="mx-auto max-w-7xl px-6 lg:px-12">
-                <div class="max-w-4xl mx-auto space-y-6 text-slate-300 font-body text-sm sm:text-base leading-relaxed text-center mb-16">
-                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white uppercase">Corporate Overview</h2>
-                    <p>
+                
+                <!-- Main Header Box -->
+                <div class="bg-[#112435]/80 border border-slate-700/80 rounded-3xl p-8 sm:p-12 mb-12 shadow-2xl backdrop-blur-sm">
+                    <h2 class="font-display text-3xl sm:text-5xl font-bold text-white uppercase mb-6 tracking-wide">
+                        OUR <span class="text-red-600">BRAND STORY</span>
+                    </h2>
+                    <p class="text-slate-200 font-body text-base sm:text-lg leading-relaxed font-semibold mb-4">
+                        Orbit Group is an integrated security, risk intelligence and technology group built to protect people, assets, operations, information and reputations in an increasingly complex world.
+                    </p>
+                    <p class="text-slate-300 font-body text-sm sm:text-base leading-relaxed border-t border-slate-700/80 pt-4">
                         Established in Malaysia in 2001, the Group has evolved from a commercial and industrial security provider into a multidisciplinary organisation delivering integrated protection, intelligence and technology solutions.
                     </p>
                 </div>
 
-                <div>
+                <!-- Three Arms -->
+                <div class="mt-12">
                     <h3 class="font-display text-2xl font-bold text-white mb-2">The New-Age Force</h3>
-                    <p class="text-sm text-slate-400 font-body mb-10">Today, we operate through three complementary business arms:</p>
+                    <p class="text-sm text-slate-400 font-body mb-8">Today, we operate through three complementary business arms:</p>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="bg-slate-900/80 border border-slate-700/80 rounded-2xl p-8 relative shadow-xl backdrop-blur-sm flex flex-col justify-between">
+                        <!-- Arm 01 -->
+                        <div class="group bg-[#112435]/80 border border-slate-700/80 hover:border-red-500 rounded-2xl p-8 relative shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-red-950/20 flex flex-col justify-between">
                             <div>
-                                <div class="w-10 h-10 rounded-xl bg-red-600 text-white font-display font-bold text-sm flex items-center justify-center mb-6 shadow-md">01</div>
-                                <h4 class="font-display font-bold text-xl text-white mb-4">Orbit Force Security</h4>
+                                <div class="w-10 h-10 rounded-xl bg-red-600 text-white font-display font-bold text-sm flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">01</div>
+                                <h4 class="font-display font-bold text-xl text-white mb-4 group-hover:text-red-400 transition-colors">Orbit Force Security</h4>
                                 <p class="text-xs sm:text-sm text-slate-300 font-body leading-relaxed">
-                                    Delivers professional security personnel and specialised protection services designed to safeguard people, premises, assets and operations across diverse industries.
+                                    Delivers professional security personnel and specialised protection services designed to safeguard people, premises, assets and operations across diverse industries and environments.
                                 </p>
                             </div>
                         </div>
 
-                        <div class="bg-slate-900/80 border border-slate-700/80 rounded-2xl p-8 relative shadow-xl backdrop-blur-sm flex flex-col justify-between">
+                        <!-- Arm 02 -->
+                        <div class="group bg-[#112435]/80 border border-slate-700/80 hover:border-red-500 rounded-2xl p-8 relative shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-red-950/20 flex flex-col justify-between">
                             <div>
-                                <div class="w-10 h-10 rounded-xl bg-red-600 text-white font-display font-bold text-sm flex items-center justify-center mb-6 shadow-md">02</div>
-                                <h4 class="font-display font-bold text-xl text-white mb-4">Orbit Asia Risk Consultancy</h4>
+                                <div class="w-10 h-10 rounded-xl bg-red-600 text-white font-display font-bold text-sm flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">02</div>
+                                <h4 class="font-display font-bold text-xl text-white mb-4 group-hover:text-red-400 transition-colors">Orbit Asia Risk Consultancy</h4>
                                 <p class="text-xs sm:text-sm text-slate-300 font-body leading-relaxed">
-                                    Provides investigations, due diligence, intelligence and strategic risk advisory to help organisations identify threats, manage exposure and make informed decisions.
+                                    Provides investigations, due diligence, intelligence and strategic risk advisory to help organisations identify threats, manage exposure and make informed decisions with confidence.
                                 </p>
                             </div>
                         </div>
 
-                        <div class="bg-slate-900/80 border border-slate-700/80 rounded-2xl p-8 relative shadow-xl backdrop-blur-sm flex flex-col justify-between">
+                        <!-- Arm 03 -->
+                        <div class="group bg-[#112435]/80 border border-slate-700/80 hover:border-red-500 rounded-2xl p-8 relative shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-red-950/20 flex flex-col justify-between">
                             <div>
-                                <div class="w-10 h-10 rounded-xl bg-red-600 text-white font-display font-bold text-sm flex items-center justify-center mb-6 shadow-md">03</div>
-                                <h4 class="font-display font-bold text-xl text-white mb-4">Orbit Global Technologies</h4>
+                                <div class="w-10 h-10 rounded-xl bg-red-600 text-white font-display font-bold text-sm flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">03</div>
+                                <h4 class="font-display font-bold text-xl text-white mb-4 group-hover:text-red-400 transition-colors">Orbit Global Technologies</h4>
                                 <p class="text-xs sm:text-sm text-slate-300 font-body leading-relaxed">
-                                    Develops intelligent digital platforms for security, workforce and premises operations, enabling organisations to strengthen oversight and improve efficiency.
+                                    Develops intelligent digital platforms for security, workforce and premises operations, enabling organisations to strengthen oversight, improve efficiency and operate more securely.
                                 </p>
                             </div>
                         </div>
@@ -207,7 +251,7 @@
 
                 <!-- Vision & Mission Cards -->
                 <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="bg-white border border-slate-200 rounded-3xl p-8 sm:p-10 shadow-sm flex flex-col justify-between">
+                    <div class="bg-white border border-slate-200 hover:border-cyan-500 rounded-3xl p-8 sm:p-10 shadow-sm transition-all duration-300 flex flex-col justify-between">
                         <div>
                             <span class="text-xs font-bold text-cyan-600 font-display">01</span>
                             <h3 class="font-display text-2xl font-bold text-[#0a1826] uppercase mt-2 mb-4">OUR VISION</h3>
@@ -217,7 +261,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-white border border-slate-200 rounded-3xl p-8 sm:p-10 shadow-sm flex flex-col justify-between">
+                    <div class="bg-white border border-slate-200 hover:border-cyan-500 rounded-3xl p-8 sm:p-10 shadow-sm transition-all duration-300 flex flex-col justify-between">
                         <div>
                             <span class="text-xs font-bold text-cyan-600 font-display">02</span>
                             <h3 class="font-display text-2xl font-bold text-[#0a1826] uppercase mt-2 mb-4">OUR MISSION</h3>
@@ -240,7 +284,7 @@
             </div>
         </section>
 
-        <!-- ==================== 4. THE ORBIT PHILOSOPHY (ACRONYM) ==================== -->
+        <!-- ==================== 4. THE ORBIT PHILOSOPHY (WITH ANIMATED SONAR CIRCLES & HOVER EFFECTS) ==================== -->
         <section class="py-24 bg-[#0a1826] text-white border-b border-white/10">
             <div class="mx-auto max-w-7xl px-6 lg:px-12">
                 <div class="mb-12">
@@ -251,42 +295,62 @@
                 </div>
 
                 <div class="space-y-4 max-w-4xl">
-                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500/50 bg-cyan-950/30 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">O</div>
+                    <!-- O -->
+                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 shadow-md">
+                        <div class="relative flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500 bg-cyan-950/50 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">
+                            <span class="absolute inset-0 rounded-full border border-cyan-400 animate-sonar pointer-events-none"></span>
+                            O
+                        </div>
                         <div>
-                            <h3 class="font-display font-bold text-lg text-white">Operational Excellence</h3>
+                            <h3 class="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors">Operational Excellence</h3>
                             <p class="text-xs sm:text-sm text-slate-300 font-body mt-1">Quality services, continuous improvement in everything we do.</p>
                         </div>
                     </div>
 
-                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500/50 bg-cyan-950/30 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">R</div>
+                    <!-- R -->
+                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 shadow-md">
+                        <div class="relative flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500 bg-cyan-950/50 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">
+                            <span class="absolute inset-0 rounded-full border border-cyan-400 animate-sonar pointer-events-none" style="animation-delay: 0.5s;"></span>
+                            R
+                        </div>
                         <div>
-                            <h3 class="font-display font-bold text-lg text-white">Reliability</h3>
+                            <h3 class="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors">Reliability</h3>
                             <p class="text-xs sm:text-sm text-slate-300 font-body mt-1">24/7 commitment to client protection and consistent service delivery.</p>
                         </div>
                     </div>
 
-                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500/50 bg-cyan-950/30 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">B</div>
+                    <!-- B -->
+                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 shadow-md">
+                        <div class="relative flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500 bg-cyan-950/50 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">
+                            <span class="absolute inset-0 rounded-full border border-cyan-400 animate-sonar pointer-events-none" style="animation-delay: 1s;"></span>
+                            B
+                        </div>
                         <div>
-                            <h3 class="font-display font-bold text-lg text-white">Beyond Compliance</h3>
+                            <h3 class="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors">Beyond Compliance</h3>
                             <p class="text-xs sm:text-sm text-slate-300 font-body mt-1">Exceeding standards, ethical conduct, and professional integrity in all engagements.</p>
                         </div>
                     </div>
 
-                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500/50 bg-cyan-950/30 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">I</div>
+                    <!-- I -->
+                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 shadow-md">
+                        <div class="relative flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500 bg-cyan-950/50 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">
+                            <span class="absolute inset-0 rounded-full border border-cyan-400 animate-sonar pointer-events-none" style="animation-delay: 1.5s;"></span>
+                            I
+                        </div>
                         <div>
-                            <h3 class="font-display font-bold text-lg text-white">Innovation</h3>
+                            <h3 class="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors">Innovation</h3>
                             <p class="text-xs sm:text-sm text-slate-300 font-body mt-1">Technology-enabled, forward-thinking solutions that stay ahead of threats.</p>
                         </div>
                     </div>
 
-                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500/50 bg-cyan-950/30 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">T</div>
+                    <!-- T -->
+                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 shadow-md">
+                        <div class="relative flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500 bg-cyan-950/50 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">
+                            <span class="absolute inset-0 rounded-full border border-cyan-400 animate-sonar pointer-events-none" style="animation-delay: 2s;"></span>
+                            T
+                        </div>
                         <div>
-                            <h3 class="font-display font-bold text-lg text-white">Trust &amp; Confidentiality</h3>
+                            <h3 class="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors">Trust &amp; Confidentiality</h3>
                             <p class="text-xs sm:text-sm text-slate-300 font-body mt-1">Discretion, professional secrecy, and unwavering client confidence.</p>
                         </div>
                     </div>
