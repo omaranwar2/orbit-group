@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canine Protection Services | Orbit Force Security Sdn Bhd</title>
-    <meta name="description" content="Trained General Purpose Security Dogs, Drug & Explosive Detection Dogs, and Pyrotechnic Detection Canine Services.">
+    <title>Guard Dogs & Canine Protection Services | Orbit Force Security Sdn Bhd</title>
+    <meta name="description" content="Professional K9 canine security services including General Purpose Security Dogs, Drug Detection, Explosive Detection, and Pyrotechnic Detection Dogs.">
     <meta name="author" content="Orbit Force Security">
 
     <!-- Tailwind CSS Play CDN -->
@@ -17,123 +17,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        .dropdown-menu {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(8px);
-            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .dropdown-parent:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        /* Dark Grid Pattern Overlay */
-        .bg-tech-grid {
-            background-color: #0c1c28;
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-            background-size: 32px 32px;
-        }
-
-        /* Radial Background Concentric Rings */
-        .bg-orbit-radial-lines {
-            background-image: radial-gradient(circle at 85% 25%, transparent 20%, rgba(56, 189, 248, 0.06) 21%, transparent 22%, transparent 38%, rgba(56, 189, 248, 0.05) 39%, transparent 40%, transparent 60%, rgba(56, 189, 248, 0.04) 61%, transparent 62%);
-        }
-    </style>
-</head>
-<body class="bg-white text-slate-900 font-sans antialiased">
-
-    <!-- Top Tagline Bar (Crimson Red Theme) -->
-    <div class="bg-[#991B1B] text-white border-b border-red-900/50 text-xs py-2 px-6">
-        <div class="mx-auto max-w-7xl flex flex-wrap items-center justify-between gap-4">
-            <div class="flex items-center gap-6">
-                <span><strong>Call Us:</strong> +603-55679771 / +603-55679718</span>
-                <span><strong>Email:</strong> enquiry@orbitforce.net</span>
-            </div>
-            <div class="hidden md:block font-semibold text-amber-300">
-                &ldquo;Security Is Not An Expense But An Investment Against Loss!&rdquo;
-            </div>
-        </div>
-    </div>
-
-    <!-- ==================== HEADER ==================== -->
-    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
-        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
-            <a href="index.html" aria-label="Orbit Force Home" class="flex items-center">
-                <img src="images/3-OrbitForce.png" alt="Orbit Force Security Sdn Bhd" class="h-14 w-auto object-contain">
-            </a>
-
-            <!-- Desktop Navigation Structure -->
-            <nav aria-label="Primary Navigation" class="hidden items-center gap-6 lg:flex">
-                <a href="index.html" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">HOME</a>
-
-                <!-- ABOUT US Dropdown -->
-                <div class="dropdown-parent relative py-6">
-                    <a href="about-orbit.html" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
-                        ABOUT US
-                        <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </a>
-                    <div class="dropdown-menu absolute left-0 top-full w-60 bg-white border border-slate-200 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium">
-                        <a href="about-orbit.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">About Company</a>
-                        <a href="management.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Management</a>
-                        <a href="certifications.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Certifications</a>
-                        <a href="branches.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Branches and Locations</a>
-                    </div>
-                </div>
-
-                <!-- SERVICES Dropdown -->
-                <div class="dropdown-parent relative py-6">
-                    <a href="security-services.html" class="inline-flex items-center gap-1 text-sm font-semibold text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
-                        SERVICES
-                        <svg class="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </a>
-                    <div class="dropdown-menu absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium">
-                        <a href="private-escort.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Private Escort Service</a>
-                        <a href="security-training.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Security Training</a>
-                        <a href="canine-protection.html" class="block px-5 py-2.5 hover:bg-slate-100 text-red-700 font-semibold transition-colors">Guard DogsHere is the image naming guide and the complete **`canine-protection.html`** code built with the same high-tech dark theme, background particle animations, radial grid overlays, and contact call-out cards!
-
----
-
-### 🖼️ Image Naming Guide (Upload to your `images/` folder on GitHub)
-
-Upload the 2 canine service images from your screenshots to your repository's `images/` folder on GitHub using these exact filenames:
-
-1. **`images/canine-training.jpg`**  
-   *(The attack training image showing the handler with bite sleeve from screenshot 1)*
-2. **`images/canine-security.jpg`**  
-   *(The German Shepherd security dog lying down with the handler from screenshot 2)*
-
----
-
-### 📄 Complete `canine-protection.html` Code
-
-Create a new file named **`canine-protection.html`** on GitHub and paste this code:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guard Dogs & Canine Protection Services | Orbit Force Security Sdn Bhd</title>
-    <meta name="description" content="Professional K9 canine security services including General Purpose Security Dogs, Drug Detection, Explosive Detection, and Pyrotechnic Detection Dogs.">
-    <meta name="author" content="Orbit Force Security">
-
-    <!-- Tailwind CSS Play CDN -->
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
-
-    <!-- Custom Design System Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-    <link href="[https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap](https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap)" rel="stylesheet">
 
     <style>
         .dropdown-menu {
@@ -285,7 +168,7 @@ Create a new file named **`canine-protection.html`** on GitHub and paste this co
                     </h2>
                     <div class="w-12 h-1 bg-red-600 mx-auto mt-4 mb-6"></div>
                     <p class="text-xs sm:text-sm text-slate-300 font-body leading-relaxed">
-                        A General Purpose Security dog is trained to detect intruders in order to protect a person, a property or valuable assets such as metals or void properties. The provision of thoroughbred, trained and disciplined guards dogs from the "Martial" breeds.
+                        A General Purpose Security dog is trained to detect intruders in order to protect a person, a property or valuable assets such as metals or void properties. The provision of thoroughbred, trained and disciplined guards dogs from the &ldquo;Martial&rdquo; breeds.
                     </p>
                 </div>
 
