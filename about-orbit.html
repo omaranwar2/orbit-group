@@ -126,22 +126,15 @@
     </header>
 
     <main>
-        <!-- ==================== 1. HERO HEADER ==================== -->
-        <section class="relative bg-slate-950 py-20 lg:py-28 text-white overflow-hidden border-b border-white/10 text-center">
-            <div class="absolute inset-0 z-0 pointer-events-none">
-                <img src="images/security-division.jpg" alt="About Orbit Group" class="h-full w-full object-cover opacity-30">
-                <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950"></div>
-            </div>
-
+        <!-- ==================== 1. SLIM ANIMATED HERO BANNER ==================== -->
+        <section class="relative bg-[#0b1e36] py-10 sm:py-12 text-white overflow-hidden border-b border-white/10 text-center flex items-center justify-center">
+            <!-- Animated Particle Network Canvas -->
+            <canvas id="tech-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-80"></canvas>
+            
             <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 flex flex-col items-center">
-                <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white uppercase">
-                    ABOUT US
+                <h1 class="font-display text-2xl sm:text-3xl font-bold tracking-normal text-white">
+                    About Us
                 </h1>
-                <div class="mt-4 flex items-center gap-2 text-sm text-amber-300 font-display">
-                    <a href="index.html" class="hover:text-white transition-colors">Home</a>
-                    <span>&rsaquo;</span>
-                    <span class="text-slate-300">About Us</span>
-                </div>
             </div>
         </section>
 
@@ -385,12 +378,82 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Menu Toggle
             document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
                 var menu = document.getElementById('mobile-menu');
                 if (menu) {
                     menu.classList.toggle('hidden');
                 }
             });
+
+            // Interactive Tech Constellation Banner Animation
+            const canvas = document.getElementById('tech-canvas');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                let width, height, particles;
+
+                function resize() {
+                    width = canvas.width = canvas.offsetWidth;
+                    height = canvas.height = canvas.offsetHeight;
+                    initParticles();
+                }
+
+                function initParticles() {
+                    particles = [];
+                    const count = Math.floor(width / 15);
+                    for (let i = 0; i < count; i++) {
+                        particles.push({
+                            x: Math.random() * width,
+                            y: Math.random() * height,
+                            vx: (Math.random() - 0.5) * 0.6,
+                            vy: (Math.random() - 0.5) * 0.6,
+                            radius: Math.random() * 1.5 + 1
+                        });
+                    }
+                }
+
+                function draw() {
+                    ctx.clearRect(0, 0, width, height);
+
+                    // Draw connecting lines
+                    for (let i = 0; i < particles.length; i++) {
+                        for (let j = i + 1; j < particles.length; j++) {
+                            const dx = particles[i].x - particles[j].x;
+                            const dy = particles[i].y - particles[j].y;
+                            const dist = Math.sqrt(dx * dx + dy * dy);
+
+                            if (dist < 110) {
+                                ctx.beginPath();
+                                ctx.moveTo(particles[i].x, particles[i].y);
+                                ctx.lineTo(particles[j].x, particles[j].y);
+                                ctx.strokeStyle = `rgba(100, 180, 255, ${1 - dist / 110})`;
+                                ctx.lineWidth = 0.5;
+                                ctx.stroke();
+                            }
+                        }
+                    }
+
+                    // Draw particles
+                    for (let p of particles) {
+                        p.x += p.vx;
+                        p.y += p.vy;
+
+                        if (p.x < 0 || p.x > width) p.vx *= -1;
+                        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = 'rgba(180, 220, 255, 0.8)';
+                        ctx.fill();
+                    }
+
+                    requestAnimationFrame(draw);
+                }
+
+                window.addEventListener('resize', resize);
+                resize();
+                draw();
+            }
         });
     </script>
 </body>
