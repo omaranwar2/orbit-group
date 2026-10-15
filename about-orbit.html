@@ -31,13 +31,22 @@
             transform: translateY(0);
         }
 
-        /* Dark Grid Pattern Overlay matching Brand Story */
+        /* Dark Grid Pattern Overlay */
         .bg-tech-grid {
             background-color: #0c1c28;
             background-image: 
                 linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
             background-size: 32px 32px;
+        }
+
+        /* Light Tech Grid Overlay (Matching screenshot style) */
+        .bg-light-grid {
+            background-color: #f4f7f9;
+            background-image: 
+                linear-gradient(rgba(11, 27, 43, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(11, 27, 43, 0.05) 1px, transparent 1px);
+            background-size: 28px 28px;
         }
 
         /* Pulsing Sonar Ring Animation for O-R-B-I-T Badges */
@@ -154,7 +163,7 @@
     </header>
 
     <main>
-        <!-- ==================== 1. HERO BANNER (BALANCED HEIGHT & LARGER TEXT) ==================== -->
+        <!-- ==================== 1. HERO BANNER ==================== -->
         <section class="relative bg-[#0b1e36] py-16 sm:py-20 text-white overflow-hidden border-b border-white/10 text-center flex items-center justify-center">
             <!-- Animated Particle Network Canvas -->
             <canvas id="tech-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-80"></canvas>
@@ -171,12 +180,12 @@
             </div>
         </section>
 
-        <!-- ==================== 2. CORPORATE OVERVIEW (DARK TEAL GRID PATTERN LIKE BRAND STORY) ==================== -->
+        <!-- ==================== 2. CORPORATE OVERVIEW (DARK TEAL GRID + HOVER ZOOM EFFECTS) ==================== -->
         <section class="py-24 bg-tech-grid text-white border-b border-white/10">
             <div class="mx-auto max-w-7xl px-6 lg:px-12">
                 
                 <!-- Main Header Box -->
-                <div class="bg-[#112435]/80 border border-slate-700/80 rounded-3xl p-8 sm:p-12 mb-12 shadow-2xl backdrop-blur-sm">
+                <div class="bg-[#112435]/90 border border-slate-700/80 rounded-3xl p-8 sm:p-12 mb-12 shadow-2xl backdrop-blur-sm transition-transform duration-300 hover:scale-[1.01]">
                     <h2 class="font-display text-3xl sm:text-5xl font-bold text-white uppercase mb-6 tracking-wide">
                         OUR <span class="text-red-600">BRAND STORY</span>
                     </h2>
@@ -188,14 +197,14 @@
                     </p>
                 </div>
 
-                <!-- Three Arms -->
+                <!-- Three Arms with Zoom-in & Lift Effects -->
                 <div class="mt-12">
                     <h3 class="font-display text-2xl font-bold text-white mb-2">The New-Age Force</h3>
                     <p class="text-sm text-slate-400 font-body mb-8">Today, we operate through three complementary business arms:</p>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <!-- Arm 01 -->
-                        <div class="group bg-[#112435]/80 border border-slate-700/80 hover:border-red-500 rounded-2xl p-8 relative shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-red-950/20 flex flex-col justify-between">
+                        <div class="group bg-[#112435]/90 border border-slate-700/80 hover:border-red-500 rounded-2xl p-8 relative shadow-xl transition-all duration-300 hover:scale-[1.03] hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-600/20 flex flex-col justify-between cursor-pointer">
                             <div>
                                 <div class="w-10 h-10 rounded-xl bg-red-600 text-white font-display font-bold text-sm flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">01</div>
                                 <h4 class="font-display font-bold text-xl text-white mb-4 group-hover:text-red-400 transition-colors">Orbit Force Security</h4>
@@ -206,7 +215,7 @@
                         </div>
 
                         <!-- Arm 02 -->
-                        <div class="group bg-[#112435]/80 border border-slate-700/80 hover:border-red-500 rounded-2xl p-8 relative shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-red-950/20 flex flex-col justify-between">
+                        <div class="group bg-[#112435]/90 border border-slate-700/80 hover:border-red-500 rounded-2xl p-8 relative shadow-xl transition-all duration-300 hover:scale-[1.03] hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-600/20 flex flex-col justify-between cursor-pointer">
                             <div>
                                 <div class="w-10 h-10 rounded-xl bg-red-600 text-white font-display font-bold text-sm flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">02</div>
                                 <h4 class="font-display font-bold text-xl text-white mb-4 group-hover:text-red-400 transition-colors">Orbit Asia Risk Consultancy</h4>
@@ -217,7 +226,7 @@
                         </div>
 
                         <!-- Arm 03 -->
-                        <div class="group bg-[#112435]/80 border border-slate-700/80 hover:border-red-500 rounded-2xl p-8 relative shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-red-950/20 flex flex-col justify-between">
+                        <div class="group bg-[#112435]/90 border border-slate-700/80 hover:border-red-500 rounded-2xl p-8 relative shadow-xl transition-all duration-300 hover:scale-[1.03] hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-600/20 flex flex-col justify-between cursor-pointer">
                             <div>
                                 <div class="w-10 h-10 rounded-xl bg-red-600 text-white font-display font-bold text-sm flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">03</div>
                                 <h4 class="font-display font-bold text-xl text-white mb-4 group-hover:text-red-400 transition-colors">Orbit Global Technologies</h4>
@@ -231,12 +240,12 @@
             </div>
         </section>
 
-        <!-- ==================== 3. DETAILED NARRATIVE & CORE DIRECTION (LIGHT THEME) ==================== -->
-        <section class="py-24 bg-slate-50 text-slate-900 border-b border-slate-200">
+        <!-- ==================== 3. INTEGRATED MODEL, VISION, MISSION & PROMISE (LIGHT TECH GRID BACKGROUND) ==================== -->
+        <section class="py-24 bg-light-grid text-slate-900 border-b border-slate-200">
             <div class="mx-auto max-w-7xl px-6 lg:px-12">
                 <div class="max-w-4xl">
                     <h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#0a1826] uppercase mb-8">
-                        More About Our Integrated Model
+                        MORE ABOUT OUR INTEGRATED MODEL
                     </h2>
                     
                     <div class="space-y-6 text-slate-600 font-body text-sm sm:text-base leading-relaxed">
@@ -249,9 +258,9 @@
                     </div>
                 </div>
 
-                <!-- Vision & Mission Cards -->
+                <!-- Vision & Mission Cards with Hover Zoom -->
                 <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="bg-white border border-slate-200 hover:border-cyan-500 rounded-3xl p-8 sm:p-10 shadow-sm transition-all duration-300 flex flex-col justify-between">
+                    <div class="bg-white border border-slate-200/90 hover:border-cyan-500 rounded-3xl p-8 sm:p-10 shadow-md transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-xl flex flex-col justify-between cursor-pointer">
                         <div>
                             <span class="text-xs font-bold text-cyan-600 font-display">01</span>
                             <h3 class="font-display text-2xl font-bold text-[#0a1826] uppercase mt-2 mb-4">OUR VISION</h3>
@@ -261,7 +270,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-white border border-slate-200 hover:border-cyan-500 rounded-3xl p-8 sm:p-10 shadow-sm transition-all duration-300 flex flex-col justify-between">
+                    <div class="bg-white border border-slate-200/90 hover:border-cyan-500 rounded-3xl p-8 sm:p-10 shadow-md transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-xl flex flex-col justify-between cursor-pointer">
                         <div>
                             <span class="text-xs font-bold text-cyan-600 font-display">02</span>
                             <h3 class="font-display text-2xl font-bold text-[#0a1826] uppercase mt-2 mb-4">OUR MISSION</h3>
@@ -273,7 +282,7 @@
                 </div>
 
                 <!-- Our Promise Card -->
-                <div class="mt-8 bg-[#092837] text-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-800">
+                <div class="mt-8 bg-[#092837] text-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-800 transition-all duration-300 hover:scale-[1.01]">
                     <span class="text-xs font-bold text-cyan-400 font-display">03</span>
                     <h3 class="font-display text-2xl sm:text-3xl font-bold uppercase mt-2 mb-2">OUR PROMISE</h3>
                     <p class="text-sm font-semibold text-cyan-300 font-display mb-6">One Group. Complete Protection.</p>
@@ -284,7 +293,7 @@
             </div>
         </section>
 
-        <!-- ==================== 4. THE ORBIT PHILOSOPHY (WITH ANIMATED SONAR CIRCLES & HOVER EFFECTS) ==================== -->
+        <!-- ==================== 4. THE ORBIT PHILOSOPHY (SONAR ANIMATIONS & HOVER EFFECTS) ==================== -->
         <section class="py-24 bg-[#0a1826] text-white border-b border-white/10">
             <div class="mx-auto max-w-7xl px-6 lg:px-12">
                 <div class="mb-12">
@@ -296,7 +305,7 @@
 
                 <div class="space-y-4 max-w-4xl">
                     <!-- O -->
-                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 shadow-md">
+                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 hover:scale-[1.02] shadow-md cursor-pointer">
                         <div class="relative flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500 bg-cyan-950/50 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">
                             <span class="absolute inset-0 rounded-full border border-cyan-400 animate-sonar pointer-events-none"></span>
                             O
@@ -308,7 +317,7 @@
                     </div>
 
                     <!-- R -->
-                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 shadow-md">
+                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 hover:scale-[1.02] shadow-md cursor-pointer">
                         <div class="relative flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500 bg-cyan-950/50 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">
                             <span class="absolute inset-0 rounded-full border border-cyan-400 animate-sonar pointer-events-none" style="animation-delay: 0.5s;"></span>
                             R
@@ -320,7 +329,7 @@
                     </div>
 
                     <!-- B -->
-                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 shadow-md">
+                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 hover:scale-[1.02] shadow-md cursor-pointer">
                         <div class="relative flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500 bg-cyan-950/50 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">
                             <span class="absolute inset-0 rounded-full border border-cyan-400 animate-sonar pointer-events-none" style="animation-delay: 1s;"></span>
                             B
@@ -332,7 +341,7 @@
                     </div>
 
                     <!-- I -->
-                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 shadow-md">
+                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 hover:scale-[1.02] shadow-md cursor-pointer">
                         <div class="relative flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500 bg-cyan-950/50 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">
                             <span class="absolute inset-0 rounded-full border border-cyan-400 animate-sonar pointer-events-none" style="animation-delay: 1.5s;"></span>
                             I
@@ -344,7 +353,7 @@
                     </div>
 
                     <!-- T -->
-                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 shadow-md">
+                    <div class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex items-start gap-6 hover:border-cyan-400 hover:bg-slate-900 transition-all duration-300 hover:scale-[1.02] shadow-md cursor-pointer">
                         <div class="relative flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500 bg-cyan-950/50 text-cyan-400 font-display font-bold text-xl flex items-center justify-center">
                             <span class="absolute inset-0 rounded-full border border-cyan-400 animate-sonar pointer-events-none" style="animation-delay: 2s;"></span>
                             T
@@ -358,8 +367,8 @@
             </div>
         </section>
 
-        <!-- ==================== 5. ORBIT FORCE SECURITY INTRODUCTION & OBJECTIVES ==================== -->
-        <section class="py-24 bg-white text-slate-900 border-b border-slate-200">
+        <!-- ==================== 5. INTRODUCTION & OBJECTIVES (LIGHT TECH GRID BACKGROUND) ==================== -->
+        <section class="py-24 bg-light-grid text-slate-900 border-b border-slate-200">
             <div class="mx-auto max-w-7xl px-6 lg:px-12">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <span class="text-xs font-bold uppercase tracking-widest text-red-700 font-display">Commercial &amp; Industrial Security</span>
@@ -370,10 +379,10 @@
                     </p>
                 </div>
 
-                <!-- Our Objectives with Dog Picture -->
-                <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-12">
-                    <div class="rounded-2xl overflow-hidden shadow-md">
-                        <img src="images/about-objectives.jpg" alt="Orbit Force Security Guard Dogs" class="w-full h-80 object-cover">
+                <!-- Our Objectives with Guard Dog Image -->
+                <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white border border-slate-200/90 rounded-3xl p-8 sm:p-12 shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="rounded-2xl overflow-hidden shadow-md group">
+                        <img src="images/about-objectives.jpg" alt="Orbit Force Security Guard Dogs" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
                     <div>
                         <span class="text-xs font-bold uppercase tracking-wider text-red-700 font-display">OUR OBJECTIVES</span>
@@ -388,13 +397,13 @@
             </div>
         </section>
 
-        <!-- ==================== 6. ORGANIZATION CHART ==================== -->
-        <section class="py-24 bg-slate-50 text-slate-900 border-b border-slate-200">
+        <!-- ==================== 6. ORGANIZATION CHART (LIGHT TECH GRID BACKGROUND) ==================== -->
+        <section class="py-24 bg-light-grid text-slate-900 border-b border-slate-200">
             <div class="mx-auto max-w-7xl px-6 lg:px-12 text-center">
                 <span class="text-xs font-bold uppercase tracking-widest text-red-700 font-display">Corporate Structure</span>
                 <h2 class="mt-2 font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 uppercase mb-12">ORGANIZATION CHART</h2>
 
-                <div class="max-w-5xl mx-auto bg-white p-4 sm:p-8 rounded-3xl border border-slate-200 shadow-lg">
+                <div class="max-w-5xl mx-auto bg-white p-4 sm:p-8 rounded-3xl border border-slate-200/90 shadow-xl transition-all duration-300 hover:shadow-2xl">
                     <img src="images/organization-chart.jpg" alt="Orbit Force Security Organization Chart" class="w-full h-auto object-contain mx-auto">
                 </div>
             </div>
