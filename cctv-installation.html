@@ -158,7 +158,7 @@
             </div>
         </section>
 
-        <!-- ==================== 2. OVERVIEW & MAIN PICTURE WITH CONTACT BOX ==================== -->
+        <!-- ==================== 2. OVERVIEW & GALLERY ==================== -->
         <section class="relative py-24 bg-gradient-to-br from-[#06141f] via-[#091e2e] to-[#040e17] bg-orbit-radial-lines text-white border-b border-white/10 overflow-hidden">
             <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
                 
@@ -173,19 +173,26 @@
                     </p>
                 </div>
 
-                <!-- Side-By-Side: Police Standing at Gate Image + Call Us Card -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                     
-                    <!-- Left: Police Standing at Gate Image (police-orbit.jpg) -->
-                    <div class="lg:col-span-8 flex">
-                        <div class="w-full rounded-3xl overflow-hidden border border-[#183950] shadow-2xl group hover:border-[#38bdf8] transition-all bg-[#0e2333]">
-                            <img src="images/police-orbit.jpg" alt="Police Guards Standing at Security Gate" class="w-full h-80 sm:h-96 lg:h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <!-- Left Images Showcase (Using 5-day-old assets) -->
+                    <div class="lg:col-span-8 space-y-8">
+                        
+                        <!-- Top Image -->
+                        <div class="rounded-3xl overflow-hidden border border-[#183950] shadow-2xl group hover:border-[#38bdf8] transition-all bg-[#0e2333]">
+                            <img src="images/mobile-security-patrol.png" alt="Advanced Surveillance & Monitoring Systems" class="w-full h-80 sm:h-96 object-cover transition-transform duration-500 group-hover:scale-105">
                         </div>
+
+                        <!-- Bottom Image -->
+                        <div class="rounded-3xl overflow-hidden border border-[#183950] shadow-2xl group hover:border-[#38bdf8] transition-all bg-[#0e2333]">
+                            <img src="images/security-division.jpg" alt="Commercial CCTV Setup & Control Room" class="w-full h-80 sm:h-96 object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+
                     </div>
 
-                    <!-- Right Column: Call Us Contact Box -->
-                    <div class="lg:col-span-4 flex">
-                        <div class="w-full bg-gradient-to-b from-[#0e2a3f] to-[#091b29] border-2 border-[#38bdf8]/60 rounded-3xl p-8 text-center shadow-2xl backdrop-blur-md flex flex-col justify-center">
+                    <!-- Right Column: Call Us Box -->
+                    <div class="lg:col-span-4">
+                        <div class="sticky top-28 bg-gradient-to-b from-[#0e2a3f] to-[#091b29] border-2 border-[#38bdf8]/60 rounded-3xl p-8 text-center shadow-2xl backdrop-blur-md">
                             <div class="w-16 h-16 mx-auto rounded-full bg-[#38bdf8]/20 border border-[#38bdf8] flex items-center justify-center text-[#38bdf8] mb-6 shadow-lg">
                                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
@@ -217,70 +224,84 @@
             </div>
         </section>
 
-        <!-- ==================== 3. COMPREHENSIVE SYSTEMS & WE OFFERED ==================== -->
+        <!-- ==================== 3. ADDITIONAL SERVICES & WE OFFERED ==================== -->
         <section class="relative py-24 bg-[#08121e] text-white border-b border-white/10 overflow-hidden">
             <canvas id="intro-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-40"></canvas>
 
-            <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 space-y-12">
-                
-                <!-- Card 1: Comprehensive Systems -->
-                <div class="bg-[#0e2333]/90 border border-slate-700/80 rounded-3xl p-8 sm:p-10 backdrop-blur-md shadow-2xl">
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-[#38bdf8] font-display mb-3">COMPREHENSIVE SYSTEMS</h3>
-                    <p class="text-sm sm:text-base font-semibold font-display text-white mb-6">
-                        Other than CCTV Installation, we are providing:
-                    </p>
-                    <ul class="space-y-4 font-display font-semibold text-xs sm:text-sm text-slate-200">
-                        <li class="flex items-center gap-3.5 border-b border-slate-800 pb-3">
-                            <span class="w-3 h-3 rounded-full bg-red-600 shadow-sm shadow-red-600/50"></span>
-                            Installation of Alarm System
-                        </li>
-                        <li class="flex items-center gap-3.5 border-b border-slate-800 pb-3">
-                            <span class="w-3 h-3 rounded-full bg-red-600 shadow-sm shadow-red-600/50"></span>
-                            Access Card System
-                        </li>
-                        <li class="flex items-center gap-3.5">
-                            <span class="w-3 h-3 rounded-full bg-red-600 shadow-sm shadow-red-600/50"></span>
-                            Central Monitoring System &amp; Maintenance
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Card 2: We Offered Section -->
-                <div class="bg-[#0e2333]/90 border border-slate-700/80 rounded-3xl p-8 sm:p-10 backdrop-blur-md shadow-2xl">
-                    <span class="text-xs font-bold uppercase tracking-widest text-red-500 font-display">WHY CHOOSE US</span>
-                    <h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white uppercase mt-1 mb-4">
-                        WE OFFERED
-                    </h2>
-                    <div class="w-12 h-1 bg-red-600 mb-6"></div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-display font-semibold text-xs sm:text-sm text-slate-200">
-                        <div class="flex items-center gap-3 border-b border-slate-800/80 pb-3">
-                            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-                            Well-trained and skilled technicians
-                        </div>
-                        <div class="flex items-center gap-3 border-b border-slate-800/80 pb-3">
-                            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-                            Customized solutions
-                        </div>
-                        <div class="flex items-center gap-3 border-b border-slate-800/80 pb-3">
-                            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-                            Affordable prices for all
-                        </div>
-                        <div class="flex items-center gap-3 border-b border-slate-800/80 pb-3">
-                            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-                            Zero service charges
-                        </div>
-                        <div class="flex items-center gap-3 border-b border-slate-800/80 pb-3 md:border-none">
-                            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-                            In-time services according to your timing and place
-                        </div>
-                        <div class="flex items-center gap-3 text-amber-300">
-                            <span class="w-2.5 h-2.5 rounded-full bg-amber-300"></span>
-                            Assurance of relaxation
+            <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Photo (Using 5-day-old asset) -->
+                    <div class="lg:col-span-5">
+                        <div class="rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl group hover:border-red-500/80 transition-colors bg-[#0e2333]">
+                            <img src="images/risk-management-consultancy.png" alt="Professional Security Technician & Setup" class="w-full h-80 sm:h-96 object-cover transition-transform duration-500 group-hover:scale-105">
                         </div>
                     </div>
-                </div>
 
+                    <!-- Right: Features & Offerings Content -->
+                    <div class="lg:col-span-7 space-y-8">
+                        
+                        <!-- Complementary Systems -->
+                        <div class="bg-[#0e2333]/90 border border-slate-700/80 rounded-2xl p-6 sm:p-8 backdrop-blur-md shadow-2xl">
+                            <h3 class="text-xs font-bold uppercase tracking-widest text-[#38bdf8] font-display mb-3">COMPREHENSIVE SYSTEMS</h3>
+                            <p class="text-sm font-semibold font-display text-white mb-4">
+                                Other than CCTV Installation, we are providing:
+                            </p>
+                            <ul class="space-y-3 font-display font-semibold text-xs sm:text-sm text-slate-200">
+                                <li class="flex items-center gap-3 border-b border-slate-800 pb-2.5">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-red-600"></span>
+                                    Installation of Alarm System
+                                </li>
+                                <li class="flex items-center gap-3 border-b border-slate-800 pb-2.5">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-red-600"></span>
+                                    Access Card System
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-red-600"></span>
+                                    Central Monitoring System &amp; Maintenance
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- We Offered Checklist -->
+                        <div class="bg-[#0e2333]/90 border border-slate-700/80 rounded-2xl p-6 sm:p-8 backdrop-blur-md shadow-2xl">
+                            <span class="text-xs font-bold uppercase tracking-widest text-red-500 font-display">WHY CHOOSE US</span>
+                            <h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white uppercase mt-1 mb-4">
+                                WE OFFERED
+                            </h2>
+                            <div class="w-12 h-1 bg-red-600 mb-6"></div>
+
+                            <ul class="space-y-3 font-display font-semibold text-xs sm:text-sm text-slate-200">
+                                <li class="flex items-center gap-3 border-b border-slate-800 pb-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                                    Well-trained and skilled technicians
+                                </li>
+                                <li class="flex items-center gap-3 border-b border-slate-800 pb-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                                    Customized solutions
+                                </li>
+                                <li class="flex items-center gap-3 border-b border-slate-800 pb-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                                    Affordable prices for all
+                                </li>
+                                <li class="flex items-center gap-3 border-b border-slate-800 pb-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                                    Zero service charges
+                                </li>
+                                <li class="flex items-center gap-3 border-b border-slate-800 pb-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                                    In-time services according to your timing and place
+                                </li>
+                                <li class="flex items-center gap-3 text-amber-300">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-amber-300"></span>
+                                    Assurance of relaxation
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </section>
 
