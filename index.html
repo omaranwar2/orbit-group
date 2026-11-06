@@ -52,14 +52,6 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
-        /* Dark Grid Pattern Overlay */
-        .bg-tech-grid {
-            background-color: #0c1c28;
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-            background-size: 32px 32px;
-        }
     </style>
 </head>
 <body class="bg-white text-slate-900 font-sans antialiased">
@@ -156,17 +148,20 @@
     </header>
 
     <main>
-        <!-- ==================== HERO SECTION (WITH MOVING TECH ANIMATION) ==================== -->
-        <section class="relative bg-[#0b1e36] py-28 lg:py-36 text-white overflow-hidden border-b border-white/10 text-center flex items-center justify-center min-h-[450px]">
-            <canvas id="tech-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-80"></canvas>
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="relative bg-slate-950 py-28 lg:py-36 text-white overflow-hidden border-b border-white/10 text-center">
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <img src="images/security-division.jpg" alt="Orbit Force Operations" class="h-full w-full object-cover opacity-35">
+                <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950"></div>
+            </div>
 
             <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 flex flex-col items-center">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-amber-400 text-xs font-semibold uppercase tracking-wider font-display mb-6">
                     License No. 005961 &amp; 005962 (KDN) &middot; Private Agency Act 1971 &middot; ISO Certified
                 </div>
 
-                <h1 class="font-display text-3xl font-bold leading-tight sm:text-5xl lg:text-6xl max-w-4xl tracking-tight uppercase">
-                    ORBIT FORCE SECURITY SDN BHD <span class="block text-slate-400 text-xl sm:text-2xl font-normal mt-2 normal-case">(Co. No. 566183-U)</span>
+                <h1 class="font-display text-3xl font-bold leading-tight sm:text-5xl lg:text-6xl max-w-4xl tracking-tight">
+                    ORBIT FORCE SECURITY SDN BHD <span class="block text-slate-400 text-xl sm:text-2xl font-normal mt-2">(Co. No. 566183-U)</span>
                 </h1>
 
                 <p class="mt-6 max-w-3xl text-lg sm:text-xl text-amber-300 font-display font-semibold leading-relaxed border-y border-amber-400/20 py-3">
@@ -176,29 +171,6 @@
                 <p class="mt-4 max-w-2xl text-sm sm:text-base text-slate-300 font-body leading-relaxed">
                     Integrated Commercial &amp; Industrial Security Agency incorporated in Malaysia on 6th December, 2001. Delivering static guarding, Gurkha units, K9 canine protection, and alarm automation.
                 </p>
-            </div>
-        </section>
-
-        <!-- ==================== PARTNER / GROUP LOGOS SHOWCASE SECTION ==================== -->
-        <section class="relative py-14 bg-tech-grid border-b border-white/10 overflow-hidden">
-            <div class="mx-auto max-w-7xl px-6 lg:px-12">
-                <div class="text-center mb-8">
-                    <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-[#38bdf8] font-display">GROUP CAPABILITIES &amp; NETWORK</span>
-                </div>
-                <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16 lg:gap-24">
-                    <!-- Logo 1: Orbit Force Security -->
-                    <div class="flex items-center justify-center p-4 bg-slate-900/40 rounded-2xl border border-white/10 shadow-lg hover:border-[#38bdf8]/50 transition-all">
-                        <img src="images/3-OrbitForce.png" alt="Orbit Force Security" class="h-14 md:h-16 w-auto object-contain">
-                    </div>
-                    <!-- Logo 2: Orbit Asia Risk Consultancy -->
-                    <div class="flex items-center justify-center p-4 bg-slate-900/40 rounded-2xl border border-white/10 shadow-lg hover:border-[#38bdf8]/50 transition-all">
-                        <img src="images/orbit-asia.png" alt="Orbit Asia Risk Consultancy" class="h-12 md:h-14 w-auto object-contain">
-                    </div>
-                    <!-- Logo 3: Orbit Global Technologies -->
-                    <div class="flex items-center justify-center p-4 bg-slate-900/40 rounded-2xl border border-white/10 shadow-lg hover:border-[#38bdf8]/50 transition-all">
-                        <img src="images/orbit-global.png" alt="Orbit Global Technologies" class="h-10 md:h-12 w-auto object-contain">
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -461,53 +433,232 @@
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
                             </div>
                         </div>
+
+                        <div class="group relative flex items-center justify-end text-right p-4 rounded-2xl bg-slate-900/80 border border-slate-700 hover:border-amber-400 hover:bg-slate-900 transition-all duration-300 shadow-lg backdrop-blur-sm">
+                            <div>
+                                <h3 class="font-display font-bold text-base text-white group-hover:text-amber-400 transition-colors">NEGERI SEMBILAN</h3>
+                                <p class="mt-1 text-xs text-slate-300 font-body leading-relaxed">NO.1760, TINGKAT 1 TAMAN RASA UTAMA, 70300 SEREMBAN.</p>
+                            </div>
+                            <div class="ml-4 flex-shrink-0 w-12 h-12 rounded-full bg-[#0073b7] text-white flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-amber-500 transition-all duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Center Graphic / Map Representation -->
-                    <div class="flex justify-center my-6 lg:my-0">
-                        <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-[#0073b7]/20 border-2 border-amber-400/50 flex items-center justify-center shadow-2xl animate-pulse">
-                            <div class="absolute inset-4 rounded-full border border-white/20"></div>
-                            <div class="absolute inset-12 rounded-full border border-amber-400/30"></div>
-                            <div class="text-center p-6 z-10">
-                                <span class="block font-display text-2xl font-bold text-white tracking-widest uppercase">HQ &amp; BRANCHES</span>
-                                <span class="mt-2 block text-xs text-amber-300 font-display">NATIONWIDE COVERAGE</span>
-                                <a href="branches.html" class="mt-4 inline-block px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold rounded-full shadow transition-colors">View All Locations</a>
-                            </div>
+                    <!-- Center Image -->
+                    <div class="flex flex-col items-center justify-center text-center py-4">
+                        <div class="relative w-full max-w-lg rounded-3xl p-3 bg-slate-900/80 border border-slate-700 shadow-2xl group hover:scale-[1.02] transition-all duration-500 backdrop-blur-sm">
+                            <img src="images/operation-centers.png" alt="Operation Centers Central Monitoring Station" class="w-full h-auto object-contain rounded-2xl">
                         </div>
                     </div>
 
                     <!-- Right Side Branches -->
                     <div class="space-y-6 flex flex-col">
-                        <div class="group relative flex items-center text-left p-4 rounded-2xl bg-slate-900/80 border border-slate-700 hover:border-amber-400 hover:bg-slate-900 transition-all duration-300 shadow-lg backdrop-blur-sm">
+                        <div class="group relative flex items-center p-4 rounded-2xl bg-slate-900/80 border border-slate-700 hover:border-amber-400 hover:bg-slate-900 transition-all duration-300 shadow-lg backdrop-blur-sm">
+                            <div class="mr-4 flex-shrink-0 w-12 h-12 rounded-full bg-[#0073b7] text-white flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-amber-500 transition-all duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-base text-white group-hover:text-amber-400 transition-colors">SUBANG JAYA</h3>
+                                <p class="mt-1 text-xs text-slate-300 font-body leading-relaxed">NO.9, JALAN SUBANG 6, SUBANG JAYA, SELANGOR.</p>
+                            </div>
+                        </div>
+
+                        <div class="group relative flex items-center p-4 rounded-2xl bg-slate-900/80 border border-slate-700 hover:border-amber-400 hover:bg-slate-900 transition-all duration-300 shadow-lg backdrop-blur-sm">
+                            <div class="mr-4 flex-shrink-0 w-12 h-12 rounded-full bg-[#0073b7] text-white flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-amber-500 transition-all duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-base text-white group-hover:text-amber-400 transition-colors">IPOH</h3>
+                                <p class="mt-1 text-xs text-slate-300 font-body leading-relaxed">15A, JALAN KLEDANG 18, TAMAN ALKAF, 30100 IPOH, PERAK.</p>
+                            </div>
+                        </div>
+
+                        <div class="group relative flex items-center p-4 rounded-2xl bg-slate-900/80 border border-slate-700 hover:border-amber-400 hover:bg-slate-900 transition-all duration-300 shadow-lg backdrop-blur-sm">
                             <div class="mr-4 flex-shrink-0 w-12 h-12 rounded-full bg-[#0073b7] text-white flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-amber-500 transition-all duration-300">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
                             </div>
                             <div>
                                 <h3 class="font-display font-bold text-base text-white group-hover:text-amber-400 transition-colors">JOHOR</h3>
-                                <p class="mt-1 text-xs text-slate-300 font-body leading-relaxed">NO. 15-01, JALAN SERI PELANGI 3, TAMAN PELANGI, 80400 JOHOR BAHRU.</p>
+                                <p class="mt-1 text-xs text-slate-300 font-body leading-relaxed">NO. 19A, JALAN KIKAPO 11, TAMAN DESA CEMERLANG, JOHOR.</p>
                             </div>
                         </div>
 
-                        <div class="group relative flex items-center text-left p-4 rounded-2xl bg-slate-900/80 border border-slate-700 hover:border-amber-400 hover:bg-slate-900 transition-all duration-300 shadow-lg backdrop-blur-sm">
+                        <div class="group relative flex items-center p-4 rounded-2xl bg-slate-900/80 border border-slate-700 hover:border-amber-400 hover:bg-slate-900 transition-all duration-300 shadow-lg backdrop-blur-sm">
                             <div class="mr-4 flex-shrink-0 w-12 h-12 rounded-full bg-[#0073b7] text-white flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-amber-500 transition-all duration-300">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
                             </div>
                             <div>
-                                <h3 class="font-display font-bold text-base text-white group-hover:text-amber-400 transition-colors">PAHANG</h3>
-                                <p class="mt-1 text-xs text-slate-300 font-body leading-relaxed">NO. A-42, 1ST FLOOR, SRI KUBANG GELUGOR, 25150 KUANTAN, PAHANG.</p>
-                            </div>
-                        </div>
-
-                        <div class="group relative flex items-center text-left p-4 rounded-2xl bg-slate-900/80 border border-slate-700 hover:border-amber-400 hover:bg-slate-900 transition-all duration-300 shadow-lg backdrop-blur-sm">
-                            <div class="mr-4 flex-shrink-0 w-12 h-12 rounded-full bg-[#0073b7] text-white flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-amber-500 transition-all duration-300">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
-                            </div>
-                            <div>
-                                <h3 class="font-display font-bold text-base text-white group-hover:text-amber-400 transition-colors">PERAK</h3>
-                                <p class="mt-1 text-xs text-slate-300 font-body leading-relaxed">NO. 28A, PERSIARAN GREENTOWN 1, GREENTOWN BUSINESS CENTRE, IPOH.</p>
+                                <h3 class="font-display font-bold text-base text-white group-hover:text-amber-400 transition-colors">KUANTAN</h3>
+                                <p class="mt-1 text-xs text-slate-300 font-body leading-relaxed">LOT 472A, JALAN BUKIT UBI, 25200 KUANTAN, PAHANG.</p>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECTOR OF INVOLVEMENT ==================== -->
+        <section id="sectors" class="py-24 bg-white text-slate-900 border-b border-slate-200 overflow-hidden">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12 mb-16">
+                <div class="text-center max-w-2xl mx-auto">
+                    <span class="text-xs font-bold uppercase tracking-widest text-red-700 font-display">Coverage Scope</span>
+                    <h2 class="mt-2 font-display text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 uppercase">SECTOR OF INVOLVEMENT</h2>
+                    <p class="mt-2 text-xs text-slate-600 font-body uppercase tracking-wider">OUR SECTORS OF INVOLVEMENT ARE AS FOLLOWS: &ndash;</p>
+                </div>
+            </div>
+
+            <!-- Sectors Marquee Track -->
+            <div class="relative w-full overflow-hidden">
+                <div class="animate-marquee-fast flex gap-8 items-stretch">
+                    
+                    <!-- Original Sectors -->
+                    <div class="sector-slide flex-shrink-0 w-80 md:w-96 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                        <div class="h-48 overflow-hidden">
+                            <img src="images/sector-commercial.jpg" alt="Commercial Sector" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Commercial Sector</h3>
+                            <ul class="space-y-1.5 text-xs text-slate-600 font-body leading-relaxed">
+                                <li>&bull; Manufacturing Company</li>
+                                <li>&bull; Hotels</li>
+                                <li>&bull; Office Building</li>
+                                <li>&bull; Shopping Complex</li>
+                                <li>&bull; Logistics / Warehousing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sector-slide flex-shrink-0 w-80 md:w-96 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                        <div class="h-48 overflow-hidden">
+                            <img src="images/sector-public.jpg" alt="Public Sector" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Public Sector</h3>
+                            <ul class="space-y-1.5 text-xs text-slate-600 font-body leading-relaxed">
+                                <li>&bull; Government Office</li>
+                                <li>&bull; School, Colleges &amp; Universities</li>
+                                <li>&bull; Bank, National Building</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sector-slide flex-shrink-0 w-80 md:w-96 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                        <div class="h-48 overflow-hidden">
+                            <img src="images/sector-residential.jpg" alt="Residential Sector" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Residential Sector</h3>
+                            <ul class="space-y-1.5 text-xs text-slate-600 font-body leading-relaxed">
+                                <li>&bull; Private Homes</li>
+                                <li>&bull; VIP Homes</li>
+                                <li>&bull; Housing Estates</li>
+                                <li>&bull; Corporate suites</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Duplicated Sectors for Seamless Loop -->
+                    <div class="sector-slide flex-shrink-0 w-80 md:w-96 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                        <div class="h-48 overflow-hidden">
+                            <img src="images/sector-commercial.jpg" alt="Commercial Sector" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Commercial Sector</h3>
+                            <ul class="space-y-1.5 text-xs text-slate-600 font-body leading-relaxed">
+                                <li>&bull; Manufacturing Company</li>
+                                <li>&bull; Hotels</li>
+                                <li>&bull; Office Building</li>
+                                <li>&bull; Shopping Complex</li>
+                                <li>&bull; Logistics / Warehousing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sector-slide flex-shrink-0 w-80 md:w-96 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                        <div class="h-48 overflow-hidden">
+                            <img src="images/sector-public.jpg" alt="Public Sector" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Public Sector</h3>
+                            <ul class="space-y-1.5 text-xs text-slate-600 font-body leading-relaxed">
+                                <li>&bull; Government Office</li>
+                                <li>&bull; School, Colleges &amp; Universities</li>
+                                <li>&bull; Bank, National Building</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sector-slide flex-shrink-0 w-80 md:w-96 bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                        <div class="h-48 overflow-hidden">
+                            <img src="images/sector-residential.jpg" alt="Residential Sector" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Residential Sector</h3>
+                            <ul class="space-y-1.5 text-xs text-slate-600 font-body leading-relaxed">
+                                <li>&bull; Private Homes</li>
+                                <li>&bull; VIP Homes</li>
+                                <li>&bull; Housing Estates</li>
+                                <li>&bull; Corporate suites</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== OUR CLIENTS (CONTINUOUS MARQUEE) ==================== -->
+        <section id="clients" class="py-20 bg-white border-b border-slate-200 text-center overflow-hidden">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12 mb-12">
+                <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 uppercase">OUR CLIENTS</h2>
+                <p class="mt-2 text-sm text-slate-600 font-body">Trusted Security Partner for Public &amp; Private Sector Organizations</p>
+            </div>
+
+            <div class="relative w-full overflow-hidden pointer-events-none">
+                <div class="animate-marquee flex gap-6 items-center">
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-felcra.jpg" alt="Felcra Berhad" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-glomac.jpg" alt="Glomac Berhad" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-kpm.jpg" alt="Kementerian Pendidikan" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-linde.jpg" alt="Linde Malaysia" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-tdklambda.jpg" alt="TDK Lambda" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-tdk.jpg" alt="TDK Malaysia" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-alps.jpg" alt="ALPS Electric" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-recron.jpg" alt="Recron Malaysian" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-pacsure.jpg" alt="Pacsure Packaging" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-musictribe.jpg" alt="Music Tribe" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-micromechanics.jpg" alt="Micro Mechanics" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-matrix.jpg" alt="Matrix" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-masjid.jpg" alt="Masjid India Muslim" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-kumhoi.jpg" alt="Kum Hoi Engineering" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-integrated.jpg" alt="Integrated Logistics" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-freyssinet.jpg" alt="Freyssinet PSC" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-sumiputeh.jpg" alt="Sumiputeh Steel Centre" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-felcraeng.jpg" alt="Felcra Processing" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-cape.jpg" alt="Cape Technology" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-beryls.jpg" alt="Beryl's Marketing" class="max-h-16 max-w-full object-contain"></div>
+
+                    <!-- Duplicated Set for Seamless Loop -->
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-felcra.jpg" alt="Felcra Berhad" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-glomac.jpg" alt="Glomac Berhad" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-kpm.jpg" alt="Kementerian Pendidikan" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-linde.jpg" alt="Linde Malaysia" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-tdklambda.jpg" alt="TDK Lambda" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-tdk.jpg" alt="TDK Malaysia" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-alps.jpg" alt="ALPS Electric" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-recron.jpg" alt="Recron Malaysian" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-pacsure.jpg" alt="Pacsure Packaging" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-musictribe.jpg" alt="Music Tribe" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-micromechanics.jpg" alt="Micro Mechanics" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-matrix.jpg" alt="Matrix" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-masjid.jpg" alt="Masjid India Muslim" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-kumhoi.jpg" alt="Kum Hoi Engineering" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-integrated.jpg" alt="Integrated Logistics" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-freyssinet.jpg" alt="Freyssinet PSC" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-sumiputeh.jpg" alt="Sumiputeh Steel Centre" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-felcraeng.jpg" alt="Felcra Processing" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-cape.jpg" alt="Cape Technology" class="max-h-16 max-w-full object-contain"></div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center h-28 w-44 flex-shrink-0"><img src="images/client-beryls.jpg" alt="Beryl's Marketing" class="max-h-16 max-w-full object-contain"></div>
                 </div>
             </div>
         </section>
@@ -530,7 +681,7 @@
                         <ul class="space-y-2.5 text-xs text-red-100 font-body">
                             <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
                             <li><a href="about-orbit.html" class="hover:text-white transition-colors">About Company</a></li>
-                            <li><a href="#scope-of-services" class="hover:text-white transition-colors">Services Overview</a></li>
+                            <li><a href="security-services.html" class="hover:text-white transition-colors">Services Overview</a></li>
                             <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
                         </ul>
                     </div>
@@ -554,80 +705,12 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Mobile Menu Toggle
             document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
                 var menu = document.getElementById('mobile-menu');
                 if (menu) {
                     menu.classList.toggle('hidden');
                 }
             });
-
-            // Hero Tech Constellation Animation
-            const techCanvas = document.getElementById('tech-canvas');
-            if (techCanvas) {
-                const ctx = techCanvas.getContext('2d');
-                let width, height, particles;
-
-                function resize() {
-                    width = techCanvas.width = techCanvas.offsetWidth;
-                    height = techCanvas.height = techCanvas.offsetHeight;
-                    initParticles();
-                }
-
-                function initParticles() {
-                    particles = [];
-                    const count = Math.floor(width / 15);
-                    for (let i = 0; i < count; i++) {
-                        particles.push({
-                            x: Math.random() * width,
-                            y: Math.random() * height,
-                            vx: (Math.random() - 0.5) * 0.6,
-                            vy: (Math.random() - 0.5) * 0.6,
-                            radius: Math.random() * 1.5 + 1
-                        });
-                    }
-                }
-
-                function draw() {
-                    ctx.clearRect(0, 0, width, height);
-
-                    for (let i = 0; i < particles.length; i++) {
-                        for (let j = i + 1; j < particles.length; j++) {
-                            const dx = particles[i].x - particles[j].x;
-                            const dy = particles[i].y - particles[j].y;
-                            const dist = Math.sqrt(dx * dx + dy * dy);
-
-                            if (dist < 110) {
-                                ctx.beginPath();
-                                ctx.moveTo(particles[i].x, particles[i].y);
-                                ctx.lineTo(particles[j].x, particles[j].y);
-                                ctx.strokeStyle = `rgba(100, 180, 255, ${1 - dist / 110})`;
-                                ctx.lineWidth = 0.5;
-                                ctx.stroke();
-                            }
-                        }
-                    }
-
-                    for (let p of particles) {
-                        p.x += p.vx;
-                        p.y += p.vy;
-
-                        if (p.x < 0 || p.x > width) p.vx *= -1;
-                        if (p.y < 0 || p.y > height) p.vy *= -1;
-
-                        ctx.beginPath();
-                        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                        ctx.fillStyle = 'rgba(180, 220, 255, 0.8)';
-                        ctx.fill();
-                    }
-
-                    requestAnimationFrame(draw);
-                }
-
-                window.addEventListener('resize', resize);
-                resize();
-                draw();
-            }
         });
     </script>
 </body>
