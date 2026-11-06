@@ -148,27 +148,22 @@
     </header>
 
     <main>
-        <!-- ==================== HERO SECTION ==================== -->
-        <section class="relative bg-slate-950 py-28 lg:py-36 text-white overflow-hidden border-b border-white/10 text-center">
-            <!-- Tech Constellation Animation Canvas -->
+        <!-- ==================== HERO SECTION (CLEAN TECH ANIMATION BACKGROUND) ==================== -->
+        <section class="relative bg-[#0b1e36] py-28 lg:py-36 text-white overflow-hidden border-b border-white/10 text-center flex items-center justify-center">
+            <!-- Tech Constellation Canvas Animation matching About Us page -->
             <canvas id="tech-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-80 z-0"></canvas>
 
-            <div class="absolute inset-0 z-0 pointer-events-none">
-                <img src="images/security-division.jpg" alt="Orbit Force Operations" class="h-full w-full object-cover opacity-35">
-                <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950"></div>
-            </div>
-
             <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 flex flex-col items-center">
-                <!-- Group Logos Showcase inside Hero -->
-                <div class="flex flex-wrap items-center justify-center gap-6 mb-8">
-                    <div class="p-2 bg-slate-900/60 rounded-xl border border-white/10 shadow-md backdrop-blur-sm">
-                        <img src="images/3-OrbitForce.png" alt="Orbit Force Security" class="h-10 md:h-12 w-auto object-contain">
+                <!-- Group Logos Showcase (Large size & glowing container cards) -->
+                <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 mb-10">
+                    <div class="p-4 bg-[#112435]/90 rounded-2xl border border-slate-700/80 shadow-2xl backdrop-blur-sm hover:border-[#38bdf8] transition-all">
+                        <img src="images/3-OrbitForce.png" alt="Orbit Force Security" class="h-14 sm:h-16 w-auto object-contain">
                     </div>
-                    <div class="p-2 bg-slate-900/60 rounded-xl border border-white/10 shadow-md backdrop-blur-sm">
-                        <img src="images/orbit-asia.png" alt="Orbit Asia Risk Consultancy" class="h-8 md:h-10 w-auto object-contain">
+                    <div class="p-4 bg-[#112435]/90 rounded-2xl border border-slate-700/80 shadow-2xl backdrop-blur-sm hover:border-[#38bdf8] transition-all">
+                        <img src="images/orbit-asia.png" alt="Orbit Asia Risk Consultancy" class="h-12 sm:h-14 w-auto object-contain">
                     </div>
-                    <div class="p-2 bg-slate-900/60 rounded-xl border border-white/10 shadow-md backdrop-blur-sm">
-                        <img src="images/orbit-global.png" alt="Orbit Global Technologies" class="h-7 md:h-9 w-auto object-contain">
+                    <div class="p-4 bg-[#112435]/90 rounded-2xl border border-slate-700/80 shadow-2xl backdrop-blur-sm hover:border-[#38bdf8] transition-all">
+                        <img src="images/orbit-global.png" alt="Orbit Global Technologies" class="h-10 sm:h-12 w-auto object-contain">
                     </div>
                 </div>
 
@@ -728,7 +723,7 @@
                 }
             });
 
-            // Hero Tech Constellation Animation
+            // Hero Tech Constellation Animation matching About Us page
             const techCanvas = document.getElementById('tech-canvas');
             if (techCanvas) {
                 const ctx = techCanvas.getContext('2d');
