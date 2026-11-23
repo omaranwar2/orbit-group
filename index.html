@@ -1,14 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orbit Force Security Sdn Bhd | Business Profile &amp; Integrated Security</title>
     <meta name="description" content="Orbit Force Security Sdn Bhd (566183-U) - Business Profile. Integrated Security & Risk Management for Malaysia's Leading Organizations since 2001.">
     <meta name="author" content="Orbit Force Security">
+    <meta property="og:title" content="Orbit Force Security — Business Profile">
+    <meta property="og:description" content="Intelligence. Integrity. Protection. Integrated security & risk management in Malaysia.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Tailwind CSS Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#081b29',
+                        'on-dark': '#ffffff',
+                        'brand-red': '#dc2626',
+                    },
+                    fontFamily: {
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                        body: ['"DM Sans"', 'sans-serif'],
+                        sans: ['"DM Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
     <!-- Custom Design System Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
@@ -16,7 +38,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         .dropdown-menu {
@@ -48,6 +70,13 @@
         .interactive-link-card:hover {
             transform: translateY(-4px);
         }
+        .heading-xl {
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.05;
+            font-size: clamp(2.25rem, 5vw, 4rem);
+        }
     </style>
 </head>
 <body class="bg-white text-slate-900 font-sans antialiased">
@@ -66,11 +95,19 @@
     </div>
 
     <!-- ==================== HEADER ==================== -->
-    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
-        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
-            <a href="index.html" aria-label="Orbit Force Home" class="flex items-center">
-                <img src="images/3-OrbitForce.png" alt="Orbit Force Security Sdn Bhd" class="h-14 w-auto object-contain">
-            </a>
+    <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur-md">
+        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-12">
+            <div class="flex items-center gap-3">
+                <button id="side-menu-open-btn" type="button" class="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-slate-50 px-3 py-2 text-xs font-display font-bold uppercase tracking-wider text-slate-800 hover:border-[#0B1B2B] hover:bg-slate-100 transition-colors" aria-label="Open Side Navigation Menu">
+                    <svg class="w-4 h-4 text-red-700" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h12"/>
+                    </svg>
+                    <span>Sections</span>
+                </button>
+                <a href="index.html" aria-label="Orbit Force Home" class="flex items-center">
+                    <img src="images/orbit-logo.jpg" alt="Orbit Force Security Sdn Bhd" class="h-12 sm:h-14 w-auto object-contain">
+                </a>
+            </div>
 
             <!-- Desktop Navigation Structure -->
             <nav aria-label="Primary Navigation" class="hidden items-center gap-6 lg:flex">
@@ -78,15 +115,17 @@
 
                 <!-- ABOUT US Dropdown -->
                 <div class="dropdown-parent relative py-6">
-                    <a href="about-orbit.html" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
+                    <a href="#about-orbit" class="inline-flex items-center gap-1 text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3 rounded-md hover:bg-slate-100/80">
                         ABOUT US
                         <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div class="dropdown-menu absolute left-0 top-full w-60 bg-white border border-slate-200 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium">
-                        <a href="about-orbit.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">About Company</a>
-                        <a href="management.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Management</a>
-                        <a href="certifications.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Certifications</a>
-                        <a href="branches.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Branches and Locations</a>
+                        <a href="#about-orbit" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">About Company</a>
+                        <a href="#our-leaders" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Our Leaders</a>
+                        <a href="#orbit-philosophy" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Orbit Philosophy</a>
+                        <a href="#brand-story" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Brand Story</a>
+                        <a href="#certifications" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Certifications</a>
+                        <a href="#geographical-presence" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Geographical Presence</a>
                     </div>
                 </div>
 
@@ -97,26 +136,24 @@
                         <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div class="dropdown-menu absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-lg shadow-xl py-2 text-slate-800 text-sm font-medium">
-                        <a href="private-escort.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Private Escort Service</a>
-                        <a href="security-training.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Security Training</a>
-                        <a href="canine-protection.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Guard Dogs Services</a>
-                        <a href="gurkha-guards.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Gurkha Guards Services</a>
-                        <a href="cctv-installation.html" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">CCTV Camera Installation Services</a>
+                        <a href="#why-orbit-force" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Why Orbit Force?</a>
+                        <a href="#challenges" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Challenges We Solved</a>
+                        <a href="#core-services" class="block px-5 py-2.5 hover:bg-slate-100 hover:text-red-700 transition-colors">Our Core Services</a>
                     </div>
                 </div>
 
                 <a href="#clientele" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">OUR CLIENTS</a>
-                <a href="contact.html" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">CONTACT</a>
+                <a href="#contact" class="text-sm font-medium text-slate-800 hover:text-red-700 transition-colors py-2 px-3">CONTACT</a>
             </nav>
 
             <div class="hidden lg:block">
-                <a href="contact.html" class="inline-flex items-center gap-2 rounded-full bg-[#0B1B2B] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800">
+                <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-[#0B1B2B] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800">
                     Get in Touch
                 </a>
             </div>
 
             <!-- Mobile Hamburger Button -->
-            <button id="mobile-menu-btn" class="p-2 text-slate-800 lg:hidden focus:outline-none" aria-label="Toggle Menu">
+            <button id="mobile-menu-btn" type="button" class="p-2 text-slate-800 lg:hidden focus:outline-none" aria-label="Toggle Menu">
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
@@ -130,23 +167,95 @@
                 <a href="#about-orbit" class="hover:text-red-700 py-1">About Orbit Force</a>
                 <a href="#our-leaders" class="hover:text-red-700 py-1">Our Leaders</a>
                 <a href="#orbit-philosophy" class="hover:text-red-700 py-1">The Orbit Philosophy</a>
+                <a href="#brand-story" class="hover:text-red-700 py-1">Our Brand Story</a>
                 <a href="#why-orbit-force" class="hover:text-red-700 py-1">Why Orbit Force?</a>
+                <a href="#challenges" class="hover:text-red-700 py-1">The Challenges We Solved</a>
                 <a href="#core-services" class="hover:text-red-700 py-1">Our Core Services</a>
-                <a href="#clientele" class="hover:text-red-700 py-1">Clientele &amp; Certifications</a>
+                <a href="#clientele" class="hover:text-red-700 py-1">Clientele</a>
+                <a href="#certifications" class="hover:text-red-700 py-1">Our License &amp; Certification</a>
                 <a href="#geographical-presence" class="hover:text-red-700 py-1">Geographical Presence</a>
-                <a href="contact.html" class="hover:text-red-700 py-1 pt-2 font-semibold text-red-700">CONTACT</a>
+                <a href="#contact" class="hover:text-red-700 py-1 pt-2 font-semibold text-red-700">CONTACT</a>
             </div>
         </div>
     </header>
 
+    <!-- ==================== COLLAPSIBLE SIDE MENU DRAWER ==================== -->
+    <div id="side-menu-backdrop" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-xs"></div>
+    <aside id="side-menu-drawer" aria-label="Profile Section Side Menu" class="fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] -translate-x-full bg-[#071622] text-white border-r border-[#183950] shadow-2xl transition-transform duration-300 flex flex-col justify-between">
+        <div class="p-6 overflow-y-auto space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <div class="flex items-center gap-2.5">
+                    <img src="images/orbit-logo.jpg" alt="Orbit Force" class="h-9 w-auto rounded object-contain bg-white p-0.5">
+                    <div>
+                        <p class="font-display text-xs font-bold uppercase tracking-wider text-amber-300">Business Profile</p>
+                        <p class="text-[11px] text-slate-400">Quick Section Menu</p>
+                    </div>
+                </div>
+                <button id="side-menu-close-btn" type="button" class="rounded-lg p-1.5 text-slate-400 hover:bg-slate-800 hover:text-white" aria-label="Close Side Menu">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+
+            <nav class="space-y-1 text-xs font-display font-semibold uppercase tracking-wider">
+                <a href="#top-hero" class="side-nav-link block rounded-xl px-3.5 py-2.5 text-slate-200 hover:bg-[#0e2333] hover:text-[#38bdf8]">01. Business Profile Cover</a>
+                <a href="#about-orbit" class="side-nav-link block rounded-xl px-3.5 py-2.5 text-slate-200 hover:bg-[#0e2333] hover:text-[#38bdf8]">02. About &amp; Corporate Data</a>
+                <a href="#our-leaders" class="side-nav-link block rounded-xl px-3.5 py-2.5 text-slate-200 hover:bg-[#0e2333] hover:text-[#38bdf8]">03. Our Leaders &amp; Org Chart</a>
+                <a href="#orbit-philosophy" class="side-nav-link block rounded-xl px-3.5 py-2.5 text-slate-200 hover:bg-[#0e2333] hover:text-[#38bdf8]">04. The Orbit Philosophy</a>
+                <a href="#brand-story" class="side-nav-link block rounded-xl px-3.5 py-2.5 text-slate-200 hover:bg-[#0e2333] hover:text-[#38bdf8]">05. Our Brand Story</a>
+                <a href="#why-orbit-force" class="side-nav-link block rounded-xl px-3.5 py-2.5 text-slate-200 hover:bg-[#0e2333] hover:text-[#38bdf8]">06. Why Orbit Force?</a>
+                <a href="#challenges" class="side-nav-link block rounded-xl px-3.5 py-2.5 text-slate-200 hover:bg-[#0e2333] hover:text-[#38bdf8]">07. Challenges We Solved</a>
+                <a href="#core-services" class="side-nav-link block rounded-xl px-3.5 py-2.5 text-slate-200 hover:bg-[#0e2333] hover:text-[#38bdf8]">08. Our Core Services</a>
+                <a href="#clientele" class="side-nav-link block rounded-xl px-3.5 py-2.5 text-slate-200 hover:bg-[#0e2333] hover:text-[#38bdf8]">09. Clientele</a>
+                <a href="#certifications" class="side-nav-link block rounded-xl px-3.5 py-2.5 text-slate-200 hover:bg-[#0e2333] hover:text-[#38bdf8]">10. License &amp; Certification</a>
+                <a href="#geographical-presence" class="side-nav-link block rounded-xl px-3.5 py-2.5 text-slate-200 hover:bg-[#0e2333] hover:text-[#38bdf8]">11. Geographical Presence</a>
+                <a href="#contact" class="side-nav-link block rounded-xl px-3.5 py-2.5 text-amber-300 hover:bg-[#0e2333]">12. Contact &amp; HQ</a>
+            </nav>
+        </div>
+
+        <div class="border-t border-slate-800 p-5 text-[11px] text-slate-400 space-y-1">
+            <p class="font-bold text-white">Orbit Force Security Sdn Bhd</p>
+            <p>03-5567 9771 / 5567 9718</p>
+            <p>enquiry@orbitforce.net</p>
+        </div>
+    </aside>
+
+    <!-- ==================== INTERACTIVE "MORE DETAILS" MODAL ==================== -->
+    <div id="detail-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/75 p-4 backdrop-blur-xs" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="relative w-full max-w-2xl rounded-3xl border border-[#38bdf8]/40 bg-[#081926] text-white shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+            <div class="flex items-center justify-between border-b border-slate-800 px-6 py-4 bg-[#0b2234]">
+                <div>
+                    <span id="modal-badge" class="text-[10px] font-display font-bold uppercase tracking-widest text-amber-300">PROFILE DETAIL</span>
+                    <h3 id="modal-title" class="font-display text-lg sm:text-xl font-bold text-white">Details</h3>
+                </div>
+                <button id="modal-close-btn" type="button" class="rounded-lg p-1.5 text-slate-400 hover:bg-slate-800 hover:text-white" aria-label="Close Details Modal">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto space-y-4">
+                <img id="modal-image" src="" alt="" class="hidden max-h-60 w-full rounded-2xl object-cover border border-slate-800">
+                <p id="modal-subtitle" class="text-xs font-display font-semibold uppercase tracking-wider text-[#38bdf8]"></p>
+                <p id="modal-description" class="text-sm text-slate-200 font-body leading-relaxed"></p>
+                <ul id="modal-highlights" class="space-y-2 text-xs sm:text-sm text-slate-300 list-disc pl-5"></ul>
+            </div>
+            <div class="flex items-center justify-between gap-3 border-t border-slate-800 px-6 py-4 bg-[#06121c]">
+                <a href="#contact" id="modal-contact-link" class="rounded-xl bg-red-600 hover:bg-red-700 px-4 py-2 text-xs font-display font-bold uppercase tracking-wider text-white transition-colors">
+                    Inquire About This
+                </a>
+                <button id="modal-done-btn" type="button" class="rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-700 px-4 py-2 text-xs font-display font-bold uppercase tracking-wider text-white transition-colors">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
     <main>
         <!-- ==================== PAGE 1: BUSINESS PROFILE HERO ==================== -->
-        <section class="relative bg-[#06141f] py-28 lg:py-36 text-white overflow-hidden border-b border-white/10 text-center flex items-center justify-center">
+        <section id="top-hero" class="relative bg-[#06141f] py-24 lg:py-32 text-white overflow-hidden border-b border-white/10 text-center flex items-center justify-center">
             <canvas id="tech-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-80 z-0"></canvas>
 
             <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 flex flex-col items-center">
                 <div class="mb-8 flex items-center justify-center">
-                    <img src="images/3-OrbitForce.png" alt="Orbit Force Security Emblem" class="h-28 sm:h-36 w-auto object-contain drop-shadow-2xl">
+                    <img src="images/orbit-logo.jpg" alt="Orbit Force Security Emblem" class="h-28 sm:h-36 w-auto rounded-2xl object-contain drop-shadow-2xl bg-white/95 p-2">
                 </div>
 
                 <span class="text-xs font-bold uppercase tracking-[0.3em] text-amber-400 font-display mb-3">
@@ -172,6 +281,9 @@
                     <a href="#core-services" class="rounded-xl bg-[#0e2333] hover:bg-[#143249] border border-[#38bdf8]/50 px-6 py-3 font-bold text-[#38bdf8] transition-colors">
                         Core Services
                     </a>
+                    <button type="button" data-modal-key="company-overview" class="open-detail-btn rounded-xl bg-amber-400/15 hover:bg-amber-400/25 border border-amber-400/60 px-6 py-3 font-bold text-amber-300 transition-colors">
+                        More Details
+                    </button>
                 </div>
             </div>
         </section>
@@ -179,7 +291,8 @@
         <!-- ==================== PAGE 2: ABOUT ORBIT FORCE & CORPORATE DATA ==================== -->
         <section id="about-orbit" class="relative py-24 bg-gradient-to-br from-[#06141f] via-[#091e2e] to-[#040e17] bg-orbit-radial-lines text-white border-b border-white/10 overflow-hidden">
             <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
-                <div class="mb-14">
+                <div class="mb-10">
+                    <img src="images/orbit-about.jpg" alt="Orbit Force Security Monitoring" class="h-56 sm:h-72 w-full rounded-3xl object-cover border border-[#183950] shadow-2xl mb-10" loading="lazy">
                     <span class="text-xs font-bold uppercase tracking-[0.25em] text-[#38bdf8] font-display">COMPANY OVERVIEW</span>
                     <h2 class="mt-2 font-display text-3xl sm:text-5xl font-bold tracking-tight uppercase text-white">
                         ABOUT ORBIT FORCE
@@ -217,26 +330,28 @@
                             <div class="bg-[#0e2333]/90 border border-[#183950] rounded-2xl p-6 shadow-lg">
                                 <span class="text-[11px] font-bold uppercase tracking-widest text-amber-300 font-display">OUR PROMISE</span>
                                 <p class="mt-3 text-xs sm:text-sm text-slate-200 font-body leading-relaxed">
-                                    We are prevention specialists, forensic auditors, investigators, and corporate consultants &mdash; not just a traditional security guard company.
+                                    We are prevention specialists, forensic auditors, investigators, and corporate consultants not just a traditional security guard company
                                 </p>
                             </div>
                         </div>
 
-                        <div>
-                            <a href="about-orbit.html" class="inline-flex items-center gap-2 rounded-xl bg-red-600 hover:bg-red-700 px-6 py-3 text-xs font-display font-bold uppercase tracking-wider text-white transition-colors shadow-lg">
-                                Read Full Company Story &rarr;
-                            </a>
+                        <div class="flex flex-wrap gap-3">
+                            <button type="button" data-modal-key="company-overview" class="open-detail-btn inline-flex items-center gap-2 rounded-xl bg-red-600 hover:bg-red-700 px-6 py-3 text-xs font-display font-bold uppercase tracking-wider text-white transition-colors shadow-lg">
+                                More Details on About Orbit Force &rarr;
+                            </button>
                         </div>
                     </div>
 
                     <!-- Right Column: Corporate Data Card -->
                     <div class="lg:col-span-5">
-                        <a href="about-orbit.html" class="interactive-link-card block bg-[#0e2a3f]/95 border border-[#38bdf8]/40 hover:border-[#38bdf8] rounded-3xl p-6 sm:p-8 shadow-2xl">
+                        <div class="interactive-link-card bg-[#0e2a3f]/95 border border-[#38bdf8]/40 hover:border-[#38bdf8] rounded-3xl p-6 sm:p-8 shadow-2xl">
                             <div class="flex items-center justify-between border-b border-slate-700/80 pb-4 mb-5">
                                 <h3 class="font-display text-lg font-bold uppercase tracking-wider text-white">
                                     CORPORATE DATA
                                 </h3>
-                                <span class="text-[11px] font-display font-semibold text-[#38bdf8]">Details &rarr;</span>
+                                <button type="button" data-modal-key="corporate-data" class="open-detail-btn text-[11px] font-display font-bold text-[#38bdf8] hover:underline">
+                                    More Details &rarr;
+                                </button>
                             </div>
 
                             <dl class="space-y-3.5 text-xs sm:text-sm font-body">
@@ -255,7 +370,7 @@
                                 <div class="border-b border-slate-800 pb-2.5">
                                     <dt class="text-slate-400 mb-1">Company Secretaries</dt>
                                     <dd class="font-semibold text-white">Misnizam Bin Gusni</dd>
-                                    <dd class="text-xs text-slate-300 mt-0.5">A4-9-911, Bali Commerce Square, No. 9, Jalan PJS 8/9, 46150 Petaling Jaya, Selangor Darul Ehsan.</dd>
+                                    <dd class="text-xs text-slate-300 mt-0.5">A4-9-911, Bali Commerce Square, No.9, Jalan PJS 8/9, 46150 Petaling Jaya, Selangor Darul Ehsan.</dd>
                                 </div>
                                 <div class="border-b border-slate-800 pb-2.5">
                                     <dt class="text-slate-400 mb-1">Bankers</dt>
@@ -264,14 +379,14 @@
                                 <div>
                                     <dt class="text-slate-400 mb-2">Insurers</dt>
                                     <div class="space-y-1.5 text-xs">
-                                        <div class="flex justify-between"><span class="text-slate-300">Public Liability</span><span class="font-semibold text-white">RM 5,000,000.00</span></div>
-                                        <div class="flex justify-between"><span class="text-slate-300">Error and Omission</span><span class="font-semibold text-white">RM 100,000.00</span></div>
-                                        <div class="flex justify-between"><span class="text-slate-300">Fidelity Guarantee</span><span class="font-semibold text-white">RM 100,000.00</span></div>
-                                        <div class="flex justify-between"><span class="text-slate-300">Group Personal Accident</span><span class="font-semibold text-white">RM 50,000.00</span></div>
+                                        <div class="flex justify-between"><span class="text-slate-300">Public Liability</span><span class="font-semibold text-white">-RM 5,000,000.00</span></div>
+                                        <div class="flex justify-between"><span class="text-slate-300">Error and Omission</span><span class="font-semibold text-white">-RM 100,000.00</span></div>
+                                        <div class="flex justify-between"><span class="text-slate-300">Fidelity Guarantee</span><span class="font-semibold text-white">-RM 100,000.00</span></div>
+                                        <div class="flex justify-between"><span class="text-slate-300">Group Personal Accident</span><span class="font-semibold text-white">-RM 50,000.00</span></div>
                                     </div>
                                 </div>
                             </dl>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -288,9 +403,9 @@
                         </h2>
                         <div class="w-14 h-1 bg-red-600 mt-4"></div>
                     </div>
-                    <a href="management.html" class="text-xs font-display font-bold uppercase tracking-wider text-[#38bdf8] hover:underline">
-                        View Full Management Page &rarr;
-                    </a>
+                    <button type="button" data-modal-key="leadership-message" class="open-detail-btn text-xs font-display font-bold uppercase tracking-wider text-[#38bdf8] hover:underline">
+                        Leadership Statement &amp; More Details &rarr;
+                    </button>
                 </div>
 
                 <div class="bg-[#0e2333]/80 border border-[#183950] rounded-3xl p-6 sm:p-8 mb-12 text-xs sm:text-sm text-slate-300 font-body leading-relaxed space-y-3">
@@ -303,50 +418,75 @@
                     <p class="font-semibold text-amber-300">Warm regards</p>
                 </div>
 
-                <!-- 4 Leaders Grid (Ready for GitHub images: leader-elayppen.jpg, leader-abdullah.jpg, leader-nitchsingham.jpg, leader-ridzuan.jpg) -->
+                <!-- 4 Leaders Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                    <a href="management.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6 text-center shadow-xl">
-                        <div class="relative w-28 h-28 mx-auto mb-4 rounded-2xl overflow-hidden border-2 border-[#38bdf8]/50 bg-[#071622] flex items-center justify-center">
-                            <img src="images/leader-elayppen.jpg" alt="Dato' M. Elayppen" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <span class="hidden w-full h-full items-center justify-center font-display text-2xl font-bold text-[#38bdf8]">ME</span>
+                    <div class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6 text-center shadow-xl flex flex-col justify-between">
+                        <div>
+                            <div class="relative w-28 h-28 mx-auto mb-4 rounded-2xl overflow-hidden border-2 border-[#38bdf8]/50 bg-[#071622] flex items-center justify-center">
+                                <img src="images/orbit-leader1.jpg" alt="Dato' M. Elayppen" class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <h3 class="font-display text-base font-bold text-white">Dato&rsquo; M. Elayppen</h3>
+                            <p class="mt-1 text-xs text-amber-300 font-medium">Group Managing Director</p>
                         </div>
-                        <h3 class="font-display text-base font-bold text-white">Dato&rsquo; M. Elayppen</h3>
-                        <p class="mt-1 text-xs text-amber-300 font-medium">Group Managing Director</p>
-                    </a>
+                        <button type="button" data-modal-key="leader-1" class="open-detail-btn mt-4 rounded-lg border border-[#38bdf8]/40 bg-[#071622] px-3 py-1.5 text-[11px] font-display font-bold uppercase text-[#38bdf8] hover:bg-[#38bdf8] hover:text-slate-950 transition-colors">
+                            More Details
+                        </button>
+                    </div>
 
-                    <a href="management.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6 text-center shadow-xl">
-                        <div class="relative w-28 h-28 mx-auto mb-4 rounded-2xl overflow-hidden border-2 border-[#38bdf8]/50 bg-[#071622] flex items-center justify-center">
-                            <img src="images/leader-abdullah.jpg" alt="Col. Abdullah Bin Mohd Ali (B)" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <span class="hidden w-full h-full items-center justify-center font-display text-2xl font-bold text-[#38bdf8]">AA</span>
+                    <div class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6 text-center shadow-xl flex flex-col justify-between">
+                        <div>
+                            <div class="relative w-28 h-28 mx-auto mb-4 rounded-2xl overflow-hidden border-2 border-[#38bdf8]/50 bg-[#071622] flex items-center justify-center">
+                                <img src="images/orbit-leader2.jpg" alt="Col. Abdullah Bin Mohd Ali (B)" class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <h3 class="font-display text-base font-bold text-white">Col. Abdullah Bin Mohd Ali (B)</h3>
+                            <p class="mt-1 text-xs text-amber-300 font-medium">Director</p>
                         </div>
-                        <h3 class="font-display text-base font-bold text-white">Col. Abdullah Bin Mohd Ali (B)</h3>
-                        <p class="mt-1 text-xs text-amber-300 font-medium">Director</p>
-                    </a>
+                        <button type="button" data-modal-key="leader-2" class="open-detail-btn mt-4 rounded-lg border border-[#38bdf8]/40 bg-[#071622] px-3 py-1.5 text-[11px] font-display font-bold uppercase text-[#38bdf8] hover:bg-[#38bdf8] hover:text-slate-950 transition-colors">
+                            More Details
+                        </button>
+                    </div>
 
-                    <a href="management.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6 text-center shadow-xl">
-                        <div class="relative w-28 h-28 mx-auto mb-4 rounded-2xl overflow-hidden border-2 border-[#38bdf8]/50 bg-[#071622] flex items-center justify-center">
-                            <img src="images/leader-nitchsingham.jpg" alt="En. V. Nitchsingham" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <span class="hidden w-full h-full items-center justify-center font-display text-2xl font-bold text-[#38bdf8]">VN</span>
+                    <div class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6 text-center shadow-xl flex flex-col justify-between">
+                        <div>
+                            <div class="relative w-28 h-28 mx-auto mb-4 rounded-2xl overflow-hidden border-2 border-[#38bdf8]/50 bg-[#071622] flex items-center justify-center">
+                                <img src="images/orbit-leader3.jpg" alt="En. V. Nitchsingham" class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <h3 class="font-display text-base font-bold text-white">En. V. Nitchsingham</h3>
+                            <p class="mt-1 text-xs text-amber-300 font-medium leading-snug">Superintendent of Police Internal Security (R) &bull; Principal Consultant</p>
                         </div>
-                        <h3 class="font-display text-base font-bold text-white">En. V. Nitchsingham</h3>
-                        <p class="mt-1 text-xs text-amber-300 font-medium leading-snug">Superintendent of Police Internal Security (R) &bull; Principal Consultant</p>
-                    </a>
+                        <button type="button" data-modal-key="leader-3" class="open-detail-btn mt-4 rounded-lg border border-[#38bdf8]/40 bg-[#071622] px-3 py-1.5 text-[11px] font-display font-bold uppercase text-[#38bdf8] hover:bg-[#38bdf8] hover:text-slate-950 transition-colors">
+                            More Details
+                        </button>
+                    </div>
 
-                    <a href="management.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6 text-center shadow-xl">
-                        <div class="relative w-28 h-28 mx-auto mb-4 rounded-2xl overflow-hidden border-2 border-[#38bdf8]/50 bg-[#071622] flex items-center justify-center">
-                            <img src="images/leader-ridzuan.jpg" alt="Mr. Ridzuan Bin Jaafar" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <span class="hidden w-full h-full items-center justify-center font-display text-2xl font-bold text-[#38bdf8]">RJ</span>
+                    <div class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6 text-center shadow-xl flex flex-col justify-between">
+                        <div>
+                            <div class="relative w-28 h-28 mx-auto mb-4 rounded-2xl overflow-hidden border-2 border-[#38bdf8]/50 bg-[#071622] flex items-center justify-center">
+                                <img src="images/orbit-leader4.jpg" alt="Mr. Ridzuan Bin Jaafar" class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <h3 class="font-display text-base font-bold text-white">Mr. Ridzuan Bin Jaafar</h3>
+                            <p class="mt-1 text-xs text-amber-300 font-medium">Director</p>
                         </div>
-                        <h3 class="font-display text-base font-bold text-white">Mr. Ridzuan Bin Jaafar</h3>
-                        <p class="mt-1 text-xs text-amber-300 font-medium">Director</p>
-                    </a>
+                        <button type="button" data-modal-key="leader-4" class="open-detail-btn mt-4 rounded-lg border border-[#38bdf8]/40 bg-[#071622] px-3 py-1.5 text-[11px] font-display font-bold uppercase text-[#38bdf8] hover:bg-[#38bdf8] hover:text-slate-950 transition-colors">
+                            More Details
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Organisation Chart Structure -->
+                <!-- Organisation Chart Structure + Full Org Chart Visual -->
                 <div class="bg-[#0e2333]/90 border border-[#183950] rounded-3xl p-6 sm:p-8 shadow-2xl">
-                    <h3 class="font-display text-lg sm:text-xl font-bold uppercase tracking-wider text-center text-white mb-8">
-                        ORGANISATION CHART
-                    </h3>
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+                        <h3 class="font-display text-lg sm:text-xl font-bold uppercase tracking-wider text-white">
+                            ORGANISATION CHART
+                        </h3>
+                        <button type="button" data-modal-key="org-chart" class="open-detail-btn text-xs font-display font-bold uppercase text-[#38bdf8] hover:underline">
+                            More Details &rarr;
+                        </button>
+                    </div>
+
+                    <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-[#071622] p-3 mb-8">
+                        <img src="images/orbit-orgchart.jpg" alt="Orbit Force Organisation Chart" class="min-w-[760px] w-full rounded-xl" loading="lazy">
+                    </div>
 
                     <div class="flex flex-col items-center space-y-3 text-[11px] sm:text-xs font-display font-bold uppercase">
                         <div class="px-5 py-2.5 rounded-lg bg-[#091b29] border border-[#38bdf8]/50 text-white">CHAIRMAN</div>
@@ -421,7 +561,7 @@
                             <span class="w-10 h-10 rounded-xl bg-[#0073b7] text-white font-display font-bold text-lg flex items-center justify-center flex-shrink-0">B</span>
                             <div>
                                 <h3 class="font-display text-sm font-bold text-amber-300">Beyond Compliance</h3>
-                                <p class="text-xs text-slate-300 mt-1">Exceeding standards, ethical conduct, and professional integrity in all engagements.</p>
+                                <p class="text-xs text-slate-300 mt-1">Exceeding standards, ethical conduct, and professional integrity in all engagements</p>
                             </div>
                         </div>
 
@@ -429,7 +569,7 @@
                             <span class="w-10 h-10 rounded-xl bg-[#0073b7] text-white font-display font-bold text-lg flex items-center justify-center flex-shrink-0">I</span>
                             <div>
                                 <h3 class="font-display text-sm font-bold text-amber-300">Innovation</h3>
-                                <p class="text-xs text-slate-300 mt-1">Technology-enabled, forward-thinking solutions that stay ahead of threats.</p>
+                                <p class="text-xs text-slate-300 mt-1">Technology-enabled, forward-thinking solutions that stay ahead of threats</p>
                             </div>
                         </div>
 
@@ -437,22 +577,30 @@
                             <span class="w-10 h-10 rounded-xl bg-[#0073b7] text-white font-display font-bold text-lg flex items-center justify-center flex-shrink-0">T</span>
                             <div>
                                 <h3 class="font-display text-sm font-bold text-amber-300">Trust &amp; Confidentiality</h3>
-                                <p class="text-xs text-slate-300 mt-1">Discretion, professional secrecy, and unwavering client confidence.</p>
+                                <p class="text-xs text-slate-300 mt-1">Discretion, professional secrecy, and unwavering client confidence</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Right: Brand Story & The New-Age Force -->
-                    <div class="lg:col-span-6 space-y-6">
-                        <div class="bg-[#0e2333]/90 border border-[#183950] rounded-3xl p-6 sm:p-8 shadow-xl">
-                            <span class="text-xs font-bold uppercase tracking-widest text-[#38bdf8] font-display">OUR BRAND STORY</span>
-                            <p class="mt-3 text-xs sm:text-sm text-slate-200 font-body leading-relaxed">
-                                Orbit Force was established on December 6, 2001 as Orbit-Force Security Sdn. Bhd., licensed under the Ministry of Home Affairs (Private Agency Act 1971). Over the past two decades, we have grown from a security services provider into Malaysia&rsquo;s integrated security and risk management organization.
-                            </p>
+                    <div id="brand-story" class="lg:col-span-6 space-y-6">
+                        <div class="relative overflow-hidden bg-[#0e2333]/90 border border-[#183950] rounded-3xl p-6 sm:p-8 shadow-xl">
+                            <img src="images/orbit-brand.jpg" alt="" class="absolute inset-0 h-full w-full object-cover opacity-20 pointer-events-none" loading="lazy">
+                            <div class="relative z-10">
+                                <span class="text-xs font-bold uppercase tracking-widest text-[#38bdf8] font-display">OUR BRAND STORY</span>
+                                <p class="mt-3 text-xs sm:text-sm text-slate-200 font-body leading-relaxed">
+                                    Orbit Force was established on December 6, 2001 as <b>Orbit-Force Security Sdn. Bhd.</b>, licensed under the Ministry of Home Affairs (Private Agency Act 1971). Over the past two decades, we have grown from a security services provider into Malaysia&rsquo;s integrated security and risk management organization.
+                                </p>
+                            </div>
                         </div>
 
                         <div class="bg-[#0e2333]/90 border border-[#38bdf8]/40 rounded-3xl p-6 sm:p-8 shadow-xl space-y-5">
-                            <span class="text-xs font-bold uppercase tracking-widest text-amber-300 font-display">THE NEW-AGE FORCE</span>
+                            <div class="flex items-center justify-between gap-2">
+                                <span class="text-xs font-bold uppercase tracking-widest text-amber-300 font-display">THE NEW-AGE FORCE</span>
+                                <button type="button" data-modal-key="brand-story" class="open-detail-btn text-xs font-display font-bold text-[#38bdf8] hover:underline">
+                                    More Details &rarr;
+                                </button>
+                            </div>
                             <p class="text-xs sm:text-sm text-slate-300">Today, we operate through two divisions:</p>
 
                             <div class="bg-[#071622] border border-slate-800 rounded-2xl p-5">
@@ -485,211 +633,261 @@
                     <div class="w-14 h-1 bg-red-600 mx-auto mt-4"></div>
                 </div>
 
-                <!-- 8 Highlights Grid -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20">
-                    <a href="certifications.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center">
-                        <div class="font-display text-sm font-bold text-amber-300">Licensed &amp; Regulated</div>
-                        <p class="text-xs text-slate-300 mt-1">Ministry of Home Affairs approval</p>
-                    </a>
-                    <a href="certifications.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center">
-                        <div class="font-display text-sm font-bold text-amber-300">ISO 9001 Certified</div>
-                        <p class="text-xs text-slate-300 mt-1">Quality Management Systems</p>
-                    </a>
-                    <a href="about-orbit.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center">
-                        <div class="font-display text-sm font-bold text-amber-300">Comprehensive Insurance</div>
-                        <p class="text-xs text-slate-300 mt-1">RM 2M coverage</p>
-                    </a>
-                    <a href="branches.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center">
-                        <div class="font-display text-sm font-bold text-amber-300">Nationwide Coverage</div>
-                        <p class="text-xs text-slate-300 mt-1">8 strategic locations (24/7)</p>
-                    </a>
-                    <div class="bg-[#0e2333] border border-[#183950] rounded-2xl p-5 text-center">
-                        <div class="font-display text-sm font-bold text-[#38bdf8]">24/7 Operations</div>
-                        <p class="text-xs text-slate-300 mt-1">Round-the-clock support</p>
+                <!-- 10 Highlights Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-20">
+                    <div class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="font-display text-sm font-bold text-amber-300">Licensed &amp; Regulated</div>
+                            <p class="text-xs text-slate-300 mt-1">Ministry of Home Affairs approval</p>
+                        </div>
+                        <button type="button" data-modal-key="why-1" class="open-detail-btn mt-3 text-[11px] font-display font-bold text-[#38bdf8] hover:underline">More Details</button>
                     </div>
-                    <a href="cctv-installation.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center">
-                        <div class="font-display text-sm font-bold text-[#38bdf8]">Technology-Enabled</div>
-                        <p class="text-xs text-slate-300 mt-1">Modern systems &amp; reporting</p>
-                    </a>
-                    <a href="security-training.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center">
-                        <div class="font-display text-sm font-bold text-[#38bdf8]">Trained Personnel</div>
-                        <p class="text-xs text-slate-300 mt-1">Continuous training programs</p>
-                    </a>
-                    <a href="#clientele" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center">
-                        <div class="font-display text-sm font-bold text-[#38bdf8]">Proven Track Record</div>
-                        <p class="text-xs text-slate-300 mt-1">36+ Major Clients &bull; TAPA &bull; RBA Compliance</p>
-                    </a>
+                    <div class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="font-display text-sm font-bold text-amber-300">ISO 9001 Certified</div>
+                            <p class="text-xs text-slate-300 mt-1">Quality Management Systems</p>
+                        </div>
+                        <button type="button" data-modal-key="why-2" class="open-detail-btn mt-3 text-[11px] font-display font-bold text-[#38bdf8] hover:underline">More Details</button>
+                    </div>
+                    <div class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="font-display text-sm font-bold text-amber-300">Comprehensive Insurance</div>
+                            <p class="text-xs text-slate-300 mt-1">RM 2M coverage</p>
+                        </div>
+                        <button type="button" data-modal-key="why-3" class="open-detail-btn mt-3 text-[11px] font-display font-bold text-[#38bdf8] hover:underline">More Details</button>
+                    </div>
+                    <div class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="font-display text-sm font-bold text-amber-300">Nationwide Coverage</div>
+                            <p class="text-xs text-slate-300 mt-1">8 strategic locations</p>
+                        </div>
+                        <button type="button" data-modal-key="why-4" class="open-detail-btn mt-3 text-[11px] font-display font-bold text-[#38bdf8] hover:underline">More Details</button>
+                    </div>
+                    <div class="bg-[#0e2333] border border-[#183950] rounded-2xl p-5 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="font-display text-sm font-bold text-[#38bdf8]">24/7 Operations</div>
+                            <p class="text-xs text-slate-300 mt-1">Round-the-clock support</p>
+                        </div>
+                        <button type="button" data-modal-key="why-5" class="open-detail-btn mt-3 text-[11px] font-display font-bold text-[#38bdf8] hover:underline">More Details</button>
+                    </div>
+                    <div class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="font-display text-sm font-bold text-[#38bdf8]">Technology-Enabled</div>
+                            <p class="text-xs text-slate-300 mt-1">Modern systems &amp; reporting</p>
+                        </div>
+                        <button type="button" data-modal-key="why-6" class="open-detail-btn mt-3 text-[11px] font-display font-bold text-[#38bdf8] hover:underline">More Details</button>
+                    </div>
+                    <div class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="font-display text-sm font-bold text-[#38bdf8]">Trained Personnel</div>
+                            <p class="text-xs text-slate-300 mt-1">Continuous training programs</p>
+                        </div>
+                        <button type="button" data-modal-key="why-7" class="open-detail-btn mt-3 text-[11px] font-display font-bold text-[#38bdf8] hover:underline">More Details</button>
+                    </div>
+                    <div class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="font-display text-sm font-bold text-[#38bdf8]">Proven Track Record</div>
+                            <p class="text-xs text-slate-300 mt-1">36+ Major Clients</p>
+                        </div>
+                        <button type="button" data-modal-key="why-8" class="open-detail-btn mt-3 text-[11px] font-display font-bold text-[#38bdf8] hover:underline">More Details</button>
+                    </div>
+                    <div class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="font-display text-sm font-bold text-amber-300">Member of TAPA</div>
+                            <p class="text-xs text-slate-300 mt-1">Transport Asset Protection Association</p>
+                        </div>
+                        <button type="button" data-modal-key="why-9" class="open-detail-btn mt-3 text-[11px] font-display font-bold text-[#38bdf8] hover:underline">More Details</button>
+                    </div>
+                    <div class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-5 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="font-display text-sm font-bold text-amber-300">Responsible Business Alliance (RBA) Compliance</div>
+                        </div>
+                        <button type="button" data-modal-key="why-10" class="open-detail-btn mt-3 text-[11px] font-display font-bold text-[#38bdf8] hover:underline">More Details</button>
+                    </div>
                 </div>
 
                 <!-- The Challenges We Solved (1 - 6) -->
-                <div class="mb-10">
+                <div id="challenges" class="mb-10">
                     <h3 class="font-display text-2xl sm:text-3xl font-bold uppercase text-center text-white">
                         THE CHALLENGES WE SOLVED
                     </h3>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="security-training.html" class="interactive-link-card bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6">
-                        <span class="inline-flex w-8 h-8 rounded-full bg-red-600 text-white font-display font-bold text-sm items-center justify-center mb-3">1</span>
-                        <h4 class="font-display text-base font-bold text-white">Security &amp; Risk Management</h4>
-                        <p class="mt-2 text-xs text-slate-300 leading-relaxed">
-                            End-to-end risk assessments, threat mitigation, vulnerabilities and security system optimization across industries.
-                        </p>
-                    </a>
-
-                    <a href="gurkha-guards.html" class="interactive-link-card bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6">
-                        <span class="inline-flex w-8 h-8 rounded-full bg-red-600 text-white font-display font-bold text-sm items-center justify-center mb-3">2</span>
-                        <h4 class="font-display text-base font-bold text-white">Asset Protection &amp; Loss Control</h4>
-                        <p class="mt-2 text-xs text-slate-300 leading-relaxed">
-                            Safeguarding physical and operational assets across Government, logistics, retail, MNC, industrial and residential sectors.
-                        </p>
-                    </a>
-
-                    <a href="private-escort.html" class="interactive-link-card bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6">
-                        <span class="inline-flex w-8 h-8 rounded-full bg-red-600 text-white font-display font-bold text-sm items-center justify-center mb-3">3</span>
-                        <h4 class="font-display text-base font-bold text-white">High-Profile Event Security Operations</h4>
-                        <p class="mt-2 text-xs text-slate-300 leading-relaxed">
-                            Full-scale security coordination for VIP events, ensuring zero-incident outcomes.
-                        </p>
-                    </a>
-
-                    <div class="bg-[#0e2333]/90 border border-[#183950] rounded-2xl p-6">
-                        <span class="inline-flex w-8 h-8 rounded-full bg-red-600 text-white font-display font-bold text-sm items-center justify-center mb-3">4</span>
-                        <h4 class="font-display text-base font-bold text-white">Retail Loss Prevention Strategy</h4>
-                        <p class="mt-2 text-xs text-slate-300 leading-relaxed">
-                            Proven reduction of shrinkage and internal theft through audits, surveillance, and covert monitoring.
-                        </p>
+                    <div class="interactive-link-card bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="inline-flex w-8 h-8 rounded-full bg-red-600 text-white font-display font-bold text-sm items-center justify-center mb-3">1</span>
+                            <h4 class="font-display text-base font-bold text-white">Security &amp; Risk Management</h4>
+                            <p class="mt-2 text-xs text-slate-300 leading-relaxed">
+                                End-to-end risk assessments, threat mitigation, vulnerabilities and security system optimization across industries.
+                            </p>
+                        </div>
+                        <button type="button" data-modal-key="challenge-1" class="open-detail-btn mt-4 self-start text-xs font-display font-bold text-amber-300 hover:underline">More Details &rarr;</button>
                     </div>
 
-                    <a href="cctv-installation.html" class="interactive-link-card bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6">
-                        <span class="inline-flex w-8 h-8 rounded-full bg-red-600 text-white font-display font-bold text-sm items-center justify-center mb-3">5</span>
-                        <h4 class="font-display text-base font-bold text-white">Technology Driven Security</h4>
-                        <p class="mt-2 text-xs text-slate-300 leading-relaxed">
-                            AI Facial Recognition Security Patrolling, Timesheet/Payroll and Incident Reporting App, Visitor Management Systems, CCTV Surveillance &amp; Access Control System Optimization.
-                        </p>
-                    </a>
+                    <div class="interactive-link-card bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="inline-flex w-8 h-8 rounded-full bg-red-600 text-white font-display font-bold text-sm items-center justify-center mb-3">2</span>
+                            <h4 class="font-display text-base font-bold text-white">Asset Protection &amp; Loss Control</h4>
+                            <p class="mt-2 text-xs text-slate-300 leading-relaxed">
+                                Safe guarding physical and operational assets across Government, logistics, retail, MNC, industrial and residential sectors.
+                            </p>
+                        </div>
+                        <button type="button" data-modal-key="challenge-2" class="open-detail-btn mt-4 self-start text-xs font-display font-bold text-amber-300 hover:underline">More Details &rarr;</button>
+                    </div>
 
-                    <a href="about-orbit.html" class="interactive-link-card bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6">
-                        <span class="inline-flex w-8 h-8 rounded-full bg-red-600 text-white font-display font-bold text-sm items-center justify-center mb-3">6</span>
-                        <h4 class="font-display text-base font-bold text-white">Intelligence-Led Corporate Investigations</h4>
-                        <p class="mt-2 text-xs text-slate-300 leading-relaxed">
-                            Discreet intelligence gathering, background checks, and strategic advisory for complex cases.
-                        </p>
-                    </a>
+                    <div class="interactive-link-card bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="inline-flex w-8 h-8 rounded-full bg-red-600 text-white font-display font-bold text-sm items-center justify-center mb-3">3</span>
+                            <h4 class="font-display text-base font-bold text-white">High-Profile Event Security Operations</h4>
+                            <p class="mt-2 text-xs text-slate-300 leading-relaxed">
+                                Full-scale security coordination for VIP events, ensuring zero-incident outcomes.
+                            </p>
+                        </div>
+                        <button type="button" data-modal-key="challenge-3" class="open-detail-btn mt-4 self-start text-xs font-display font-bold text-amber-300 hover:underline">More Details &rarr;</button>
+                    </div>
+
+                    <div class="interactive-link-card bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="inline-flex w-8 h-8 rounded-full bg-red-600 text-white font-display font-bold text-sm items-center justify-center mb-3">4</span>
+                            <h4 class="font-display text-base font-bold text-white">Retail Loss Prevention Strategy</h4>
+                            <p class="mt-2 text-xs text-slate-300 leading-relaxed">
+                                Proven reduction of shrinkage and internal theft through audits, surveillance, and covert monitoring.
+                            </p>
+                        </div>
+                        <button type="button" data-modal-key="challenge-4" class="open-detail-btn mt-4 self-start text-xs font-display font-bold text-amber-300 hover:underline">More Details &rarr;</button>
+                    </div>
+
+                    <div class="interactive-link-card bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="inline-flex w-8 h-8 rounded-full bg-red-600 text-white font-display font-bold text-sm items-center justify-center mb-3">5</span>
+                            <h4 class="font-display text-base font-bold text-white">Technology Driven Security</h4>
+                            <p class="mt-2 text-xs text-slate-300 leading-relaxed">
+                                AI Facial Recognition Security Patrolling, Timesheet/Payroll and Incident Reporting App, Visitor Management Systems CCTV Surveillance &amp; Access Control System Optimization.
+                            </p>
+                        </div>
+                        <button type="button" data-modal-key="challenge-5" class="open-detail-btn mt-4 self-start text-xs font-display font-bold text-amber-300 hover:underline">More Details &rarr;</button>
+                    </div>
+
+                    <div class="interactive-link-card bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="inline-flex w-8 h-8 rounded-full bg-red-600 text-white font-display font-bold text-sm items-center justify-center mb-3">6</span>
+                            <h4 class="font-display text-base font-bold text-white">Intelligence-Led Corporate Investigations</h4>
+                            <p class="mt-2 text-xs text-slate-300 leading-relaxed">
+                                Discreet intelligence gathering, background checks, and strategic advisory for complex cases.
+                            </p>
+                        </div>
+                        <button type="button" data-modal-key="challenge-6" class="open-detail-btn mt-4 self-start text-xs font-display font-bold text-amber-300 hover:underline">More Details &rarr;</button>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ==================== PAGE 6: OUR CORE SERVICES (CLICKABLE TO EXISTING PAGES) ==================== -->
+        <!-- ==================== PAGE 6: OUR CORE SERVICES ==================== -->
         <section id="core-services" class="relative py-24 bg-gradient-to-br from-[#06141f] via-[#091e2e] to-[#040e17] text-white border-b border-white/10 overflow-hidden">
-            <div class="mx-auto max-w-7xl px-6 lg:px-12">
-                <div class="text-center max-w-3xl mx-auto mb-14">
+            <div class="mx-auto max-w-7xl px-6 lg:px-12 space-y-12">
+                <div class="text-center max-w-3xl mx-auto">
                     <span class="text-xs font-bold uppercase tracking-[0.25em] text-[#38bdf8] font-display">LOSS PREVENTION &amp; SECURITY SERVICES</span>
                     <h2 class="mt-2 font-display text-3xl sm:text-5xl font-bold uppercase text-white">
                         OUR CORE SERVICES
                     </h2>
                     <div class="w-14 h-1 bg-red-600 mx-auto mt-4"></div>
                     <p class="mt-3 text-xs sm:text-sm text-slate-300">
-                        Click any service card below to view full details on its dedicated page.
+                        Click &ldquo;More Details&rdquo; on any card to view full operational scope and capabilities.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Unarmed / Armed Personnel -->
-                    <a href="gurkha-guards.html" class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
-                        <img src="images/team_1.jpg" alt="Unarmed / Armed Personnel" class="h-44 w-full object-cover">
-                        <div class="p-5 flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Unarmed / Armed Personnel</h3>
-                                <p class="mt-1.5 text-xs text-slate-300">Trained static, industrial, and commercial security guarding.</p>
+                <!-- LOSS PREVENTION (SECURITY) SERVICES -->
+                <div>
+                    <h3 class="font-display text-xl sm:text-2xl font-bold uppercase text-amber-300 mb-4">LOSS PREVENTION (SECURITY) SERVICES</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
+                            <img src="images/orbit-s1.jpg" alt="Unarmed / Armed Personnel" class="aspect-[1.1] w-full object-cover" loading="lazy">
+                            <div class="p-5 flex-1 flex flex-col justify-between">
+                                <h4 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Unarmed / Armed Personnel</h4>
+                                <button type="button" data-modal-key="service-s1" class="open-detail-btn mt-4 self-start text-xs font-display font-bold text-amber-300 hover:underline">More Details &rarr;</button>
                             </div>
-                            <span class="mt-4 text-xs font-display font-bold text-amber-300">Explore Service &rarr;</span>
                         </div>
-                    </a>
 
-                    <!-- Armed Guard -->
-                    <a href="gurkha-guards.html" class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
-                        <img src="images/team_2.jpg" alt="Armed Guard" class="h-44 w-full object-cover">
-                        <div class="p-5 flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Armed Guard</h3>
-                                <p class="mt-1.5 text-xs text-slate-300">High-alert armed protection for critical sites and operations.</p>
+                        <div class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
+                            <img src="images/orbit-s2.jpg" alt="Armed Guard" class="aspect-[1.1] w-full object-cover" loading="lazy">
+                            <div class="p-5 flex-1 flex flex-col justify-between">
+                                <h4 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Armed Guard</h4>
+                                <button type="button" data-modal-key="service-s2" class="open-detail-btn mt-4 self-start text-xs font-display font-bold text-amber-300 hover:underline">More Details &rarr;</button>
                             </div>
-                            <span class="mt-4 text-xs font-display font-bold text-amber-300">Explore Service &rarr;</span>
                         </div>
-                    </a>
 
-                    <!-- Canine (K9) Protection -->
-                    <a href="canine-protection.html" class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
-                        <img src="images/canine9k9-protection.png" alt="Canine (K9) Protection" class="h-44 w-full object-cover">
-                        <div class="p-5 flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Canine (K9) Protection</h3>
-                                <p class="mt-1.5 text-xs text-slate-300">Specialized K9 patrol and personal protection units.</p>
+                        <div class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
+                            <img src="images/orbit-s3.jpg" alt="Canine (K9) Protection" class="aspect-[1.1] w-full object-cover" loading="lazy">
+                            <div class="p-5 flex-1 flex flex-col justify-between">
+                                <h4 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Canine (K9) Protection</h4>
+                                <button type="button" data-modal-key="service-s3" class="open-detail-btn mt-4 self-start text-xs font-display font-bold text-amber-300 hover:underline">More Details &rarr;</button>
                             </div>
-                            <span class="mt-4 text-xs font-display font-bold text-amber-300">Explore K9 Page &rarr;</span>
                         </div>
-                    </a>
 
-                    <!-- Mobile Protection Services -->
-                    <a href="private-escort.html" class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
-                        <img src="images/mobile-security-patrol.png" alt="Mobile Protection Services" class="h-44 w-full object-cover">
-                        <div class="p-5 flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Mobile Protection Services</h3>
-                                <p class="mt-1.5 text-xs text-slate-300">Mobile patrol units and private escort services.</p>
+                        <div class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
+                            <img src="images/orbit-s4.jpg" alt="Asset Protection" class="aspect-[1.1] w-full object-cover" loading="lazy">
+                            <div class="p-5 flex-1 flex flex-col justify-between">
+                                <h4 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Asset Protection</h4>
+                                <button type="button" data-modal-key="service-s4" class="open-detail-btn mt-4 self-start text-xs font-display font-bold text-amber-300 hover:underline">More Details &rarr;</button>
                             </div>
-                            <span class="mt-4 text-xs font-display font-bold text-amber-300">Explore Escort Page &rarr;</span>
                         </div>
-                    </a>
+                    </div>
+                </div>
 
-                    <!-- Risk Management -->
-                    <a href="security-training.html" class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
-                        <img src="images/risk-management-consultancy.png" alt="Risk Management" class="h-44 w-full object-cover">
-                        <div class="p-5 flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Risk Management</h3>
-                                <p class="mt-1.5 text-xs text-slate-300">Security survey, risk assessment, consultancy &amp; HR/automation systems.</p>
+                <!-- RISK MANAGEMENT- SECURITY SURVEY, RISK -->
+                <div>
+                    <h3 class="font-display text-xl sm:text-2xl font-bold uppercase text-amber-300 mb-4">RISK MANAGEMENT- SECURITY SURVEY, RISK</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
+                            <img src="images/orbit-s5.jpg" alt="Assessment And Consultancy" class="aspect-[1.1] w-full object-cover" loading="lazy">
+                            <div class="p-5 flex-1 flex flex-col justify-between">
+                                <h4 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Assessment And Consultancy</h4>
+                                <button type="button" data-modal-key="service-s5" class="open-detail-btn mt-4 self-start text-xs font-display font-bold text-amber-300 hover:underline">More Details &rarr;</button>
                             </div>
-                            <span class="mt-4 text-xs font-display font-bold text-amber-300">Explore Training &rarr;</span>
                         </div>
-                    </a>
 
-                    <!-- Security Investigations -->
-                    <a href="about-orbit.html" class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
-                        <img src="images/new_security-1.jpg" alt="Security Investigations" class="h-44 w-full object-cover">
-                        <div class="p-5 flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Security Investigations</h3>
-                                <p class="mt-1.5 text-xs text-slate-300">Addressing syndicated losses, fraud, and shrinkages.</p>
+                        <div class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
+                            <img src="images/orbit-s6.jpg" alt="Designing customised loss prevention systems" class="aspect-[1.1] w-full object-cover" loading="lazy">
+                            <div class="p-5 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <h4 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Designing customised loss prevention systems</h4>
+                                    <p class="mt-1 text-xs text-slate-300">(Optimal Combination Of HR &amp; security Automation)</p>
+                                </div>
+                                <button type="button" data-modal-key="service-s6" class="open-detail-btn mt-4 self-start text-xs font-display font-bold text-amber-300 hover:underline">More Details &rarr;</button>
                             </div>
-                            <span class="mt-4 text-xs font-display font-bold text-amber-300">Learn More &rarr;</span>
                         </div>
-                    </a>
 
-                    <!-- Personality Profiling / Risk & Threat -->
-                    <a href="cctv-installation.html" class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
-                        <img src="images/new_securityA1.jpg" alt="Personality Profiling / Risk and Threat" class="h-44 w-full object-cover">
-                        <div class="p-5 flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Personality Profiling / Risk &amp; Threat</h3>
-                                <p class="mt-1.5 text-xs text-slate-300">Threat evaluation, surveillance systems &amp; monitoring.</p>
+                        <div class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
+                            <img src="images/orbit-s7.jpg" alt="Mobile Protection Services" class="aspect-[1.1] w-full object-cover" loading="lazy">
+                            <div class="p-5 flex-1 flex flex-col justify-between">
+                                <h4 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Mobile Protection Services</h4>
+                                <button type="button" data-modal-key="service-s7" class="open-detail-btn mt-4 self-start text-xs font-display font-bold text-amber-300 hover:underline">More Details &rarr;</button>
                             </div>
-                            <span class="mt-4 text-xs font-display font-bold text-amber-300">Explore Systems &rarr;</span>
                         </div>
-                    </a>
+                    </div>
+                </div>
 
-                    <!-- Threat Detection and Response -->
-                    <a href="cctv-installation.html" class="interactive-link-card group bg-[#0e2333]/90 border border-[#183950] hover:border-[#38bdf8] rounded-2xl overflow-hidden shadow-xl flex flex-col">
-                        <img src="images/security-division.jpg" alt="Threat Detection and Response" class="h-44 w-full object-cover">
-                        <div class="p-5 flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="font-display text-sm font-bold uppercase text-white group-hover:text-[#38bdf8]">Threat Detection &amp; Response</h3>
-                                <p class="mt-1.5 text-xs text-slate-300 font-semibold text-sky-300">Monitor &rarr; Detect &rarr; Respond</p>
+                <!-- SECURITY INVESTIGATIONS & PERSONALITY PROFILING / RISK AND THREAT -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <h3 class="font-display text-xl sm:text-2xl font-bold uppercase text-amber-300 mb-4">SECURITY INVESTIGATIONS</h3>
+                        <div class="bg-[#0e2333]/90 border border-[#183950] rounded-2xl p-4 flex flex-col sm:flex-row items-center gap-6 shadow-xl">
+                            <img src="images/orbit-s8.jpg" alt="Investigations" class="w-full sm:w-44 h-40 rounded-xl object-cover shrink-0" loading="lazy">
+                            <div class="space-y-3">
+                                <p class="font-semibold text-sm sm:text-base text-white">Addressing syndicated losses fraud and shrinkages</p>
+                                <button type="button" data-modal-key="service-s8" class="open-detail-btn text-xs font-display font-bold text-[#38bdf8] hover:underline">More Details &rarr;</button>
                             </div>
-                            <span class="mt-4 text-xs font-display font-bold text-amber-300">Explore Systems &rarr;</span>
                         </div>
-                    </a>
+                    </div>
+
+                    <div>
+                        <h3 class="font-display text-xl sm:text-2xl font-bold uppercase text-amber-300 mb-4">PERSONALITY PROFILING / RISK AND THREAT</h3>
+                        <div class="bg-[#0e2333]/90 border border-[#183950] rounded-2xl p-4 shadow-xl space-y-3">
+                            <img src="images/orbit-threat.jpg" alt="Threat Detection and Response: Monitor, Detect, Respond" class="w-full rounded-xl object-cover" loading="lazy">
+                            <button type="button" data-modal-key="service-threat" class="open-detail-btn text-xs font-display font-bold text-[#38bdf8] hover:underline">More Details on Monitor, Detect, Respond &rarr;</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -708,38 +906,41 @@
                 <!-- Client Logos Marquee -->
                 <div class="relative w-full overflow-hidden mb-10">
                     <div class="animate-marquee flex gap-5 items-center">
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-felcra.jpg" alt="Felcra" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-glomac.jpg" alt="Glomac" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-kpm.jpg" alt="Kementerian Pendidikan Malaysia" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-linde.jpg" alt="Linde" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-tdklambda.jpg" alt="TDK Lambda" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-tdk.jpg" alt="TDK" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-alps.jpg" alt="ALPS ALPINE" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-recron.jpg" alt="Recron Malaysia" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-pacsure.jpg" alt="Pacsure Packaging" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-kumhoi.jpg" alt="Kum Hoi" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-integrated.jpg" alt="Integrated Logistics Solutions" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-freyssinet.jpg" alt="Freyssinet" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-sumiputeh.jpg" alt="Sumiputeh" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-beryls.jpg" alt="Beryl's" class="max-h-14 max-w-full object-contain"></div>
-                        <!-- Duplicate for seamless marquee -->
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-felcra.jpg" alt="Felcra" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-glomac.jpg" alt="Glomac" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-kpm.jpg" alt="Kementerian Pendidikan Malaysia" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-linde.jpg" alt="Linde" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-tdklambda.jpg" alt="TDK Lambda" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-tdk.jpg" alt="TDK" class="max-h-14 max-w-full object-contain"></div>
-                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-alps.jpg" alt="ALPS ALPINE" class="max-h-14 max-w-full object-contain"></div>
+                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-felcra.jpg" alt="Felcra" class="max-h-14 max-w-full object-contain" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-glomac.jpg" alt="Glomac" class="max-h-14 max-w-full object-contain" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-kpm.jpg" alt="Kementerian Pendidikan Malaysia" class="max-h-14 max-w-full object-contain" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-linde.jpg" alt="Linde" class="max-h-14 max-w-full object-contain" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-tdklambda.jpg" alt="TDK Lambda" class="max-h-14 max-w-full object-contain" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-tdk.jpg" alt="TDK" class="max-h-14 max-w-full object-contain" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-alps.jpg" alt="ALPS ALPINE" class="max-h-14 max-w-full object-contain" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-recron.jpg" alt="Recron Malaysia" class="max-h-14 max-w-full object-contain" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-pacsure.jpg" alt="Pacsure Packaging" class="max-h-14 max-w-full object-contain" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-kumhoi.jpg" alt="Kum Hoi" class="max-h-14 max-w-full object-contain" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-integrated.jpg" alt="Integrated Logistics Solutions" class="max-h-14 max-w-full object-contain" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-freyssinet.jpg" alt="Freyssinet" class="max-h-14 max-w-full object-contain" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-sumiputeh.jpg" alt="Sumiputeh" class="max-h-14 max-w-full object-contain" onerror="this.parentElement.style.display='none'"></div>
+                        <div class="p-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center h-24 w-40 flex-shrink-0"><img src="images/client-beryls.jpg" alt="Beryl's" class="max-h-14 max-w-full object-contain" onerror="this.parentElement.style.display='none'"></div>
                     </div>
                 </div>
 
+                <!-- Full Clientele Graphic from Uploaded Assets -->
+                <div class="bg-[#0e2333]/90 border border-[#183950] rounded-3xl p-4 sm:p-6 mb-12 shadow-xl">
+                    <img src="images/orbit-clients.jpg" alt="Orbit Force Clientele" class="w-full rounded-2xl object-contain" loading="lazy">
+                </div>
+
                 <!-- Our License & Certification -->
-                <a href="certifications.html" class="interactive-link-card block bg-[#0e2333]/90 border border-[#38bdf8]/40 hover:border-[#38bdf8] rounded-3xl p-6 sm:p-8 shadow-2xl">
+                <div id="certifications" class="interactive-link-card bg-[#0e2333]/90 border border-[#38bdf8]/40 hover:border-[#38bdf8] rounded-3xl p-6 sm:p-8 shadow-2xl">
                     <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-700/80 pb-4 mb-6">
                         <h3 class="font-display text-xl sm:text-2xl font-bold uppercase text-white">
                             OUR LICENSE &amp; CERTIFICATION
                         </h3>
-                        <span class="text-xs font-display font-bold uppercase text-[#38bdf8]">View All Certificates &rarr;</span>
+                        <button type="button" data-modal-key="certifications" class="open-detail-btn text-xs font-display font-bold uppercase text-[#38bdf8] hover:underline">
+                            More Details &rarr;
+                        </button>
+                    </div>
+
+                    <div class="mb-6 rounded-2xl overflow-hidden border border-slate-800 bg-[#071622] p-3">
+                        <img src="images/orbit-certs.jpg" alt="Licenses and Certificates" class="w-full rounded-xl object-contain" loading="lazy">
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-display">
@@ -760,13 +961,14 @@
                             <p class="text-slate-300 font-body mt-1">Orbit-Force Coverage &amp; Protection</p>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </section>
 
         <!-- ==================== PAGE 8: GEOGRAPHICAL PRESENCE ==================== -->
         <section id="geographical-presence" class="relative py-24 bg-gradient-to-br from-[#06141f] via-[#091e2e] to-[#040e17] text-white overflow-hidden">
-            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+            <img src="images/orbit-city.jpg" alt="" class="absolute inset-0 h-full w-full object-cover opacity-20 pointer-events-none" loading="lazy">
+            <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 space-y-12">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                     <!-- States Presence -->
                     <div class="lg:col-span-6 space-y-6">
@@ -777,23 +979,27 @@
                         <div class="w-14 h-1 bg-red-600"></div>
 
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs sm:text-sm font-display font-semibold">
-                            <a href="branches.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-xl px-4 py-3 text-slate-200">Kedah</a>
-                            <a href="branches.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-xl px-4 py-3 text-slate-200">Pulau Pinang</a>
-                            <a href="branches.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-xl px-4 py-3 text-slate-200">Perak</a>
-                            <a href="branches.html" class="interactive-link-card bg-[#0e2333] border border-amber-400/60 hover:border-amber-300 rounded-xl px-4 py-3 text-amber-300">Selangor (Headquarters)</a>
-                            <a href="branches.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-xl px-4 py-3 text-slate-200">Johor</a>
-                            <a href="branches.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-xl px-4 py-3 text-slate-200">Terengganu</a>
-                            <a href="branches.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-xl px-4 py-3 text-slate-200">Pahang</a>
-                            <a href="branches.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-xl px-4 py-3 text-slate-200">Sarawak</a>
-                            <a href="branches.html" class="interactive-link-card bg-[#0e2333] border border-[#183950] hover:border-[#38bdf8] rounded-xl px-4 py-3 text-slate-200">Sabah</a>
+                            <div class="bg-[#0e2333] border border-[#183950] rounded-xl px-4 py-3 text-slate-200">Kedah</div>
+                            <div class="bg-[#0e2333] border border-[#183950] rounded-xl px-4 py-3 text-slate-200">Pulau Pinang</div>
+                            <div class="bg-[#0e2333] border border-[#183950] rounded-xl px-4 py-3 text-slate-200">Perak</div>
+                            <div class="bg-[#0e2333] border border-amber-400/60 rounded-xl px-4 py-3 text-amber-300">Selangor (Headquarters)</div>
+                            <div class="bg-[#0e2333] border border-[#183950] rounded-xl px-4 py-3 text-slate-200">Johor</div>
+                            <div class="bg-[#0e2333] border border-[#183950] rounded-xl px-4 py-3 text-slate-200">Terengganu</div>
+                            <div class="bg-[#0e2333] border border-[#183950] rounded-xl px-4 py-3 text-slate-200">Pahang</div>
+                            <div class="bg-[#0e2333] border border-[#183950] rounded-xl px-4 py-3 text-slate-200">Sarawak</div>
+                            <div class="bg-[#0e2333] border border-[#183950] rounded-xl px-4 py-3 text-slate-200">Sabah</div>
+                        </div>
+
+                        <div class="bg-[#0e2333]/90 border border-[#183950] rounded-2xl p-4 shadow-xl">
+                            <img src="images/orbit-map.jpg" alt="Map of Malaysia locations" class="w-full rounded-xl object-contain" loading="lazy">
                         </div>
                     </div>
 
-                    <!-- Head Office Card -->
-                    <div class="lg:col-span-6">
-                        <a href="branches.html" class="interactive-link-card block bg-[#0e2333]/95 border border-[#38bdf8]/50 hover:border-[#38bdf8] rounded-3xl p-6 sm:p-8 shadow-2xl">
+                    <!-- Head Office Card + QR -->
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="bg-[#0e2333]/95 border border-[#38bdf8]/50 rounded-3xl p-6 sm:p-8 shadow-2xl">
                             <div class="flex items-center gap-4 border-b border-slate-700/80 pb-5 mb-5">
-                                <img src="images/3-OrbitForce.png" alt="Orbit Force Security" class="h-14 w-auto object-contain">
+                                <img src="images/orbit-logo.jpg" alt="Orbit Force Security" class="h-14 w-auto rounded-xl object-contain bg-white p-1">
                                 <div>
                                     <h3 class="font-display text-lg font-bold uppercase text-white">Orbit Force Security Sdn Bhd</h3>
                                     <p class="text-xs text-amber-300 font-display uppercase tracking-wider">HEAD OFFICE SELANGOR / MALAYSIA</p>
@@ -802,14 +1008,20 @@
 
                             <div class="space-y-3 text-xs sm:text-sm text-slate-200 font-body">
                                 <p>No. 36B, Jalan Jubli Perak 22/1, Persiaran Puri Ayu, 40700 Shah Alam, Selangor Darul Ehsan.</p>
-                                <p><strong class="text-[#38bdf8]">Phone:</strong> 03-5567 9771, 5567 9718 &bull; +6012-282 6744</p>
-                                <p><strong class="text-[#38bdf8]">Email:</strong> enquiry@orbitforce.net</p>
+                                <p><strong class="text-[#38bdf8]">Phone:</strong> <a href="tel:0355679771" class="hover:underline">03-5567 9771</a>, <a href="tel:0355679718" class="hover:underline">5567 9718</a> &bull; <a href="tel:+60122826744" class="hover:underline">+6012-282 6744</a></p>
+                                <p><strong class="text-[#38bdf8]">Email:</strong> <a href="mailto:enquiry@orbitforce.net" class="hover:underline">enquiry@orbitforce.net</a></p>
                             </div>
 
-                            <div class="mt-6 inline-block rounded-xl bg-red-600 px-5 py-2.5 text-xs font-display font-bold uppercase tracking-wider text-white">
-                                View All Branch Locations &rarr;
+                            <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
+                                <button type="button" data-modal-key="geographical-presence" class="open-detail-btn inline-block rounded-xl bg-red-600 hover:bg-red-700 px-5 py-2.5 text-xs font-display font-bold uppercase tracking-wider text-white transition-colors">
+                                    More Details &rarr;
+                                </button>
+                                <div class="flex items-center gap-3 rounded-2xl bg-[#071622] border border-slate-800 p-3">
+                                    <img src="images/orbit-qr.jpg" alt="QR code" class="w-20 h-20 rounded-lg object-contain bg-white p-1" loading="lazy">
+                                    <span class="text-[11px] text-slate-300 max-w-[120px]">Scan QR for quick profile &amp; contact access</span>
+                                </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -824,7 +1036,7 @@
                             ORBIT FORCE <span class="text-xs font-semibold tracking-normal block text-red-200 mt-1">SECURITY SDN BHD</span>
                         </div>
                         <p class="mt-6 max-w-sm text-red-100 font-body text-xs leading-relaxed">
-                            Commercial &amp; Industrial Security Agency incorporated on 6th December, 2001. Licensed under Private Agency Act 1971 &amp; ISO 9001:2015 Certified.
+                            Orbit Force Security Sdn Bhd &bull; www.orbitforce.net &bull; Intelligence. Integrity. Protection. Established 6th December, 2001 under Ministry of Home Affairs (Private Agency Act 1971).
                         </p>
                     </div>
 
@@ -832,17 +1044,18 @@
                         <p class="font-display text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/20 pb-2">Quick Links</p>
                         <ul class="space-y-2.5 text-xs text-red-100 font-body">
                             <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
-                            <li><a href="about-orbit.html" class="hover:text-white transition-colors">About Company</a></li>
-                            <li><a href="management.html" class="hover:text-white transition-colors">Management</a></li>
-                            <li><a href="certifications.html" class="hover:text-white transition-colors">Certifications</a></li>
-                            <li><a href="branches.html" class="hover:text-white transition-colors">Branches &amp; Locations</a></li>
-                            <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                            <li><a href="#about-orbit" class="hover:text-white transition-colors">About Company</a></li>
+                            <li><a href="#our-leaders" class="hover:text-white transition-colors">Our Leaders</a></li>
+                            <li><a href="#core-services" class="hover:text-white transition-colors">Our Core Services</a></li>
+                            <li><a href="#clientele" class="hover:text-white transition-colors">Clientele</a></li>
+                            <li><a href="#contact" class="hover:text-white transition-colors">Contact Us</a></li>
                         </ul>
                     </div>
 
                     <div>
                         <p class="font-display text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/20 pb-2">Headquarters</p>
                         <p class="text-xs text-red-100 font-body leading-relaxed">
+                            HEAD OFFICE SELANGOR / MALAYSIA<br>
                             No. 36B, Jalan Jubli Perak 22/1, Persiaran Puri Ayu, 40700 Shah Alam, Selangor Darul Ehsan.<br>
                             Phone: 03-5567 9771, 5567 9718 &bull; +6012-282 6744<br>
                             Email: enquiry@orbitforce.net
@@ -859,10 +1072,231 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Menu Toggle
             document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
                 var menu = document.getElementById('mobile-menu');
                 if (menu) {
                     menu.classList.toggle('hidden');
+                }
+            });
+
+            // Collapsible Side Menu Drawer
+            const sideMenuBackdrop = document.getElementById('side-menu-backdrop');
+            const sideMenuDrawer = document.getElementById('side-menu-drawer');
+            const sideMenuOpenBtn = document.getElementById('side-menu-open-btn');
+            const sideMenuCloseBtn = document.getElementById('side-menu-close-btn');
+
+            function openSideMenu() {
+                sideMenuBackdrop?.classList.remove('hidden');
+                sideMenuDrawer?.classList.remove('-translate-x-full');
+            }
+
+            function closeSideMenu() {
+                sideMenuDrawer?.classList.add('-translate-x-full');
+                sideMenuBackdrop?.classList.add('hidden');
+            }
+
+            sideMenuOpenBtn?.addEventListener('click', openSideMenu);
+            sideMenuCloseBtn?.addEventListener('click', closeSideMenu);
+            sideMenuBackdrop?.addEventListener('click', closeSideMenu);
+            document.querySelectorAll('.side-nav-link').forEach(function (link) {
+                link.addEventListener('click', closeSideMenu);
+            });
+
+            // Interactive "More Details" Modal Data
+            const modalDetailsData = {
+                'company-overview': {
+                    badge: 'ABOUT ORBIT FORCE',
+                    title: 'Integrated Security & Risk Management',
+                    subtitle: 'Serving Malaysia Since 6th December, 2001',
+                    image: 'images/orbit-about.jpg',
+                    description: 'Orbit Force delivers comprehensive security and risk management solutions to government agencies, multinationals, and leading Malaysian enterprises—combining prevention specialists, forensic auditors, investigators, and corporate consultants.',
+                    highlights: [
+                        'Vision: Regional leader in security and risk management, quality management, HR development, customer service, and innovative security solutions.',
+                        'Mission: Quality, trained, and effective integrated security solutions tailored to customer requirements.',
+                        'Promise: Prevention specialists, forensic auditors, investigators, and corporate consultants—not just a traditional security guard company.'
+                    ]
+                },
+                'corporate-data': {
+                    badge: 'CORPORATE DATA',
+                    title: 'Registration, Capital & Insurance Coverage',
+                    subtitle: 'Orbit Force Security Sdn Bhd',
+                    image: '',
+                    description: 'Incorporated on 6th December, 2001 with RM 1,000,000.00 authorised and paid-up capital, backed by multi-tier insurance coverage.',
+                    highlights: [
+                        'Date of Registration: 6th December, 2001',
+                        'Authorised & Paid-up Capital: RM 1,000,000.00 each',
+                        'Company Secretaries: Misnizam Bin Gusni, A4-9-911, Bali Commerce Square, No.9, Jalan PJS 8/9, 46150 Petaling Jaya, Selangor Darul Ehsan.',
+                        'Bankers: Affin Bank, Section SS15, Subang Jaya, Selangor',
+                        'Insurers: Public Liability (-RM 5,000,000.00), Error and Omission (-RM 100,000.00), Fidelity Guarantee (-RM 100,000.00), Group Personal Accident (-RM 50,000.00).'
+                    ]
+                },
+                'leadership-message': {
+                    badge: 'OUR LEADERS',
+                    title: 'Leadership Excellence & Governance',
+                    subtitle: 'Discipline, Integrity & Professionalism Since 2001',
+                    image: 'images/orbit-leader1.jpg',
+                    description: 'Guided by experienced leadership across security operations, law enforcement intelligence, and corporate governance, Orbit Force supports clients with continuous training and modern 24/7 operations.',
+                    highlights: [
+                        'Dato\' M. Elayppen — Group Managing Director',
+                        'Col. Abdullah Bin Mohd Ali (B) — Director',
+                        'En. V. Nitchsingham — Superintendent of Police Internal Security (R), Principal Consultant',
+                        'Mr. Ridzuan Bin Jaafar — Director'
+                    ]
+                },
+                'leader-1': {
+                    badge: 'LEADERSHIP',
+                    title: "Dato' M. Elayppen",
+                    subtitle: 'Group Managing Director',
+                    image: 'images/orbit-leader1.jpg',
+                    description: 'Leads Orbit Force Security Sdn Bhd with a focus on disciplined operations, continuous personnel training, integrity, and trusted long-term client partnerships since 2001.',
+                    highlights: [
+                        'Role: Group Managing Director',
+                        'Focus: Strategic growth, operational standards, and client confidence across Malaysia'
+                    ]
+                },
+                'leader-2': {
+                    badge: 'LEADERSHIP',
+                    title: 'Col. Abdullah Bin Mohd Ali (B)',
+                    subtitle: 'Director',
+                    image: 'images/orbit-leader2.jpg',
+                    description: 'Brings command discipline and structured operational oversight to Orbit Force\'s security management framework.',
+                    highlights: [
+                        'Role: Director',
+                        'Focus: Operational discipline, structure, and service reliability'
+                    ]
+                },
+                'leader-3': {
+                    badge: 'LEADERSHIP',
+                    title: 'En. V. Nitchsingham',
+                    subtitle: 'Superintendent of Police Internal Security (R) • Principal Consultant',
+                    image: 'images/orbit-leader3.jpg',
+                    description: 'Provides senior security consulting, internal security expertise, and risk/investigative guidance drawn from law enforcement experience.',
+                    highlights: [
+                        'Designation: Superintendent of Police Internal Security (R) & Principal Consultant',
+                        'Focus: Threat assessment, internal security advisory, and risk mitigation'
+                    ]
+                },
+                'leader-4': {
+                    badge: 'LEADERSHIP',
+                    title: 'Mr. Ridzuan Bin Jaafar',
+                    subtitle: 'Director',
+                    image: 'images/orbit-leader4.jpg',
+                    description: 'Supports corporate governance, operational execution, and nationwide service delivery across Orbit Force\'s divisions.',
+                    highlights: [
+                        'Role: Director',
+                        'Focus: Corporate execution and regional operational support'
+                    ]
+                },
+                'org-chart': {
+                    badge: 'ORGANISATION CHART',
+                    title: 'Command & Support Structure',
+                    subtitle: 'Chairman • Board • Managing Director • General Manager',
+                    image: 'images/orbit-orgchart.jpg',
+                    description: 'Structured across regional operations and corporate support functions to ensure responsive field supervision and administrative governance.',
+                    highlights: [
+                        'Operation Director: Northern Region, Southern Region, Central Region, East Coast, and East Malaysia (Regional Manager → Branch Manager → Operation Team).',
+                        'Office Administration & Support Staff: Finance & Accounting, HR Development & Training, and Business Development.'
+                    ]
+                },
+                'brand-story': {
+                    badge: 'THE NEW-AGE FORCE',
+                    title: 'Two Specialized Divisions Working Together',
+                    subtitle: 'Established 6 December 2001 • Ministry of Home Affairs (Private Agency Act 1971)',
+                    image: 'images/orbit-brand.jpg',
+                    description: 'Orbit Force operates through two complementary divisions so clients receive both frontline physical protection and specialized investigative/risk expertise.',
+                    highlights: [
+                        'Orbit Force Security Services: Manned guarding, mobile patrols, security technology solutions, and training with 1,000+ trained personnel across 8 locations, 24/7 nationwide.',
+                        'Orbit Group Partners: Law enforcement intelligence and forensic expertise with former senior police officers, fraud examiners, and forensic accountants for fraud investigations, risk advisory, and executive protection.'
+                    ]
+                },
+                'why-1': { badge: 'WHY ORBIT FORCE?', title: 'Licensed & Regulated', subtitle: 'Ministry of Home Affairs approval', image: '', description: 'Licensed under the Ministry of Home Affairs (Private Agency Act 1971) since 2001.', highlights: ['Full regulatory compliance under Malaysian private agency law'] },
+                'why-2': { badge: 'WHY ORBIT FORCE?', title: 'ISO 9001 Certified', subtitle: 'Quality Management Systems', image: '', description: 'Standardized quality management processes across security operations and service delivery.', highlights: ['BS EN ISO 9001:2015 certification'] },
+                'why-3': { badge: 'WHY ORBIT FORCE?', title: 'Comprehensive Insurance', subtitle: 'RM 2M coverage', image: '', description: 'Backed by strong corporate insurance policies protecting client operations and liability.', highlights: ['Public Liability up to -RM 5,000,000.00 plus Fidelity Guarantee, E&O, and GPA coverage'] },
+                'why-4': { badge: 'WHY ORBIT FORCE?', title: 'Nationwide Coverage', subtitle: '8 strategic locations', image: '', description: 'Presence across Peninsular Malaysia and East Malaysia for multi-site clients.', highlights: ['Headquarters in Selangor with regional branches nationwide'] },
+                'why-5': { badge: 'WHY ORBIT FORCE?', title: '24/7 Operations', subtitle: 'Round-the-clock support', image: '', description: 'Continuous 24/7 monitoring, guarding, and response support.', highlights: ['Round-the-clock operational readiness'] },
+                'why-6': { badge: 'WHY ORBIT FORCE?', title: 'Technology-Enabled', subtitle: 'Modern systems & reporting', image: '', description: 'Integrates modern security technology and reporting workflows with field teams.', highlights: ['AI patrolling, reporting apps, CCTV & access control optimization'] },
+                'why-7': { badge: 'WHY ORBIT FORCE?', title: 'Trained Personnel', subtitle: 'Continuous training programs', image: '', description: 'Ongoing training programs keep guards and specialists prepared for evolving site requirements.', highlights: ['1,000+ trained personnel supported by continuous training'] },
+                'why-8': { badge: 'WHY ORBIT FORCE?', title: 'Proven Track Record', subtitle: '36+ Major Clients', image: '', description: 'Trusted by 36+ major clients across government, logistics, retail, MNC, industrial, and residential sectors.', highlights: ['Over two decades of proven service delivery'] },
+                'why-9': { badge: 'WHY ORBIT FORCE?', title: 'Member of TAPA', subtitle: 'Transport Asset Protection Association', image: '', description: 'Aligned with supply chain and cargo/transport asset protection standards.', highlights: ['Supports high-value logistics and transit security'] },
+                'why-10': { badge: 'WHY ORBIT FORCE?', title: 'Responsible Business Alliance (RBA) Compliance', subtitle: 'Ethical & Compliant Standards', image: '', description: 'Supports responsible business and supply chain compliance expectations for enterprise and MNC clients.', highlights: ['Aligned with ethical conduct and compliance standards'] },
+                'challenge-1': { badge: 'CHALLENGE 1', title: 'Security & Risk Management', subtitle: 'Risk Assessments & Optimization', image: '', description: 'End-to-end risk assessments, threat mitigation, vulnerabilities and security system optimization across industries.', highlights: ['Identifies site vulnerabilities and optimizes security systems'] },
+                'challenge-2': { badge: 'CHALLENGE 2', title: 'Asset Protection & Loss Control', subtitle: 'Multi-Sector Asset Safeguarding', image: '', description: 'Safe guarding physical and operational assets across Government, logistics, retail, MNC, industrial and residential sectors.', highlights: ['Tailored physical and operational asset protection'] },
+                'challenge-3': { badge: 'CHALLENGE 3', title: 'High-Profile Event Security Operations', subtitle: 'VIP & Zero-Incident Coordination', image: '', description: 'Full-scale security coordination for VIP events, ensuring zero-incident outcomes.', highlights: ['Structured crowd, access, and VIP coordination'] },
+                'challenge-4': { badge: 'CHALLENGE 4', title: 'Retail Loss Prevention Strategy', subtitle: 'Shrinkage & Theft Reduction', image: '', description: 'Proven reduction of shrinkage and internal theft through audits, surveillance, and covert monitoring.', highlights: ['Targets both external shrinkage and internal loss risks'] },
+                'challenge-5': { badge: 'CHALLENGE 5', title: 'Technology Driven Security', subtitle: 'Smart Guarding & Systems', image: '', description: 'AI Facial Recognition Security Patrolling, Timesheet/Payroll and Incident Reporting App, Visitor Management Systems CCTV Surveillance & Access Control System Optimization.', highlights: ['Combines digital reporting, surveillance, and access control'] },
+                'challenge-6': { badge: 'CHALLENGE 6', title: 'Intelligence-Led Corporate Investigations', subtitle: 'Investigations & Advisory', image: '', description: 'Discreet intelligence gathering, background checks, and strategic advisory for complex cases.', highlights: ['Handled discreetly by experienced investigators and specialists'] },
+                'service-s1': { badge: 'LOSS PREVENTION SERVICES', title: 'Unarmed / Armed Personnel', subtitle: 'Core Guarding Division', image: 'images/orbit-s1.jpg', description: 'Trained unarmed and armed security personnel deployed for commercial, industrial, logistics, and institutional facilities.', highlights: ['24/7 shift coverage', 'Disciplined access control and perimeter vigilance'] },
+                'service-s2': { badge: 'LOSS PREVENTION SERVICES', title: 'Armed Guard', subtitle: 'High-Security Protection', image: 'images/orbit-s2.jpg', description: 'Specialized armed guarding for elevated risk sites and high-value asset protection.', highlights: ['Licensed and regulated armed security operations'] },
+                'service-s3': { badge: 'LOSS PREVENTION SERVICES', title: 'Canine (K9) Protection', subtitle: 'K9 Patrol & Deterrence', image: 'images/orbit-s3.jpg', description: 'Canine (K9) protection units for enhanced perimeter deterrence, patrolling, and site security.', highlights: ['High-visibility deterrence and specialized K9 handling'] },
+                'service-s4': { badge: 'LOSS PREVENTION SERVICES', title: 'Asset Protection', subtitle: 'Physical & Operational Security', image: 'images/orbit-s4.jpg', description: 'Comprehensive asset protection to safeguard equipment, inventory, facilities, and high-value property.', highlights: ['Reduces exposure to theft, damage, and unauthorized access'] },
+                'service-s5': { badge: 'RISK MANAGEMENT', title: 'Assessment And Consultancy', subtitle: 'Security Survey & Risk Advisory', image: 'images/orbit-s5.jpg', description: 'On-site security surveys, risk assessments, and practical consultancy to close operational security gaps.', highlights: ['Evaluates threats, vulnerabilities, and existing controls'] },
+                'service-s6': { badge: 'RISK MANAGEMENT', title: 'Designing Customised Loss Prevention Systems', subtitle: '(Optimal Combination Of HR & security Automation)', image: 'images/orbit-s6.jpg', description: 'Custom loss prevention architecture combining trained human resources with modern security automation.', highlights: ['Balances manpower with CCTV, access control, and reporting tools'] },
+                'service-s7': { badge: 'RISK MANAGEMENT', title: 'Mobile Protection Services', subtitle: 'Rapid & Scheduled Patrols', image: 'images/orbit-s7.jpg', description: 'Mobile patrol and response coverage across dispersed sites, industrial zones, and commercial properties.', highlights: ['Flexible patrol schedules and incident response'] },
+                'service-s8': { badge: 'SECURITY INVESTIGATIONS', title: 'Security Investigations', subtitle: 'Addressing syndicated losses fraud and shrinkages', image: 'images/orbit-s8.jpg', description: 'Targeted investigations into syndicated losses, internal/external fraud, and inventory shrinkage.', highlights: ['Fact-finding, intelligence gathering, and risk advisory'] },
+                'service-threat': { badge: 'PERSONALITY PROFILING / RISK AND THREAT', title: 'Threat Detection and Response', subtitle: 'Monitor • Detect • Respond', image: 'images/orbit-threat.jpg', description: 'Structured threat detection and response workflow focused on continuous monitoring, early detection, and decisive response.', highlights: ['Step 1: Monitor continuous activity and risk indicators', 'Step 2: Detect anomalies, threats, and vulnerabilities', 'Step 3: Respond with coordinated protective action'] },
+                'certifications': { badge: 'LICENSE & CERTIFICATION', title: 'Regulatory Approvals & Certifications', subtitle: 'Compliance & Quality Assurance', image: 'images/orbit-certs.jpg', description: 'Operates under Malaysian regulatory licensing, ISO 9001 quality management, and recognized industry memberships.', highlights: ['Ministry of Home Affairs (Akta Agensi Persendirian 1971)', 'BS EN ISO 9001:2015', 'TAPA Membership & RBA Compliance'] },
+                'geographical-presence': { badge: 'GEOGRAPHICAL PRESENCE', title: 'Nationwide Operations Across Malaysia', subtitle: 'Headquarters in Selangor + Regional Presence', image: 'images/orbit-map.jpg', description: 'Serving clients across Kedah, Pulau Pinang, Perak, Selangor (Headquarters), Johor, Terengganu, Pahang, Sarawak, and Sabah.', highlights: ['Head Office: No. 36B, Jalan Jubli Perak 22/1, Persiaran Puri Ayu, 40700 Shah Alam, Selangor Darul Ehsan.'] }
+            };
+
+            const detailModal = document.getElementById('detail-modal');
+            const modalBadge = document.getElementById('modal-badge');
+            const modalTitle = document.getElementById('modal-title');
+            const modalSubtitle = document.getElementById('modal-subtitle');
+            const modalDescription = document.getElementById('modal-description');
+            const modalHighlights = document.getElementById('modal-highlights');
+            const modalImage = document.getElementById('modal-image');
+            const modalCloseBtn = document.getElementById('modal-close-btn');
+            const modalDoneBtn = document.getElementById('modal-done-btn');
+            const modalContactLink = document.getElementById('modal-contact-link');
+
+            function openDetailModal(key) {
+                const info = modalDetailsData[key];
+                if (!info || !detailModal) return;
+
+                modalBadge.textContent = info.badge || 'DETAILS';
+                modalTitle.textContent = info.title || '';
+                modalSubtitle.textContent = info.subtitle || '';
+                modalDescription.textContent = info.description || '';
+
+                if (info.image) {
+                    modalImage.src = info.image;
+                    modalImage.alt = info.title || '';
+                    modalImage.classList.remove('hidden');
+                } else {
+                    modalImage.src = '';
+                    modalImage.classList.add('hidden');
+                }
+
+                modalHighlights.innerHTML = '';
+                (info.highlights || []).forEach(function (item) {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    modalHighlights.appendChild(li);
+                });
+
+                detailModal.classList.remove('hidden');
+                detailModal.classList.add('flex');
+            }
+
+            function closeDetailModal() {
+                detailModal?.classList.add('hidden');
+                detailModal?.classList.remove('flex');
+            }
+
+            document.querySelectorAll('.open-detail-btn').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    const key = btn.getAttribute('data-modal-key');
+                    openDetailModal(key);
+                });
+            });
+
+            modalCloseBtn?.addEventListener('click', closeDetailModal);
+            modalDoneBtn?.addEventListener('click', closeDetailModal);
+            modalContactLink?.addEventListener('click', closeDetailModal);
+            detailModal?.addEventListener('click', function (e) {
+                if (e.target === detailModal) {
+                    closeDetailModal();
                 }
             });
 
