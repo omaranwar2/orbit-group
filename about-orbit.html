@@ -385,20 +385,6 @@
             </div>
         </section>
 
-        <!-- ==================== 6. ORGANIZATION CHART ==================== -->
-        <section class="relative py-24 bg-[#0f2232] text-white overflow-hidden border-b border-white/10">
-            <canvas id="org-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-50"></canvas>
-
-            <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 text-center">
-                <span class="text-xs font-bold uppercase tracking-widest text-amber-400 font-display">Corporate Structure</span>
-                <h2 class="mt-2 font-display text-3xl sm:text-4xl font-bold tracking-tight text-white uppercase mb-12">ORGANIZATION CHART</h2>
-
-                <div class="max-w-5xl mx-auto bg-white p-4 sm:p-8 rounded-3xl border border-slate-200 shadow-2xl transition-all duration-300 hover:scale-[1.01]">
-                    <img src="images/organization-chart.jpg" alt="Orbit Force Security Organization Chart" class="w-full h-auto object-contain mx-auto">
-                </div>
-            </div>
-        </section>
-
         <!-- ==================== CRIMSON RED GRADIENT FOOTER ==================== -->
         <footer id="contact" class="bg-gradient-to-r from-[#900C0F] via-[#B91C1C] to-[#800A0C] py-20 text-white relative overflow-hidden">
             <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
@@ -545,49 +531,6 @@
                 window.addEventListener('resize', resizeIntro);
                 resizeIntro();
                 drawIntro();
-            }
-
-            // 3. Animated Light Rays & Particle Canvas (Organization Chart Section)
-            const orgCanvas = document.getElementById('org-canvas');
-            if (orgCanvas) {
-                const ctx = orgCanvas.getContext('2d');
-                let w, h, rays = [];
-
-                function resizeOrg() {
-                    w = orgCanvas.width = orgCanvas.offsetWidth;
-                    h = orgCanvas.height = orgCanvas.offsetHeight;
-                    rays = [];
-                    for(let i=0; i<25; i++) {
-                        rays.push({
-                            x: Math.random() * w,
-                            y: Math.random() * h,
-                            len: Math.random() * 80 + 40,
-                            speed: Math.random() * 1.2 + 0.4
-                        });
-                    }
-                }
-
-                function drawOrg() {
-                    ctx.clearRect(0, 0, w, h);
-                    ctx.strokeStyle = 'rgba(245, 158, 11, 0.15)';
-                    ctx.lineWidth = 2;
-
-                    for(let r of rays) {
-                        r.y -= r.speed;
-                        if(r.y < -r.len) r.y = h + r.len;
-
-                        ctx.beginPath();
-                        ctx.moveTo(r.x, r.y);
-                        ctx.lineTo(r.x - 20, r.y - r.len);
-                        ctx.stroke();
-                    }
-
-                    requestAnimationFrame(drawOrg);
-                }
-
-                window.addEventListener('resize', resizeOrg);
-                resizeOrg();
-                drawOrg();
             }
         });
     </script>
